@@ -20,6 +20,24 @@ export default {
 
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
     if (request.method === "GET") {
+      // Free diagnostic: asks Anthropic whether the stored key and the model name are accepted.
+      // Reports status codes only; uses no tokens.
+      if (new URL(request.url).pathname === "/diag") {
+        const key = (env.ANTHROPIC_API_KEY || "").trim();
+        const model = env.MODEL || "claude-sonnet-5-5";
+        const h = { "x-api-key": key, "anthropic-version": "2023-06-01" };
+        const out = { ok: true, model, keyLength: key.length, keyEndsCleanly: /^[A-Za-z0-9_-]+$/.test(key) };
+        try {
+          const r1 = await fetch("https://api.anthropic.com/v1/models?limit=100", { headers: h });
+          out.keyStatus = r1.status;
+          const j1 = await r1.json().catch(() => null);
+          if (r1.ok && j1 && Array.isArray(j1.data)) out.models = j1.data.map((m) => m.id);
+          else out.keyError = (j1 && j1.error && (j1.error.type + ": " + j1.error.message)) || "";
+          const r2 = await fetch("https://api.anthropic.com/v1/models/" + model, { headers: h });
+          out.modelStatus = r2.status;
+        } catch (e) { out.network = String(e && e.message || e); }
+        return json(200, out);
+      }
       // Health check: open the Worker address in a browser to see what is still missing.
       const k = (env.ANTHROPIC_API_KEY || "").trim();
       return json(200, { ok: true, service: "livella", key: !!k, keyLooksRight: k.startsWith("sk-ant-") && k.length > 60, passcode: !!env.PASSCODE, origins: allowed.length, build: 2 });
