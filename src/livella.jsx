@@ -22,11 +22,11 @@ const LANGUAGES = {
     tf: ["Vero", "Falso"],
     glossRule: "english gloss",
     levels: [
-      { id: "it1", label: "Italiano 1", sub: "Novice Low–Mid", description: "present tense of essere/avere/chiamarsi/abitare + regular -are verbs, articles, numbers, concrete self/family/school topics", calibration: "Present tense only: essere, avere, chiamarsi, abitare, piacere (mi piace), regular -are verbs. Articles, numbers, days, colors. Sentences 5-8 words. Top 500 words. NO past tense, NO future, NO conditional, NO subjunctive, NO reflexives beyond chiamarsi. Topics: self, family, school, likes." },
-      { id: "it2", label: "Italiano 2", sub: "Novice High", description: "high-frequency vocab, simple present tense, basic past forms", calibration: "Present tense + most common irregulars, very limited passato prossimo, sentences 6-10 words, top 1000 words, no subjunctive/conditional/future, concrete topics." },
-      { id: "it3", label: "Italiano 3", sub: "Intermediate Low", description: "passato prossimo, imperfetto contrast, expanded thematic vocab", calibration: "Passato prossimo fluent, imperfetto introduced, future introduced, sentences 8-14 words, top 2000 words, reflexives, conditional only in fixed expressions." },
-      { id: "it4", label: "Italiano 4", sub: "Intermediate Mid", description: "subjunctive intro, conditional, complex sentence structures", calibration: "All indicative tenses fluent, present subjunctive introduced, conditional fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
-      { id: "itap", label: "AP Italiano", sub: "Intermediate High → Advanced Low", description: "full register range, idiomatic usage, cultural depth, AP themes", calibration: "Full tense/mood range, idiomatic expressions, register variation, AP Italian Language and Culture themes, sophisticated discourse markers." },
+      { id: "it1", label: "Novice Mid", sub: "~ Italiano 1", description: "present tense of essere/avere/chiamarsi/abitare + regular -are verbs, articles, numbers, concrete self/family/school topics", calibration: "Present tense only: essere, avere, chiamarsi, abitare, piacere (mi piace), regular -are verbs. Articles, numbers, days, colors. Sentences 5-8 words. Top 500 words. NO past tense, NO future, NO conditional, NO subjunctive, NO reflexives beyond chiamarsi. Topics: self, family, school, likes." },
+      { id: "it2", label: "Novice High", sub: "~ Italiano 2", description: "high-frequency vocab, simple present tense, basic past forms", calibration: "Present tense + most common irregulars, very limited passato prossimo, sentences 6-10 words, top 1000 words, no subjunctive/conditional/future, concrete topics." },
+      { id: "it3", label: "Intermediate Low", sub: "~ Italiano 3", description: "passato prossimo, imperfetto contrast, expanded thematic vocab", calibration: "Passato prossimo fluent, imperfetto introduced, future introduced, sentences 8-14 words, top 2000 words, reflexives, conditional only in fixed expressions." },
+      { id: "it4", label: "Intermediate Mid", sub: "~ Italiano 4", description: "subjunctive intro, conditional, complex sentence structures", calibration: "All indicative tenses fluent, present subjunctive introduced, conditional fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
+      { id: "itap", label: "Intermediate High", sub: "~ AP Italiano", description: "full register range, idiomatic usage, cultural depth, AP themes", calibration: "Full tense/mood range, idiomatic expressions, register variation, AP Italian Language and Culture themes, sophisticated discourse markers." },
     ],
   },
   fr: {
@@ -45,11 +45,11 @@ const LANGUAGES = {
     tf: ["Vrai", "Faux"],
     glossRule: "english gloss",
     levels: [
-      { id: "fr1", label: "Français 1", sub: "Novice Low–Mid", description: "present tense of être/avoir/aller/faire + regular -er verbs, articles, numbers, concrete self/family/school topics", calibration: "Present tense only: être, avoir, aller, faire, s'appeler, habiter, aimer, regular -er verbs. Articles (le/la/les/un/une/des), numbers, days, colors. Sentences 5-8 words. Top 500 words. NO passé composé, NO futur, NO conditionnel, NO subjonctif. Topics: self, family, school, likes." },
-      { id: "fr2", label: "Français 2", sub: "Novice High", description: "present + common irregulars, passé composé with avoir introduced, futur proche", calibration: "Present tense + common irregulars (vouloir, pouvoir, prendre), passé composé with avoir introduced (regular participles), futur proche (aller + infinitive). Sentences 6-10 words. Top 1000 words. NO imparfait, NO futur simple, NO conditionnel, NO subjonctif." },
-      { id: "fr3", label: "Français 3", sub: "Intermediate Low", description: "passé composé (avoir and être), imparfait contrast, futur simple, reflexives", calibration: "Passé composé fluent (avoir AND être, agreement), imparfait introduced with contrast, futur simple introduced, reflexive verbs, sentences 8-14 words, top 2000 words, conditionnel only in fixed expressions (je voudrais)." },
-      { id: "fr4", label: "Français 4", sub: "Intermediate Mid", description: "all indicative tenses, present subjunctive intro, conditional, complex sentences", calibration: "All indicative tenses fluent (incl. plus-que-parfait), subjonctif présent introduced after common triggers (il faut que, je veux que), conditionnel fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
-      { id: "frap", label: "AP Français", sub: "Intermediate High → Advanced Low", description: "full register range, idiomatic usage, cultural depth, AP themes", calibration: "Full tense/mood range, idiomatic expressions, tu/vous register variation, AP French Language and Culture themes, sophisticated discourse markers." },
+      { id: "fr1", label: "Novice Mid", sub: "~ Français 1", description: "present tense of être/avoir/aller/faire + regular -er verbs, articles, numbers, concrete self/family/school topics", calibration: "Present tense only: être, avoir, aller, faire, s'appeler, habiter, aimer, regular -er verbs. Articles (le/la/les/un/une/des), numbers, days, colors. Sentences 5-8 words. Top 500 words. NO passé composé, NO futur, NO conditionnel, NO subjonctif. Topics: self, family, school, likes." },
+      { id: "fr2", label: "Novice High", sub: "~ Français 2", description: "present + common irregulars, passé composé with avoir introduced, futur proche", calibration: "Present tense + common irregulars (vouloir, pouvoir, prendre), passé composé with avoir introduced (regular participles), futur proche (aller + infinitive). Sentences 6-10 words. Top 1000 words. NO imparfait, NO futur simple, NO conditionnel, NO subjonctif." },
+      { id: "fr3", label: "Intermediate Low", sub: "~ Français 3", description: "passé composé (avoir and être), imparfait contrast, futur simple, reflexives", calibration: "Passé composé fluent (avoir AND être, agreement), imparfait introduced with contrast, futur simple introduced, reflexive verbs, sentences 8-14 words, top 2000 words, conditionnel only in fixed expressions (je voudrais)." },
+      { id: "fr4", label: "Intermediate Mid", sub: "~ Français 4", description: "all indicative tenses, present subjunctive intro, conditional, complex sentences", calibration: "All indicative tenses fluent (incl. plus-que-parfait), subjonctif présent introduced after common triggers (il faut que, je veux que), conditionnel fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
+      { id: "frap", label: "Intermediate High", sub: "~ AP Français", description: "full register range, idiomatic usage, cultural depth, AP themes", calibration: "Full tense/mood range, idiomatic expressions, tu/vous register variation, AP French Language and Culture themes, sophisticated discourse markers." },
     ],
   },
   es: {
@@ -68,11 +68,11 @@ const LANGUAGES = {
     tf: ["Cierto", "Falso"],
     glossRule: "english gloss",
     levels: [
-      { id: "es1", label: "Español 1", sub: "Novice Low–Mid", description: "present tense of ser/estar/tener/ir + regular -ar/-er/-ir verbs, gustar basics, articles, numbers, concrete topics", calibration: "Present tense only: ser, estar, tener, ir, llamarse, vivir, gustar (me gusta), regular -ar/-er/-ir verbs. Articles, numbers, days, colors. Sentences 5-8 words. Top 500 words. NO pretérito, NO futuro, NO condicional, NO subjuntivo. Topics: self, family, school, likes." },
-      { id: "es2", label: "Español 2", sub: "Novice High", description: "present + stem-changers, preterite introduced, ir a + infinitive", calibration: "Present tense + stem-changing verbs, pretérito introduced (regular + ser/ir/hacer), ir a + infinitive for future. Sentences 6-10 words. Top 1000 words. NO imperfecto, NO futuro simple, NO condicional, NO subjuntivo." },
-      { id: "es3", label: "Español 3", sub: "Intermediate Low", description: "preterite fluent, imperfect contrast, future introduced, reflexives", calibration: "Pretérito fluent (incl. common irregulars), imperfecto introduced with contrast, futuro simple introduced, reflexive verbs, sentences 8-14 words, top 2000 words, condicional only in fixed expressions (me gustaría)." },
-      { id: "es4", label: "Español 4", sub: "Intermediate Mid", description: "all indicative tenses, present subjunctive intro, conditional, complex sentences", calibration: "All indicative tenses fluent (incl. pluscuamperfecto), presente de subjuntivo introduced after common triggers (quiero que, es importante que), condicional fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
-      { id: "esap", label: "AP Español", sub: "Intermediate High → Advanced Low", description: "full register range, idiomatic usage, cultural depth, AP themes", calibration: "Full tense/mood range, idiomatic expressions, tú/usted register variation, AP Spanish Language and Culture themes, sophisticated discourse markers." },
+      { id: "es1", label: "Novice Mid", sub: "~ Español 1", description: "present tense of ser/estar/tener/ir + regular -ar/-er/-ir verbs, gustar basics, articles, numbers, concrete topics", calibration: "Present tense only: ser, estar, tener, ir, llamarse, vivir, gustar (me gusta), regular -ar/-er/-ir verbs. Articles, numbers, days, colors. Sentences 5-8 words. Top 500 words. NO pretérito, NO futuro, NO condicional, NO subjuntivo. Topics: self, family, school, likes." },
+      { id: "es2", label: "Novice High", sub: "~ Español 2", description: "present + stem-changers, preterite introduced, ir a + infinitive", calibration: "Present tense + stem-changing verbs, pretérito introduced (regular + ser/ir/hacer), ir a + infinitive for future. Sentences 6-10 words. Top 1000 words. NO imperfecto, NO futuro simple, NO condicional, NO subjuntivo." },
+      { id: "es3", label: "Intermediate Low", sub: "~ Español 3", description: "preterite fluent, imperfect contrast, future introduced, reflexives", calibration: "Pretérito fluent (incl. common irregulars), imperfecto introduced with contrast, futuro simple introduced, reflexive verbs, sentences 8-14 words, top 2000 words, condicional only in fixed expressions (me gustaría)." },
+      { id: "es4", label: "Intermediate Mid", sub: "~ Español 4", description: "all indicative tenses, present subjunctive intro, conditional, complex sentences", calibration: "All indicative tenses fluent (incl. pluscuamperfecto), presente de subjuntivo introduced after common triggers (quiero que, es importante que), condicional fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
+      { id: "esap", label: "Intermediate High", sub: "~ AP Español", description: "full register range, idiomatic usage, cultural depth, AP themes", calibration: "Full tense/mood range, idiomatic expressions, tú/usted register variation, AP Spanish Language and Culture themes, sophisticated discourse markers." },
     ],
   },
   esl: {
@@ -80,7 +80,7 @@ const LANGUAGES = {
     ui: "en",
     support: [],
     flag: "🌐",
-    name: "ESL",
+    name: "English · ESL / ML",
     langEn: "English",
     // Front-page sample: one story at this ladder's five levels (shown on the fanned pages).
     heroTitle: "At the market",
@@ -101,6 +101,8 @@ const LANGUAGES = {
 };
 
 const LANGUAGE_ORDER = ["it", "fr", "es", "esl"];
+// Short tab names for the ACTFL sublevels (the ESL side uses WIDA numbers 1-5).
+const LEVEL_SHORT = { "Novice Mid": "NM", "Novice High": "NH", "Intermediate Low": "IL", "Intermediate Mid": "IM", "Intermediate High": "IH" };
 // Voice used by the Listen button (the browser's own speech engine).
 const SPEECH = { it: "it-IT", fr: "fr-FR", es: "es-MX", esl: "en-US" };
 
@@ -162,6 +164,7 @@ const UI = {
     switchWarn: "Passare a {x} cancella la lezione sullo schermo.", switchYes: "Passa a {x}", switchNo: "Resta qui", switchTip: "Per vedere la stessa lezione in un'altra lingua, usa Confronta → Lingua.",
     listen: "Ascolta", stopListen: "Ferma", slow: "Lento", hideText: "Nascondi il testo", showText: "Mostra il testo", hiddenNote: "Testo nascosto. Ascolta e rispondi.", errVoice: "Questo dispositivo non ha una voce per questa lingua.", listenNote: "Voce del browser: la qualità dipende dal dispositivo.",
     rights: "Tutti i diritti riservati.",
+    learnersLabel: "Studenti", learnersHint: "Il livello indica la competenza. Qui scegli l'età: cambiano temi, lunghezza e compiti.",
     modeText: "Da un testo", modeWrite: "Scrivi da zero", genreLabel: "Genere", topicLabel: "Tema",
     topicPlaceholder: "Es. una gita a Napoli con la classe · la mia famiglia · il mercato del sabato", writeHint: "Livella scrive un testo originale al livello scelto. Scrivi un tema, oppure incolla appunti o fatti; anche in inglese.",
     errTopic: "Scrivi un tema.", write: "Scrivi", writing: "Sto scrivendo...",
@@ -202,6 +205,7 @@ const UI = {
     switchWarn: "Passer à {x} efface la leçon affichée.", switchYes: "Passer à {x}", switchNo: "Rester ici", switchTip: "Pour voir la même leçon dans une autre langue, utilisez Comparer → Langue.",
     listen: "Écouter", stopListen: "Arrêter", slow: "Lent", hideText: "Masquer le texte", showText: "Afficher le texte", hiddenNote: "Texte masqué. Écoutez et répondez.", errVoice: "Cet appareil n'a pas de voix pour cette langue.", listenNote: "Voix du navigateur : la qualité dépend de l'appareil.",
     rights: "Tous droits réservés.",
+    learnersLabel: "Apprenants", learnersHint: "Le niveau indique la compétence. Ici, choisissez l'âge : thèmes, longueur et tâches changent.",
     modeText: "À partir d'un texte", modeWrite: "Écrire de zéro", genreLabel: "Genre", topicLabel: "Sujet",
     topicPlaceholder: "Ex. une sortie à Lyon avec la classe · ma famille · le marché du samedi", writeHint: "Livella écrit un texte original au niveau choisi. Indiquez un sujet, ou collez des notes ou des faits ; même en anglais.",
     errTopic: "Indiquez un sujet.", write: "Écrire", writing: "J'écris...",
@@ -242,58 +246,99 @@ const UI = {
     switchWarn: "Switching to {x} clears the lesson on screen.", switchYes: "Switch to {x}", switchNo: "Stay here", switchTip: "To see the same lesson in another language, use Compare → Language.",
     listen: "Listen", stopListen: "Stop", slow: "Slow", hideText: "Hide the text", showText: "Show the text", hiddenNote: "Text hidden. Listen and answer.", errVoice: "This device has no voice for this language.", listenNote: "Browser voice: quality depends on the device.",
     rights: "All rights reserved.",
+    learnersLabel: "Learners", learnersHint: "The level is proficiency. Here you choose the age: topics, length and tasks change.",
     modeText: "From a text", modeWrite: "Write from scratch", genreLabel: "Genre", topicLabel: "Topic",
     topicPlaceholder: "e.g. a class trip · my family · the Saturday market", writeHint: "Livella writes an original text at the chosen level. Type a topic, or paste notes or facts; English is fine.",
     errTopic: "Enter a topic.", write: "Write", writing: "Writing...",
     profileLabel: "Profile", profileHint: "The level never changes. Pick one or more profiles.", standard: "Standard", standardSub: "no adaptations",
     wordBank: "Word bank", microTask: "Micro-task", of: "of", accommodations: "Accommodations applied", pdfFontNote: "The Lexend font isn't available in the PDF; spacing and line length still follow the rules.",
+  },  es: {
+    inputLabel: "Texto o tema",
+    placeholder: "Pega un artículo, una canción, un capítulo del libro... o escribe un tema en inglés.",
+    purposeLabel: "Tipo de lectura", levelLabel: "Nivel",
+    go: "Livella", going: "Nivelando...",
+    errEmpty: "Escribe un texto o un tema.", errGeneric: "Algo salió mal. Inténtalo de nuevo.",
+    errCompare: "La comparación falló.", errActivity: "No se pudo generar la actividad.", errExercise: "No se pudieron generar los ejercicios.",
+    errNotGranted: "Esta página aún no tiene permiso para usar Claude. Abre el menú Permisos de la página, permite el acceso e inténtalo de nuevo.",
+    errRate: "Demasiadas solicitudes a la vez. Espera un momento e inténtalo de nuevo.",
+    showOriginal: "Mostrar original", hideOriginal: "Ocultar original", original: "Original",
+    vocab: "Vocabulario", teacherNote: "Nota para el docente",
+    compareLabel: "Comparar con otro nivel", closeCompare: "Cerrar comparación",
+    easier: "← Más fácil", harder: "Más difícil →",
+    copyAll: "Copiar todo", copied: "Copiado ✓", print: "Imprimir / PDF",
+    buildTitle: "Crear ejercicios", buildSub: "Arma tu propio conjunto: elige el tipo, la cantidad y la dificultad.",
+    typeLabel: "Tipo", countLabel: "Cantidad", diffLabel: "Dificultad",
+    genExercises: "Generar ejercicios", generating: "Generando...", questions: "preguntas", remove: "Quitar",
+    whatDoWeDo: "¿Qué hacemos?", activitiesSub: "Actividades de clase: elige qué generar.",
+    ready: "✓ listo", emptyActivities: "Haz clic en una actividad para empezar",
+    answer: "Respuesta", name: "Nombre", date: "Fecha", klass: "Clase",
+    uploadBtn: "Subir una imagen o un archivo .txt", uploadHint: "Foto o captura de pantalla: Claude lee el texto de la imagen. También puedes pegar una captura (Ctrl+V) o arrastrarla al cuadro.",
+    linkLabel: "Enlace de la fuente", linkHint: "Solo para la cita en la hoja: la página no abre enlaces. Pega el texto arriba.",
+    source: "Fuente", errImages: "Las imágenes no están disponibles en esta vista. Pega el texto.", errFile: "No se puede leer ese archivo. Usa una imagen (JPG/PNG) o un archivo .txt.",
+    scalaBtn: "La Scala — los cinco niveles", scalaBuilding: "Construyendo la escalera...", scalaTitle: "La Scala",
+    scalaSub: "El mismo texto en cinco niveles, párrafo por párrafo. Toca ↑ o ↓ en un párrafo para subirlo o bajarlo un nivel.",
+    up: "Subir", down: "Bajar", allUp: "Todos arriba", allDown: "Todos abajo", rung: "peldaño", scalaReset: "Volver a mi nivel",
+    errScala: "No se pudo construir la escalera.", scalaCount: "párrafos",
+    pdfStudent: "PDF del estudiante", pdfTeacher: "PDF del docente", pdfBuilding: "Creando el PDF...", teacherGuide: "Guía del docente", studentSheet: "Hoja del estudiante",
+    errPdf: "No se puede descargar el PDF en esta vista.", pdfDeclined: "Descarga cancelada.",
+    heroHead: "El nivel adecuado para cada estudiante.", heroSub: "Pega un texto, o solo un tema. Livella te devuelve la misma página en cada nivel de tu clase, con apoyos para los lectores que los necesitan.", heroCta: "Nivelar un texto", heroMicro: "Cinco niveles · cuatro idiomas · perfiles de lectura",
+    cmpTitle: "Comparar", cmpLevel: "Nivel", cmpProfile: "Perfil", cmpLang: "Idioma", cmpHint: "Cada comparación es una nueva generación. Tu página queda a la izquierda.", cmpWorking: "Preparando la comparación...",
+    switchWarn: "Cambiar a {x} borra la lección en pantalla.", switchYes: "Cambiar a {x}", switchNo: "Quedarme aquí", switchTip: "Para ver la misma lección en otro idioma, usa Comparar → Idioma.",
+    listen: "Escuchar", stopListen: "Detener", slow: "Lento", hideText: "Ocultar el texto", showText: "Mostrar el texto", hiddenNote: "Texto oculto. Escucha y responde.", errVoice: "Este dispositivo no tiene una voz para este idioma.", listenNote: "Voz del navegador: la calidad depende del dispositivo.",
+    rights: "Todos los derechos reservados.",
+    learnersLabel: "Estudiantes", learnersHint: "El nivel indica la competencia. Aquí eliges la edad: cambian los temas, la extensión y las tareas.",
+    modeText: "A partir de un texto", modeWrite: "Escribir desde cero", genreLabel: "Género", topicLabel: "Tema",
+    topicPlaceholder: "p. ej. una excursión de la clase · mi familia · el mercado del sábado", writeHint: "Livella escribe un texto original en el nivel elegido. Escribe un tema, o pega apuntes o datos; puede ser en inglés.",
+    errTopic: "Escribe un tema.", write: "Escribir", writing: "Escribiendo...",
+    profileLabel: "Perfil", profileHint: "El nivel no cambia. Elige uno o más perfiles.", standard: "Estándar", standardSub: "sin adaptaciones",
+    wordBank: "Banco de palabras", microTask: "Mini-tarea", of: "de", accommodations: "Adaptaciones aplicadas", pdfFontNote: "La fuente Lexend no está disponible en el PDF; el espaciado y la longitud de línea siguen las reglas.",
   },
 };
 
 
 const PURPOSES = [
-  { id: "warmup", label: { it: "Riscaldamento", fr: "Échauffement", en: "Warm-up" }, sub: { it: "Warm-up", fr: "Warm-up", en: "60–100 words" }, promptName: "Riscaldamento", promptSub: "Warm-up", description: "short passage (60-100 words), simple comprehension, activates background knowledge" },
-  { id: "main", label: { it: "Lezione principale", fr: "Leçon principale", en: "Main lesson" }, sub: { it: "Main lesson", fr: "Main lesson", en: "140–200 words" }, promptName: "Lezione principale", promptSub: "Main lesson", description: "full passage (140-200 words), full activity suite, balances skills" },
-  { id: "homework", label: { it: "Compito a casa", fr: "Devoir à la maison", en: "Homework" }, sub: { it: "Homework", fr: "Homework", en: "180–250 words" }, promptName: "Compito a casa", promptSub: "Homework", description: "longer passage (180-250 words), independent work, clearer scaffolding in questions" },
-  { id: "assessment", label: { it: "Verifica", fr: "Évaluation", en: "Assessment" }, sub: { it: "Assessment", fr: "Assessment", en: "includes inference" }, promptName: "Verifica", promptSub: "Assessment", description: "full passage (140-200 words), sharper questions, no hints, includes inference" },
+  { id: "warmup", label: { it: "Riscaldamento", fr: "Échauffement", en: "Warm-up", es: "Calentamiento" }, sub: { it: "Warm-up", fr: "Warm-up", en: "60–100 words", es: "60–100 palabras" }, promptName: "Riscaldamento", promptSub: "Warm-up", description: "short passage (60-100 words), simple comprehension, activates background knowledge" },
+  { id: "main", label: { it: "Lezione principale", fr: "Leçon principale", en: "Main lesson", es: "Lección principal" }, sub: { it: "Main lesson", fr: "Main lesson", en: "140–200 words", es: "140–200 palabras" }, promptName: "Lezione principale", promptSub: "Main lesson", description: "full passage (140-200 words), full activity suite, balances skills" },
+  { id: "homework", label: { it: "Compito a casa", fr: "Devoir à la maison", en: "Homework", es: "Tarea" }, sub: { it: "Homework", fr: "Homework", en: "180–250 words", es: "180–250 palabras" }, promptName: "Compito a casa", promptSub: "Homework", description: "longer passage (180-250 words), independent work, clearer scaffolding in questions" },
+  { id: "assessment", label: { it: "Verifica", fr: "Évaluation", en: "Assessment", es: "Evaluación" }, sub: { it: "Assessment", fr: "Assessment", en: "includes inference", es: "incluye inferencia" }, promptName: "Verifica", promptSub: "Assessment", description: "full passage (140-200 words), sharper questions, no hints, includes inference" },
 ];
 
 const EXERCISE_TYPES = [
-  { id: "multiple_choice", label: { it: "Scelta multipla", fr: "Choix multiple", en: "Multiple choice" }, sub: { it: "Multiple choice", fr: "Multiple choice", en: "" } },
-  { id: "true_false", label: { it: "Vero o falso", fr: "Vrai ou faux", en: "True / False" }, sub: { it: "True / False", fr: "True / False", en: "" } },
-  { id: "short_answer", label: { it: "Risposta breve", fr: "Réponse courte", en: "Short answer" }, sub: { it: "Short answer", fr: "Short answer", en: "" } },
-  { id: "fill_blank", label: { it: "Riempi gli spazi", fr: "Texte à trous", en: "Fill in the blank" }, sub: { it: "Fill in the blank", fr: "Fill in the blank", en: "" } },
+  { id: "multiple_choice", label: { it: "Scelta multipla", fr: "Choix multiple", en: "Multiple choice", es: "Opción múltiple" }, sub: { it: "Multiple choice", fr: "Multiple choice", en: "", es: "" } },
+  { id: "true_false", label: { it: "Vero o falso", fr: "Vrai ou faux", en: "True / False", es: "Cierto / Falso" }, sub: { it: "True / False", fr: "True / False", en: "", es: "" } },
+  { id: "short_answer", label: { it: "Risposta breve", fr: "Réponse courte", en: "Short answer", es: "Respuesta corta" }, sub: { it: "Short answer", fr: "Short answer", en: "", es: "" } },
+  { id: "fill_blank", label: { it: "Riempi gli spazi", fr: "Texte à trous", en: "Fill in the blank", es: "Completar espacios" }, sub: { it: "Fill in the blank", fr: "Fill in the blank", en: "", es: "" } },
 ];
 
 const COUNTS = [3, 5, 8, 10];
 
 const DIFFICULTIES = [
-  { id: "easier", label: { it: "Più facile", fr: "Plus facile", en: "Easier" }, sub: { it: "Easier", fr: "Easier", en: "literal recall" }, description: "literal recall, direct retrieval from text" },
-  { id: "standard", label: { it: "Standard", fr: "Standard", en: "Standard" }, sub: { it: "At-level", fr: "At-level", en: "at level" }, description: "matches the reading's complexity" },
-  { id: "harder", label: { it: "Più difficile", fr: "Plus difficile", en: "Harder" }, sub: { it: "Harder", fr: "Harder", en: "inference" }, description: "inference, analysis, between-the-lines thinking" },
+  { id: "easier", label: { it: "Più facile", fr: "Plus facile", en: "Easier", es: "Más fácil" }, sub: { it: "Easier", fr: "Easier", en: "literal recall", es: "recuerdo literal" }, description: "literal recall, direct retrieval from text" },
+  { id: "standard", label: { it: "Standard", fr: "Standard", en: "Standard", es: "Estándar" }, sub: { it: "At-level", fr: "At-level", en: "at level", es: "al nivel" }, description: "matches the reading's complexity" },
+  { id: "harder", label: { it: "Più difficile", fr: "Plus difficile", en: "Harder", es: "Más difícil" }, sub: { it: "Harder", fr: "Harder", en: "inference", es: "inferencia" }, description: "inference, analysis, between-the-lines thinking" },
 ];
 
 // ===== SCRIVI (generation mode): genres Livella can write from scratch =====
 // Conventions are written for the model in English and apply to every language;
 // examples are described, not quoted, so no language's phrasing leaks into another's prompt.
 const GENRES = [
-  { id: "postcard", label: { it: "Cartolina", fr: "Carte postale", en: "Postcard" }, sub: { it: "Postcard", fr: "Postcard", en: "50–90 words" }, promptName: "Postcard",
+  { id: "postcard", label: { it: "Cartolina", fr: "Carte postale", en: "Postcard", es: "Postal" }, sub: { it: "Postcard", fr: "Postcard", en: "50–90 words", es: "50–90 palabras" }, promptName: "Postcard",
     conventions: "A postcard: a greeting line, 3-6 sentences about where the writer is and what they are doing, a closing and a signature. 50-90 words at the middle rung; the genre's length wins over the purpose length. Informal register. Lowest rung: fixed, high-frequency chunks (greeting, 'I am in...', weather, one food, one activity). Highest rung: vivid detail, varied connectors, a touch of humour." },
-  { id: "letter", label: { it: "Lettera / Email", fr: "Lettre / Courriel", en: "Letter / Email" }, sub: { it: "Letter / Email", fr: "Letter / Email", en: "formal or informal" }, promptName: "Letter or email",
+  { id: "letter", label: { it: "Lettera / Email", fr: "Lettre / Courriel", en: "Letter / Email", es: "Carta / Correo" }, sub: { it: "Letter / Email", fr: "Letter / Email", en: "formal or informal", es: "formal o informal" }, promptName: "Letter or email",
     conventions: "A letter or email with an opening, body and closing. The register (formal or informal) must fit the addressee named in the topic; if none is named, write to a friend. Lower rungs: informal and short. Highest rung: may be formal (a request, a complaint, an application) using the language's real conventions of formal correspondence." },
-  { id: "story", label: { it: "Racconto", fr: "Récit", en: "Story" }, sub: { it: "Short story", fr: "Short story", en: "narrative" }, promptName: "Short story",
+  { id: "story", label: { it: "Racconto", fr: "Récit", en: "Story", es: "Cuento" }, sub: { it: "Short story", fr: "Short story", en: "narrative", es: "narración" }, promptName: "Short story",
     conventions: "A short narrative with a beginning, a complication and an ending. Named characters and a concrete setting in the target culture. Where the rung's calibration forbids past tenses, narrate in the present. Higher rungs: past narration and dialogue as the calibration allows." },
-  { id: "article", label: { it: "Articolo informativo", fr: "Article informatif", en: "Informational article" }, sub: { it: "Informational", fr: "Informational", en: "facts · explanation" }, promptName: "Informational article",
+  { id: "article", label: { it: "Articolo informativo", fr: "Article informatif", en: "Informational article", es: "Artículo informativo" }, sub: { it: "Informational", fr: "Informational", en: "facts · explanation", es: "datos · explicación" }, promptName: "Informational article",
     conventions: "An informational text that explains the topic or presents the facts given in the TOPIC: a headline-style title, a short opening that states the subject, then 2-4 short paragraphs that each develop one aspect. Neutral register. If the TOPIC contains notes or facts, use them and never contradict them; do not invent statistics, dates or quotations. Lower rungs: simple declarative sentences, one fact each. Higher rungs: connectors of cause and contrast and precise vocabulary. Paragraphs separated by a blank line." },
-  { id: "dialogue", label: { it: "Dialogo", fr: "Dialogue", en: "Dialogue" }, sub: { it: "Dialogue", fr: "Dialogue", en: "two speakers" }, promptName: "Dialogue",
+  { id: "dialogue", label: { it: "Dialogo", fr: "Dialogue", en: "Dialogue", es: "Diálogo" }, sub: { it: "Dialogue", fr: "Dialogue", en: "two speakers", es: "dos hablantes" }, promptName: "Dialogue",
     conventions: "A conversation between two named speakers. Each turn on its own line, prefixed with the speaker's name and a colon. 8-16 turns at the middle rung. Natural spoken language with the fillers and reactions typical of the culture. Performable by two students. Separate turns with newline characters inside the JSON string." },
-  { id: "essay", label: { it: "Saggio", fr: "Essai", en: "Essay" }, sub: { it: "Essay", fr: "Essay", en: "opinion / argument" }, promptName: "Essay",
+  { id: "essay", label: { it: "Saggio", fr: "Essai", en: "Essay", es: "Ensayo" }, sub: { it: "Essay", fr: "Essay", en: "opinion / argument", es: "opinión / argumento" }, promptName: "Essay",
     conventions: "An opinion or argumentative text with a thesis, reasons and a conclusion. At the two lowest rungs the 'essay' is one short opinion paragraph of 4-7 simple sentences ('I like X because...', 'In my opinion...' in the target language). Middle rung: three short paragraphs. Highest rungs: full structure with connectors of argument and, where the calibration allows, the moods the language uses after opinion verbs." },
-  { id: "rhyme", label: { it: "Filastrocca", fr: "Comptine", en: "Rhyme" }, sub: { it: "Rhyme / chant", fr: "Rhyme / chant", en: "8–12 lines" }, promptName: "Rhyme or chant",
+  { id: "rhyme", label: { it: "Filastrocca", fr: "Comptine", en: "Rhyme", es: "Rima" }, sub: { it: "Rhyme / chant", fr: "Rhyme / chant", en: "8–12 lines", es: "8–12 versos" }, promptName: "Rhyme or chant",
     conventions: "A short rhyming chant of 8-12 lines with a regular rhythm, built on repetition so a class can recite it. Lower rungs: every line is a complete simple sentence. Higher rungs: internal rhyme, richer vocabulary, a playful twist in the last couplet. One line per newline; stanzas separated by a blank line, inside the JSON string." },
-  { id: "song", label: { it: "Canzone", fr: "Chanson", en: "Song" }, sub: { it: "Song lyrics", fr: "Song lyrics", en: "verses + refrain" }, promptName: "Song lyrics",
+  { id: "song", label: { it: "Canzone", fr: "Chanson", en: "Song", es: "Canción" }, sub: { it: "Song lyrics", fr: "Song lyrics", en: "verses + refrain", es: "estrofas + estribillo" }, promptName: "Song lyrics",
     conventions: "Original song lyrics: two or three verses and a repeated refrain, each section labelled in the target language (Verse 1 / Refrain equivalents). Rhyme and a singable, regular line length. This is a DRAFT the class will improve and perform, so keep the structure plain and the refrain very memorable. Never reproduce, adapt or imitate an existing song. One line per newline; sections separated by a blank line, inside the JSON string." },
-  { id: "description", label: { it: "Descrizione", fr: "Description", en: "Description" }, sub: { it: "Description", fr: "Description", en: "person · place · object" }, promptName: "Description",
+  { id: "description", label: { it: "Descrizione", fr: "Description", en: "Description", es: "Descripción" }, sub: { it: "Description", fr: "Description", en: "person · place · object", es: "persona · lugar · objeto" }, promptName: "Description",
     conventions: "A descriptive text about a person, place, object or scene from the topic, organised spatially or by category. Lower rungs: simple sentences, one adjective each. Higher rungs: comparisons, sensory detail, figurative language where the calibration allows." },
 ];
 
@@ -304,16 +349,16 @@ const GENRES = [
 // autism-informed literal-language practice (neuro). "support" is the bundle of common
 // IEP/504 reading accommodations and is labelled reading support, never "IEP-compliant".
 const PROFILES = [
-  { id: "dyslexia", label: { it: "Dislessia", fr: "Dyslexie", en: "Dyslexia" }, sub: { it: "frasi brevi · Lexend", fr: "phrases courtes · Lexend", en: "short sentences · Lexend" },
+  { id: "dyslexia", label: { it: "Dislessia", fr: "Dyslexie", en: "Dyslexia", es: "Dislexia" }, sub: { it: "frasi brevi · Lexend", fr: "phrases courtes · Lexend", en: "short sentences · Lexend", es: "frases cortas · Lexend" },
     writing: "DYSLEXIA (BDA Dyslexia Friendly Style Guide): sentences of 8-12 words, one idea each; paragraphs of 2-3 sentences separated by a blank line; high-frequency words; no idioms or figurative language; never three polysyllabic words in a row; the glossed words are the hardest words in the text and appear in it exactly as glossed.",
     tasks: "DYSLEXIA: multiple choice over open answer; every open item carries an answer stem; nothing timed; instructions in one short sentence." },
-  { id: "adhd", label: { it: "ADHD", fr: "TDAH", en: "ADHD" }, sub: { it: "4 blocchi + mini-compiti", fr: "4 blocs + mini-tâches", en: "4 chunks + micro-tasks" },
+  { id: "adhd", label: { it: "ADHD", fr: "TDAH", en: "ADHD", es: "TDAH" }, sub: { it: "4 blocchi + mini-compiti", fr: "4 blocs + mini-tâches", en: "4 chunks + micro-tasks", es: "4 bloques + mini-tareas" },
     writing: "ADHD (CAST UDL, minimise distraction / mastery feedback): the text is EXACTLY 4 chunks separated by a blank line; each chunk is 2-3 sentences and a complete thought on its own; the whole text finishable in under 8 minutes. ALSO return \"micro_tasks\": an array of exactly 4 strings, one per chunk, in the target language at the level, each doable in under 30 seconds (true/false, circle a word, say one sentence to a partner).",
     tasks: "ADHD: build in choice ('pick 2 of these 3'); 3 comprehension items instead of 5; one movement option in production (stand up and ask three classmates)." },
-  { id: "neuro", label: { it: "Neurodivergente", fr: "Neurodivergent·e", en: "Neurodivergent" }, sub: { it: "linguaggio letterale", fr: "langage littéral", en: "literal language" },
+  { id: "neuro", label: { it: "Neurodivergente", fr: "Neurodivergent·e", en: "Neurodivergent", es: "Neurodivergente" }, sub: { it: "linguaggio letterale", fr: "langage littéral", en: "literal language", es: "lenguaje literal" },
     writing: "NEURODIVERGENT (autism-informed): fully literal language — no idioms, sarcasm, irony, metaphor or rhetorical questions; say exactly what is meant; predictable structure with explicit signposting (first, then, finally); the same name for the same person or thing every time, never a synonym; concrete, specific details; no sudden tone shifts or surprises; a clear final sentence that closes the text.",
     tasks: "NEURODIVERGENT: explicit, literal instructions; one question type at a time; no 'how would you feel' without answer choices; no trick options or double negatives; give a worked example before the first item." },
-  { id: "support", label: { it: "Supporto alla lettura", fr: "Soutien à la lecture", en: "Reading support" }, sub: { it: "IEP / 504", fr: "PEI / 504", en: "IEP / 504" },
+  { id: "support", label: { it: "Supporto alla lettura", fr: "Soutien à la lecture", en: "Reading support", es: "Apoyo a la lectura" }, sub: { it: "IEP / 504", fr: "PEI / 504", en: "IEP / 504", es: "IEP / 504" },
     writing: "READING SUPPORT (common IEP/504 reading accommodations; label it reading support, never 'IEP-compliant'): text 40% shorter than the purpose length; one paragraph = one event, paragraphs separated by a blank line; explicit sequence words (first, then, finally in the target language). ALSO return \"word_bank\": the 5 glosses plus 5 more useful words from the text (10 total) as [{\"word\",\"translation\"}].",
     tasks: "READING SUPPORT: a sentence frame for every production item; every question carries an answer stem; matching over fill-in-the-blank; reduced set: 3 comprehension, 2 vocabulary." },
 ];
@@ -328,6 +373,31 @@ function profileTaskBlock(ids) {
   const ps = PROFILES.filter((p) => ids.includes(p.id));
   if (!ps.length) return "";
   return `\n\nLEARNER PROFILE TASK RULES (obey exactly):\n${ps.map((p) => "- " + p.tasks).join("\n")}\n${PROFILE_STACK}`;
+}
+
+// ===== LEARNERS (age band) =====
+// Proficiency (the level) and age are separate: a Novice Mid reader can be 7 or 19.
+// The band changes topics, length, tone and task types. The level's language rules stay the ceiling.
+// "high" adds no rules: it is the behaviour the tool has always had.
+const AGE_BANDS = [
+  { id: "elem", label: { it: "Elementari", fr: "Élémentaire", en: "Elementary", es: "Primaria" }, sub: { it: "classi 1–5", fr: "1re–5e année", en: "grades 1–5", es: "grados 1–5" },
+    writing: "ELEMENTARY SCHOOL (about ages 6-10). Topics from a child's world: family, pets and animals, food, the school day, games, seasons, celebrations. Very short: at most half the purpose length. Sentences of 4-8 words. Deliberate repetition of the key words and of one sentence pattern. Concrete nouns and actions a child can picture or act out; no abstractions, no irony. A named child or animal as the main character. Gloss words a child could draw.",
+    tasks: "ELEMENTARY: only tasks a 6-10 year old can do: circle, match, draw and label, point and say, act it out, yes/no. No written paragraphs. Instructions of at most 8 words. 3 items per set." },
+  { id: "middle", label: { it: "Medie", fr: "Collège", en: "Middle school", es: "Escuela media" }, sub: { it: "classi 6–8", fr: "6e–8e année", en: "grades 6–8", es: "grados 6–8" },
+    writing: "MIDDLE SCHOOL (about ages 11-13). Topics from early-teen life: friends, sports, music, phones and games, school life, food, weekend plans; a touch of humour is welcome. Short: toward the low end of the purpose length. One idea per paragraph, paragraphs of 2-3 sentences. A relatable character of the same age. Nothing childish, nothing preachy.",
+    tasks: "MIDDLE SCHOOL: quick tasks of under a minute each; a choice in at least one ('pick 2 of 3'); one partner-talk item; concrete over abstract." },
+  { id: "high", label: { it: "Superiori", fr: "Lycée", en: "High school", es: "Escuela secundaria" }, sub: { it: "classi 9–12", fr: "9e–12e année", en: "grades 9–12", es: "grados 9–12" }, writing: "", tasks: "" },
+  { id: "college", label: { it: "Università / Adulti", fr: "Université / Adultes", en: "College / Adult", es: "Universidad / Adultos" }, sub: { it: "adulti", fr: "adultes", en: "adults", es: "adultos" },
+    writing: "COLLEGE / ADULT LEARNERS. Keep the language at the level, but never childish. Adult topics and settings: work, study abroad, travel logistics, housing, news, society, culture. Adult characters. At the same level the text may sit at the upper end of the purpose length and carry more information per sentence. No cartoonish names and no school-day framing.",
+    tasks: "COLLEGE / ADULT: open questions, an opinion with a reason, a comparison with the learner's own experience, one analysis item. No drawing or acting tasks." },
+];
+function ageBlock(id) {
+  const a = AGE_BANDS.find((x) => x.id === id);
+  return a && a.writing ? `\n\nLEARNER AGE RULES (obey; the level's language rules remain the ceiling):\n- ${a.writing}` : "";
+}
+function ageTaskBlock(id) {
+  const a = AGE_BANDS.find((x) => x.id === id);
+  return a && a.tasks ? `\n\nLEARNER AGE TASK RULES (obey):\n- ${a.tasks}` : "";
 }
 
 function genreBlock(genre, topic) {
@@ -371,6 +441,7 @@ PURPOSE CALIBRATION:
 - Verifica (assessment): 140-200 words, includes inference
 
 LEARNER PROFILES: If the request contains LEARNER PROFILE RULES, obey them exactly. They never change the level. Report what you applied in "accommodations".
+LEARNER AGE: If the request contains LEARNER AGE RULES, obey them. They choose topics, length and tone; the level's language rules remain the ceiling.
 
 ${translationRule(L)}
 
@@ -412,6 +483,7 @@ ALIGNMENT RULES — these matter more than anything else:
 6. Length follows the reading purpose for the MIDDLE rung; lower rungs are shorter, higher rungs longer, by at most 30%.
 7. CULTURAL AUTHENTICITY: content reflects ${L.culture}. No tourist-board stereotypes.${genreRules}
 LEARNER PROFILES: If the request contains LEARNER PROFILE RULES, they apply at EVERY rung and never change a rung's calibration. If an ADHD rule is present, P = 4. Do not return micro_tasks or word_bank for the ladder.
+LEARNER AGE: If the request contains LEARNER AGE RULES, they apply at EVERY rung (topics, length, tone) and never change a rung's calibration.
 
 OUTPUT FORMAT (respond with ONLY a JSON object, no other text, no markdown fences):
 {
@@ -435,7 +507,7 @@ function buildActivitiesPrompt(L) {
 Activity type: {ACTIVITY_TYPE}
 
 PRINCIPLES:
-- If the request contains LEARNER PROFILE TASK RULES, obey them exactly (they override the counts below)
+- If the request contains LEARNER PROFILE TASK RULES or LEARNER AGE TASK RULES, obey them exactly (they override the counts below)
 - ${L.langEn} in questions never harder than the passage
 - Vary formats
 - Include inference
@@ -470,7 +542,7 @@ function buildCustomPrompt(L) {
   return `You are Livella, building focused exercises for a ${L.langEn} reading passage.
 
 RULES:
-- If the request contains LEARNER PROFILE TASK RULES, obey them exactly
+- If the request contains LEARNER PROFILE TASK RULES or LEARNER AGE TASK RULES, obey them exactly
 - All ${L.langEn} at or below passage level
 - Difficulty = cognitive task, NOT linguistic level
 - Items grounded in the passage
@@ -510,6 +582,7 @@ export default function Livella() {
   const [genre, setGenre] = useState("postcard");
   const [topic, setTopic] = useState("");
   const [profiles, setProfiles] = useState([]);   // ids from PROFILES; [] = Standard
+  const [ageBand, setAgeBand] = useState("high");  // id from AGE_BANDS
   // Front-page fan: which level is in front, Standard or ADHD view, opened yet, still auto-advancing.
   const [heroIdx, setHeroIdx] = useState(1);
   const [heroAdhd, setHeroAdhd] = useState(false);
@@ -590,8 +663,8 @@ export default function Livella() {
   const L = LANGUAGES[lang];
   // Interface language. Teachers plan in English, so English is the default on the Italian side;
   // the French side keeps French (as asked earlier). The teacher can switch, and the choice is remembered.
-  const UI_CHOICES = { it: ["en", "it"], fr: ["fr", "en"], es: ["en"], esl: ["en"] };
-  const UI_NAMES = { en: "English", it: "Italiano", fr: "Français" };
+  const UI_CHOICES = { it: ["en", "it", "fr", "es"], fr: ["fr", "en", "it", "es"], es: ["en", "es", "it", "fr"], esl: ["en", "es", "it", "fr"] };
+  const UI_NAMES = { en: "English", it: "Italiano", fr: "Français", es: "Español" };
   const uiOptions = UI_CHOICES[lang] || ["en"];
   const UIL = uiOptions.includes(uiPref[lang]) ? uiPref[lang] : uiOptions[0];
   function chooseUi(code) {
@@ -614,6 +687,11 @@ export default function Livella() {
     const names = PROFILES.filter((p) => ids.includes(p.id)).map((p) => p.label[UIL]);
     return names.length ? ` · ${names.join(" + ")}` : "";
   }
+  function ageMeta(obj) {
+    const a = obj && obj.age && obj.age !== "high" && AGE_BANDS.find((x) => x.id === obj.age);
+    return a ? ` · ${a.label[UIL]}` : "";
+  }
+  const ageClass = (obj) => (obj && obj.age === "elem" ? "age-elem" : "");
   const hasP = (obj, id) => !!(obj && obj.profiles && obj.profiles.includes(id));
 
   // Switching language swaps the whole ladder, so anything generated for the old
@@ -727,7 +805,7 @@ export default function Livella() {
   // What the request is about: a source to re-level, or a genre + topic to write from.
   function subjectBlock() {
     const subject = writing ? genreBlock(selectedGenre, topic.trim()) : `${sourceBlock()}\n\nINPUT:\n${input || "(see attached image)"}`;
-    return subject + profileWritingBlock(profiles);
+    return subject + profileWritingBlock(profiles) + ageBlock(ageBand);
   }
   function attachment() { return writing ? null : imageFile; }
   function hasSubject() {
@@ -757,7 +835,7 @@ export default function Livella() {
     setCustomExercises([]);
     try {
       const parsed = await callClaude(buildPassagePrompt(L, mode), buildPassageMessage(modifier), attachment());
-      setResult({ ...parsed, genre: writing ? selectedGenre.id : null, profiles: profiles.slice() });
+      setResult({ ...parsed, genre: writing ? selectedGenre.id : null, profiles: profiles.slice(), age: ageBand });
     } catch (err) {
       console.error(err);
       setError(describeError(err, T.errGeneric));
@@ -784,10 +862,10 @@ export default function Livella() {
     setLoadingComparison(true); setCmpBusy("p:" + pid); setError(null);
     try {
       const ids = pid ? [pid] : [];
-      const msg = `LEVEL: ${selectedLevel.label} (${selectedLevel.sub})\nLEVEL NOTES: ${selectedLevel.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\n\nTASK: Rewrite the INPUT below at the SAME level. Keep the same title, events, facts and order. ${pid ? "Apply the learner profile rules that follow." : "Write it with no learner-profile adaptations."}${profileWritingBlock(ids)}\n\nINPUT:\n${result.title}\n\n${result.passage}`;
+      const msg = `LEVEL: ${selectedLevel.label} (${selectedLevel.sub})\nLEVEL NOTES: ${selectedLevel.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\n\nTASK: Rewrite the INPUT below at the SAME level. Keep the same title, events, facts and order. ${pid ? "Apply the learner profile rules that follow." : "Write it with no learner-profile adaptations."}${profileWritingBlock(ids)}${ageBlock(result.age)}\n\nINPUT:\n${result.title}\n\n${result.passage}`;
       const parsed = await callClaude(buildPassagePrompt(L, "text"), msg, null);
       const p = PROFILES.find((x) => x.id === pid);
-      setComparison({ ...parsed, profiles: ids }); setComparisonLevel(null);
+      setComparison({ ...parsed, profiles: ids, age: result.age }); setComparisonLevel(null);
       setCmpInfo({ kind: "profile", key: pid, title: `${selectedLevel.label} · ${p ? p.label[UIL] : T.standard}` });
     } catch (err) {
       console.error(err);
@@ -801,7 +879,7 @@ export default function Livella() {
     const lv2 = L2.levels[levelIndex(level)] || L2.levels[0];
     setLoadingComparison(true); setCmpBusy("l:" + otherId); setError(null);
     try {
-      const msg = `LEVEL: ${lv2.label} (${lv2.sub})\nLEVEL NOTES: ${lv2.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\n\nTASK: The INPUT below is a ${L.langEn} classroom reading. Write the SAME lesson in ${L2.langEn} at the level above, for a colleague who teaches ${L2.langEn}: same events, same facts, same order and paragraphing. Do not translate word for word; write it the way a ${L2.langEn} teacher would for this level. Where a name, place or cultural detail would not make sense for a ${L2.langEn} class, replace it with an equivalent from ${L2.culture}; otherwise keep it.\n\nINPUT:\n${result.title}\n\n${result.passage}`;
+      const msg = `LEVEL: ${lv2.label} (${lv2.sub})\nLEVEL NOTES: ${lv2.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\n\nTASK: The INPUT below is a ${L.langEn} classroom reading. Write the SAME lesson in ${L2.langEn} at the level above, for a colleague who teaches ${L2.langEn}: same events, same facts, same order and paragraphing. Do not translate word for word; write it the way a ${L2.langEn} teacher would for this level. Where a name, place or cultural detail would not make sense for a ${L2.langEn} class, replace it with an equivalent from ${L2.culture}; otherwise keep it.${ageBlock(result.age)}\n\nINPUT:\n${result.title}\n\n${result.passage}`;
       const parsed = await callClaude(buildPassagePrompt(L2, "text"), msg, null);
       setComparison({ ...parsed, profiles: [] }); setComparisonLevel(null);
       setCmpInfo({ kind: "lang", key: otherId, lang: otherId, title: `${L2.name} · ${lv2.label} · ${lv2.sub}` });
@@ -826,7 +904,7 @@ export default function Livella() {
       const P = Math.max(1, Math.min(...rungs.map((r) => (r.paragraphs || []).length)));
       if (!isFinite(P) || rungs.some((r) => !r.paragraphs || r.paragraphs.length === 0)) throw { code: "invalid_json", message: "rungs incomplete" };
       rungs.forEach((r) => { r.paragraphs = r.paragraphs.slice(0, P); });
-      setScala({ title: parsed.title, rungs, teacher_note: parsed.teacher_note, genre: writing ? selectedGenre.id : null, profiles: profiles.slice() });
+      setScala({ title: parsed.title, rungs, teacher_note: parsed.teacher_note, genre: writing ? selectedGenre.id : null, profiles: profiles.slice(), age: ageBand });
       setScalaIdx(Array.from({ length: P }, () => levelIndex(level)));
       setBumped(null);
     } catch (err) {
@@ -853,7 +931,7 @@ export default function Livella() {
     if (activities[type]) { setActiveTab(type); return; }
     setLoadingActivity(type); setError(null);
     try {
-      const userMessage = `LEVEL: ${selectedLevel.label} (${selectedLevel.sub})\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nACTIVITY_TYPE: ${type}${profileTaskBlock(result.profiles || [])}\n\nPASSAGE:\n${result.passage}`;
+      const userMessage = `LEVEL: ${selectedLevel.label} (${selectedLevel.sub})\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nACTIVITY_TYPE: ${type}${profileTaskBlock(result.profiles || [])}${ageTaskBlock(result.age)}\n\nPASSAGE:\n${result.passage}`;
       const parsed = await callClaude(buildActivitiesPrompt(L).replace("{ACTIVITY_TYPE}", type), userMessage);
       setActivities({ ...activities, [type]: parsed });
       setActiveTab(type);
@@ -880,7 +958,7 @@ DIFFICULTY NOTES: ${diffObj.description}
 PASSAGE:
 ${result.passage}
 
-Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty} difficulty.${profileTaskBlock(result.profiles || [])}`;
+Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty} difficulty.${profileTaskBlock(result.profiles || [])}${ageTaskBlock(result.age)}`;
       const parsed = await callClaude(buildCustomPrompt(L), userMessage);
       parsed._typeLabel = typeObj.label[UIL];
       parsed._difficultyLabel = diffObj.label[UIL];
@@ -931,7 +1009,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
       doc.text(`${T.klass}: ______________________________`, M, y); y += 14;
     }
     rule();
-    const meta = `${selectedLevel.label} · ${selectedLevel.sub} · ${selectedPurpose.label[UIL]}` + genreMeta(result) + profileMeta(result) + (sourceUrl.trim() && !(result && result.genre) ? ` · ${T.source}: ${sourceUrl.trim()}` : "");
+    const meta = `${selectedLevel.label} · ${selectedLevel.sub} · ${selectedPurpose.label[UIL]}` + genreMeta(result) + profileMeta(result) + ageMeta(result) + (sourceUrl.trim() && !(result && result.genre) ? ` · ${T.source}: ${sourceUrl.trim()}` : "");
     const dys = hasP(result, "dyslexia") || hasP(scala, "dyslexia");
     const bodySize = dys ? 13 : 12, bodyGap = dys ? 1.85 : 1.6;
     if (result) {
@@ -1156,10 +1234,10 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
   }
 
   const ACTIVITY_TABS = [
-    { id: "comprensione", label: { it: "Comprensione", fr: "Compréhension", en: "Comprehension" }, sub: { it: "Comprehension", fr: "Comprehension", en: "questions" }, icon: "?" },
-    { id: "vocabolario", label: { it: "Vocabolario", fr: "Vocabulaire", en: "Vocabulary" }, sub: { it: "Vocabulary", fr: "Vocabulary", en: "words" }, icon: "Aa" },
-    { id: "produzione", label: { it: "Produzione", fr: "Production", en: "Production" }, sub: { it: "Output", fr: "Output", en: "speak & write" }, icon: "✎" },
-    { id: "cultura", label: { it: "Cultura", fr: "Culture", en: "Culture" }, sub: { it: "Culture", fr: "Culture", en: "compare" }, icon: "★" },
+    { id: "comprensione", label: { it: "Comprensione", fr: "Compréhension", en: "Comprehension", es: "Comprensión" }, sub: { it: "Comprehension", fr: "Comprehension", en: "questions", es: "preguntas" }, icon: "?" },
+    { id: "vocabolario", label: { it: "Vocabolario", fr: "Vocabulaire", en: "Vocabulary", es: "Vocabulario" }, sub: { it: "Vocabulary", fr: "Vocabulary", en: "words", es: "palabras" }, icon: "Aa" },
+    { id: "produzione", label: { it: "Produzione", fr: "Production", en: "Production", es: "Producción" }, sub: { it: "Output", fr: "Output", en: "speak & write", es: "hablar y escribir" }, icon: "✎" },
+    { id: "cultura", label: { it: "Cultura", fr: "Culture", en: "Culture", es: "Cultura" }, sub: { it: "Culture", fr: "Culture", en: "compare", es: "comparar" }, icon: "★" },
   ];
 
   function renderItem(item, i) {
@@ -1414,7 +1492,9 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         .livella-accommodations-label { list-style: none; margin-left: -18px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 10px; color: var(--copper); margin-bottom: 4px; }
         @media print { .livella-accommodations { display: none; } }
 
-        .livella-ui-choice { display: flex; align-items: center; justify-content: center; gap: 6px; margin: -4px 0 14px; font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray-500); }
+        /* Elementary readers: larger type, more air */
+        .age-elem .livella-passage, .age-elem .livella-para-text, .age-elem .livella-scala-text { font-size: 24px; line-height: 1.75; }
+        .livella-ui-choice { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; margin: -4px 0 14px; font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray-500); }
         .livella-ui-choice span { letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; font-size: 10.5px; margin-right: 4px; }
         .livella-ui-choice button { border: 1px solid var(--gray-200); background: white; color: var(--teal-dark); border-radius: 999px; padding: 4px 12px; font: 600 12px 'Inter', sans-serif; cursor: pointer; }
         .livella-ui-choice button.active { background: var(--teal-dark); color: white; border-color: var(--teal-dark); }
@@ -2226,7 +2306,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                 {LEVELS.map((l, i) => (
                   <button key={l.id} type="button" role="tab" aria-selected={heroIdx === i} aria-label={l.label}
                     className="livella-fan-tab" onClick={() => pickHero(i)}>
-                    {/^AP/.test(l.label) ? "AP" : i + 1}
+                    {LEVEL_SHORT[l.label] || i + 1}
                   </button>
                 ))}
               </div>
@@ -2357,6 +2437,21 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           </div>
 
           <div style={{ marginTop: 22 }}>
+            <label className="livella-label">{T.learnersLabel}</label>
+            <div className="livella-options-grid">
+              {AGE_BANDS.map((a) => (
+                <button key={a.id} type="button"
+                  className={`livella-option-btn ${ageBand === a.id ? "active" : ""}`}
+                  onClick={() => setAgeBand(a.id)} aria-pressed={ageBand === a.id}>
+                  <span className="livella-option-name">{a.label[UIL]}</span>
+                  <span className="livella-option-sub">{a.sub[UIL]}</span>
+                </button>
+              ))}
+            </div>
+            <span className="livella-link-hint" style={{ display: "block", marginTop: 8 }}>{T.learnersHint}</span>
+          </div>
+
+          <div style={{ marginTop: 22 }}>
             <label className="livella-label">{T.profileLabel}</label>
             <div className="livella-options-grid profiles">
               <button className={`livella-option-btn ${profiles.length === 0 ? "active" : ""}`} onClick={() => setProfiles([])} aria-pressed={profiles.length === 0}>
@@ -2401,12 +2496,12 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         )}
 
         {!loadingScala && scala && (
-          <div className={`livella-card livella-scala-card ${profileClass(scala)}`}>
+          <div className={`livella-card livella-scala-card ${profileClass(scala)} ${ageClass(scala)}`}>
             <div className="livella-result-header">
               <div>
                 <div className="livella-scala-eyebrow">{T.scalaTitle}</div>
                 <h2 className="livella-result-title">{scala.title}</h2>
-                <div className="livella-result-meta">{L.name}{genreMeta(scala)}{profileMeta(scala)} · {scala.rungs[0].paragraphs.length} {T.scalaCount} · {LEVELS[0].label} → {LEVELS[LEVELS.length - 1].label}</div>
+                <div className="livella-result-meta">{L.name}{genreMeta(scala)}{profileMeta(scala)}{ageMeta(scala)} · {scala.rungs[0].paragraphs.length} {T.scalaCount} · {LEVELS[0].label} → {LEVELS[LEVELS.length - 1].label}</div>
               </div>
               <div className="livella-scala-all">
                 <button className="livella-scala-mini" onClick={() => moveAll(-1)} title={T.allDown}>↓ {T.allDown}</button>
@@ -2470,7 +2565,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
 
         {!loading && result && (
           <>
-            <div className={`livella-card ${profileClass(result)}`}>
+            <div className={`livella-card ${profileClass(result)} ${ageClass(result)}`}>
               <div className="livella-print-header">
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8pt" }}>
                   <span>{T.name}: ______________________________</span>
@@ -2482,7 +2577,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                 <div>
                   <h2 className="livella-result-title">{result.title}</h2>
                   <div className="livella-result-meta">
-                    {selectedLevel.label} · {selectedLevel.sub} · {selectedPurpose.label[UIL]}{genreMeta(result)}{profileMeta(result)}
+                    {selectedLevel.label} · {selectedLevel.sub} · {selectedPurpose.label[UIL]}{genreMeta(result)}{profileMeta(result)}{ageMeta(result)}
                     {sourceUrl.trim() && !result.genre && <> · {T.source}: <a className="livella-source-link" href={sourceUrl.trim()} target="_blank" rel="noopener noreferrer">{sourceUrl.trim()}</a></>}
                   </div>
                 </div>
@@ -2759,7 +2854,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           </div>
         )}
 
-        <div className="livella-footer">uno strumento, un lavoro · v0.13 · © 2026 Assunta Scotto. {T.rights}</div>
+        <div className="livella-footer">uno strumento, un lavoro · v0.14 · © 2026 Assunta Scotto. {T.rights}</div>
       </div>
     </div>
   );
