@@ -167,6 +167,7 @@ const UI = {
     learnersLabel: "Studenti", learnersHint: "Il livello indica la competenza. Qui scegli l'età: cambiano temi, lunghezza e compiti.",
     shareBtn: "Condividi con un collega", shareTitle: "Lezione condivisa", shareName: "Il tuo nome", shareNamePh: "Così il collega sa chi ha scritto cosa", shareSave: "Crea il link", shareLink: "Link", copyLink: "Copia link", copiedLink: "Link copiato ✓", refresh: "Aggiorna", shareHint: "Chi ha il link può vedere questa lezione. Per modificarla serve il codice insegnante. Le lezioni condivise vengono cancellate dopo 90 giorni.", sharedBy: "Iniziata da {x}.", versions: "Versioni", addLang: "Aggiungi {x}", adding: "Sto scrivendo...", edit: "Modifica", save: "Salva", cancel: "Annulla", editedBy: "Ultimo salvataggio: {x}", notes: "Note", noNotes: "Nessuna nota.", notePh: "Lascia una nota al collega", addNote: "Aggiungi nota", pdfAll: "PDF: tutte le versioni", errShare: "Non riesco a salvare la lezione condivisa.", errLoad: "Non riesco ad aprire questa lezione condivisa. Il link potrebbe essere scaduto.", saving: "Salvo...", loadingShared: "Apro la lezione condivisa...",
     tagline: "il testo giusto, al livello giusto", forAll: "per tutti",
+    inviteBtn: "Condividi Livella", inviteCopied: "Messaggio e link copiati ✓", inviteText: "Imparare una lingua è diverso per ogni studente. Livella prende una lettura e la riscrive al livello di ogni studente, così tutta la classe legge la stessa storia. E il bello: la mandi a un collega, che può aggiungerla nella sua lingua o adattarla alla sua classe.",
     modeText: "Da un testo", modeWrite: "Scrivi da zero", genreLabel: "Genere", topicLabel: "Tema",
     topicPlaceholder: "Es. una gita a Napoli con la classe · la mia famiglia · il mercato del sabato", writeHint: "Livella scrive un testo originale al livello scelto. Scrivi un tema, oppure incolla appunti o fatti; anche in inglese.",
     errTopic: "Scrivi un tema.", write: "Scrivi", writing: "Sto scrivendo...",
@@ -210,6 +211,7 @@ const UI = {
     learnersLabel: "Apprenants", learnersHint: "Le niveau indique la compétence. Ici, choisissez l'âge : thèmes, longueur et tâches changent.",
     shareBtn: "Partager avec un·e collègue", shareTitle: "Leçon partagée", shareName: "Votre nom", shareNamePh: "Pour que votre collègue sache qui a écrit quoi", shareSave: "Créer le lien", shareLink: "Lien", copyLink: "Copier le lien", copiedLink: "Lien copié ✓", refresh: "Actualiser", shareHint: "Toute personne ayant le lien peut voir cette leçon. Pour la modifier, il faut le code enseignant. Les leçons partagées sont supprimées après 90 jours.", sharedBy: "Commencée par {x}.", versions: "Versions", addLang: "Ajouter {x}", adding: "J'écris...", edit: "Modifier", save: "Enregistrer", cancel: "Annuler", editedBy: "Dernier enregistrement : {x}", notes: "Notes", noNotes: "Aucune note.", notePh: "Laissez une note à votre collègue", addNote: "Ajouter la note", pdfAll: "PDF : toutes les versions", errShare: "Impossible d'enregistrer la leçon partagée.", errLoad: "Impossible d'ouvrir cette leçon partagée. Le lien a peut-être expiré.", saving: "Enregistrement...", loadingShared: "Ouverture de la leçon partagée...",
     tagline: "le bon texte, au bon niveau", forAll: "pour tous",
+    inviteBtn: "Partager Livella", inviteCopied: "Message et lien copiés ✓", inviteText: "Apprendre une langue, c'est différent pour chaque élève. Livella prend une lecture et la réécrit au niveau de chaque élève, pour que toute la classe lise la même histoire. Le plus : envoyez-la à un·e collègue, qui peut l'ajouter dans sa langue ou l'adapter à sa classe.",
     modeText: "À partir d'un texte", modeWrite: "Écrire de zéro", genreLabel: "Genre", topicLabel: "Sujet",
     topicPlaceholder: "Ex. une sortie à Lyon avec la classe · ma famille · le marché du samedi", writeHint: "Livella écrit un texte original au niveau choisi. Indiquez un sujet, ou collez des notes ou des faits ; même en anglais.",
     errTopic: "Indiquez un sujet.", write: "Écrire", writing: "J'écris...",
@@ -253,6 +255,7 @@ const UI = {
     learnersLabel: "Learners", learnersHint: "The level is proficiency. Here you choose the age: topics, length and tasks change.",
     shareBtn: "Share with a colleague", shareTitle: "Shared lesson", shareName: "Your name", shareNamePh: "So your colleague knows who wrote what", shareSave: "Create the link", shareLink: "Link", copyLink: "Copy link", copiedLink: "Link copied ✓", refresh: "Refresh", shareHint: "Anyone with the link can view this lesson. Changing it needs the teacher passcode. Shared lessons are deleted after 90 days.", sharedBy: "Started by {x}.", versions: "Versions", addLang: "Add {x}", adding: "Writing...", edit: "Edit", save: "Save", cancel: "Cancel", editedBy: "Last saved by {x}", notes: "Notes", noNotes: "No notes yet.", notePh: "Leave a note for your colleague", addNote: "Add note", pdfAll: "PDF: all versions", errShare: "Couldn't save the shared lesson.", errLoad: "Couldn't open that shared lesson. The link may have expired.", saving: "Saving...", loadingShared: "Opening the shared lesson...",
     tagline: "the right text, at the right level", forAll: "for everyone",
+    inviteBtn: "Share Livella", inviteCopied: "Message and link copied ✓", inviteText: "Language learning looks different for every student. Livella takes any reading and rewrites it at each student's level, so the whole class reads the same story. Best part: send it to a colleague and they can add it in their language or edit it for their own class.",
     modeText: "From a text", modeWrite: "Write from scratch", genreLabel: "Genre", topicLabel: "Topic",
     topicPlaceholder: "e.g. a class trip · my family · the Saturday market", writeHint: "Livella writes an original text at the chosen level. Type a topic, or paste notes or facts; English is fine.",
     errTopic: "Enter a topic.", write: "Write", writing: "Writing...",
@@ -295,6 +298,7 @@ const UI = {
     learnersLabel: "Estudiantes", learnersHint: "El nivel indica la competencia. Aquí eliges la edad: cambian los temas, la extensión y las tareas.",
     shareBtn: "Compartir con un colega", shareTitle: "Lección compartida", shareName: "Tu nombre", shareNamePh: "Para que tu colega sepa quién escribió qué", shareSave: "Crear el enlace", shareLink: "Enlace", copyLink: "Copiar enlace", copiedLink: "Enlace copiado ✓", refresh: "Actualizar", shareHint: "Cualquier persona con el enlace puede ver esta lección. Para cambiarla se necesita el código docente. Las lecciones compartidas se borran después de 90 días.", sharedBy: "Iniciada por {x}.", versions: "Versiones", addLang: "Añadir {x}", adding: "Escribiendo...", edit: "Editar", save: "Guardar", cancel: "Cancelar", editedBy: "Último guardado: {x}", notes: "Notas", noNotes: "Aún no hay notas.", notePh: "Deja una nota para tu colega", addNote: "Añadir nota", pdfAll: "PDF: todas las versiones", errShare: "No se pudo guardar la lección compartida.", errLoad: "No se pudo abrir esa lección compartida. El enlace puede haber caducado.", saving: "Guardando...", loadingShared: "Abriendo la lección compartida...",
     tagline: "el texto adecuado, al nivel adecuado", forAll: "para todos",
+    inviteBtn: "Compartir Livella", inviteCopied: "Mensaje y enlace copiados ✓", inviteText: "Aprender un idioma es distinto para cada estudiante. Livella toma una lectura y la reescribe al nivel de cada estudiante, para que toda la clase lea la misma historia. Lo mejor: envíasela a un colega, que puede añadirla en su idioma o adaptarla a su clase.",
     modeText: "A partir de un texto", modeWrite: "Escribir desde cero", genreLabel: "Género", topicLabel: "Tema",
     topicPlaceholder: "p. ej. una excursión de la clase · mi familia · el mercado del sábado", writeHint: "Livella escribe un texto original en el nivel elegido. Escribe un tema, o pega apuntes o datos; puede ser en inglés.",
     errTopic: "Escribe un tema.", write: "Escribir", writing: "Escribiendo...",
@@ -1005,6 +1009,19 @@ export default function Livella() {
     const done = () => { setLinkCopied(true); setTimeout(() => setLinkCopied(false), 2000); };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(shareUrl(shared.id)).then(done).catch(() => {});
   }
+  // "Share Livella": the phone's share menu (or the clipboard on a laptop) with a ready-written
+  // message and the address for the current interface language.
+  const [invited, setInvited] = useState(false);
+  function inviteTeachers() {
+    const base = window.location.origin + window.location.pathname.replace(/[^/]*$/, "");
+    const url = base + (UIL === "en" ? "" : UIL + "/");
+    const done = () => { setInvited(true); setTimeout(() => setInvited(false), 2600); };
+    if (navigator.share) { navigator.share({ title: "Livella", text: T.inviteText, url }).catch(() => {}); return; }
+    const full = `${T.inviteText}\n\n${url}`;
+    const byHand = () => { try { window.prompt(T.inviteBtn, full); } catch (e) {} };   // last resort: a box to copy from
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(full).then(done).catch(byHand);
+    else byHand();
+  }
   function startShare() {
     setShareOpen(true);
     setTimeout(() => { if (shareRef.current && shareRef.current.scrollIntoView) shareRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); }, 60);
@@ -1550,6 +1567,9 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         .livella-hero-sub { font-size: 16px; line-height: 1.6; color: rgba(214, 241, 239, 0.82); max-width: 40ch; margin: 0 0 24px; }
         .livella-hero-cta { background: var(--cream); color: #8a5028; border: 0; border-radius: 6px; padding: 13px 24px; font: 600 15px 'Inter', sans-serif; cursor: pointer; transition: background 0.2s, color 0.2s; }
         .livella-hero-cta:hover, .livella-hero-cta:focus-visible { background: var(--copper); color: var(--cream); outline: 2px solid var(--cream); outline-offset: 3px; }
+        .livella-hero-btns { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+        .livella-hero-invite { background: transparent; color: var(--cream); border: 1.5px solid rgba(250, 246, 240, 0.55); border-radius: 6px; padding: 11.5px 18px; font: 600 15px 'Inter', sans-serif; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+        .livella-hero-invite:hover, .livella-hero-invite:focus-visible { background: rgba(250, 246, 240, 0.12); border-color: var(--cream); outline: none; }
         .livella-hero-micro { display: block; font-size: 12.5px; color: rgba(214, 241, 239, 0.75); margin-top: 12px; letter-spacing: 0.02em; }
 
         .livella-fanwrap { grid-area: fan; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; }
@@ -2497,7 +2517,14 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             <h2 className="livella-hero-head">{T.heroHead}</h2>
             <hr className="livella-hero-rule" />
             <p className="livella-hero-sub">{T.heroSub}</p>
-            <button type="button" className="livella-hero-cta" onClick={scrollToTool}>{T.heroCta}</button>
+            <div className="livella-hero-btns">
+              <button type="button" className="livella-hero-cta" onClick={scrollToTool}>{T.heroCta}</button>
+              {shareApi && (
+                <button type="button" className="livella-hero-invite" onClick={inviteTeachers} aria-live="polite">
+                  {invited ? T.inviteCopied : <><span aria-hidden="true">↗</span> {T.inviteBtn}</>}
+                </button>
+              )}
+            </div>
             <span className="livella-hero-micro">{T.heroMicro}</span>
           </div>
           <div className="livella-fanwrap">
@@ -3151,7 +3178,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           </div>
         )}
 
-        <div className="livella-footer">uno strumento, un lavoro · v0.15.1 · © 2026 Assunta Scotto. {T.rights}</div>
+        <div className="livella-footer">uno strumento, un lavoro · v0.15.2 · © 2026 Assunta Scotto. {T.rights}</div>
       </div>
     </div>
   );
