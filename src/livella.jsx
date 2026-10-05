@@ -166,6 +166,7 @@ const UI = {
     rights: "Tutti i diritti riservati.",
     learnersLabel: "Studenti", learnersHint: "Il livello indica la competenza. Qui scegli l'età: cambiano temi, lunghezza e compiti.",
     shareBtn: "Condividi con un collega", shareTitle: "Lezione condivisa", shareName: "Il tuo nome", shareNamePh: "Così il collega sa chi ha scritto cosa", shareSave: "Crea il link", shareLink: "Link", copyLink: "Copia link", copiedLink: "Link copiato ✓", refresh: "Aggiorna", shareHint: "Chi ha il link può vedere questa lezione. Per modificarla serve il codice insegnante. Le lezioni condivise vengono cancellate dopo 90 giorni.", sharedBy: "Iniziata da {x}.", versions: "Versioni", addLang: "Aggiungi {x}", adding: "Sto scrivendo...", edit: "Modifica", save: "Salva", cancel: "Annulla", editedBy: "Ultimo salvataggio: {x}", notes: "Note", noNotes: "Nessuna nota.", notePh: "Lascia una nota al collega", addNote: "Aggiungi nota", pdfAll: "PDF: tutte le versioni", errShare: "Non riesco a salvare la lezione condivisa.", errLoad: "Non riesco ad aprire questa lezione condivisa. Il link potrebbe essere scaduto.", saving: "Salvo...", loadingShared: "Apro la lezione condivisa...",
+    tagline: "il testo giusto, al livello giusto", forAll: "per tutti",
     modeText: "Da un testo", modeWrite: "Scrivi da zero", genreLabel: "Genere", topicLabel: "Tema",
     topicPlaceholder: "Es. una gita a Napoli con la classe · la mia famiglia · il mercato del sabato", writeHint: "Livella scrive un testo originale al livello scelto. Scrivi un tema, oppure incolla appunti o fatti; anche in inglese.",
     errTopic: "Scrivi un tema.", write: "Scrivi", writing: "Sto scrivendo...",
@@ -208,6 +209,7 @@ const UI = {
     rights: "Tous droits réservés.",
     learnersLabel: "Apprenants", learnersHint: "Le niveau indique la compétence. Ici, choisissez l'âge : thèmes, longueur et tâches changent.",
     shareBtn: "Partager avec un·e collègue", shareTitle: "Leçon partagée", shareName: "Votre nom", shareNamePh: "Pour que votre collègue sache qui a écrit quoi", shareSave: "Créer le lien", shareLink: "Lien", copyLink: "Copier le lien", copiedLink: "Lien copié ✓", refresh: "Actualiser", shareHint: "Toute personne ayant le lien peut voir cette leçon. Pour la modifier, il faut le code enseignant. Les leçons partagées sont supprimées après 90 jours.", sharedBy: "Commencée par {x}.", versions: "Versions", addLang: "Ajouter {x}", adding: "J'écris...", edit: "Modifier", save: "Enregistrer", cancel: "Annuler", editedBy: "Dernier enregistrement : {x}", notes: "Notes", noNotes: "Aucune note.", notePh: "Laissez une note à votre collègue", addNote: "Ajouter la note", pdfAll: "PDF : toutes les versions", errShare: "Impossible d'enregistrer la leçon partagée.", errLoad: "Impossible d'ouvrir cette leçon partagée. Le lien a peut-être expiré.", saving: "Enregistrement...", loadingShared: "Ouverture de la leçon partagée...",
+    tagline: "le bon texte, au bon niveau", forAll: "pour tous",
     modeText: "À partir d'un texte", modeWrite: "Écrire de zéro", genreLabel: "Genre", topicLabel: "Sujet",
     topicPlaceholder: "Ex. une sortie à Lyon avec la classe · ma famille · le marché du samedi", writeHint: "Livella écrit un texte original au niveau choisi. Indiquez un sujet, ou collez des notes ou des faits ; même en anglais.",
     errTopic: "Indiquez un sujet.", write: "Écrire", writing: "J'écris...",
@@ -250,6 +252,7 @@ const UI = {
     rights: "All rights reserved.",
     learnersLabel: "Learners", learnersHint: "The level is proficiency. Here you choose the age: topics, length and tasks change.",
     shareBtn: "Share with a colleague", shareTitle: "Shared lesson", shareName: "Your name", shareNamePh: "So your colleague knows who wrote what", shareSave: "Create the link", shareLink: "Link", copyLink: "Copy link", copiedLink: "Link copied ✓", refresh: "Refresh", shareHint: "Anyone with the link can view this lesson. Changing it needs the teacher passcode. Shared lessons are deleted after 90 days.", sharedBy: "Started by {x}.", versions: "Versions", addLang: "Add {x}", adding: "Writing...", edit: "Edit", save: "Save", cancel: "Cancel", editedBy: "Last saved by {x}", notes: "Notes", noNotes: "No notes yet.", notePh: "Leave a note for your colleague", addNote: "Add note", pdfAll: "PDF: all versions", errShare: "Couldn't save the shared lesson.", errLoad: "Couldn't open that shared lesson. The link may have expired.", saving: "Saving...", loadingShared: "Opening the shared lesson...",
+    tagline: "the right text, at the right level", forAll: "for everyone",
     modeText: "From a text", modeWrite: "Write from scratch", genreLabel: "Genre", topicLabel: "Topic",
     topicPlaceholder: "e.g. a class trip · my family · the Saturday market", writeHint: "Livella writes an original text at the chosen level. Type a topic, or paste notes or facts; English is fine.",
     errTopic: "Enter a topic.", write: "Write", writing: "Writing...",
@@ -291,6 +294,7 @@ const UI = {
     rights: "Todos los derechos reservados.",
     learnersLabel: "Estudiantes", learnersHint: "El nivel indica la competencia. Aquí eliges la edad: cambian los temas, la extensión y las tareas.",
     shareBtn: "Compartir con un colega", shareTitle: "Lección compartida", shareName: "Tu nombre", shareNamePh: "Para que tu colega sepa quién escribió qué", shareSave: "Crear el enlace", shareLink: "Enlace", copyLink: "Copiar enlace", copiedLink: "Enlace copiado ✓", refresh: "Actualizar", shareHint: "Cualquier persona con el enlace puede ver esta lección. Para cambiarla se necesita el código docente. Las lecciones compartidas se borran después de 90 días.", sharedBy: "Iniciada por {x}.", versions: "Versiones", addLang: "Añadir {x}", adding: "Escribiendo...", edit: "Editar", save: "Guardar", cancel: "Cancelar", editedBy: "Último guardado: {x}", notes: "Notas", noNotes: "Aún no hay notas.", notePh: "Deja una nota para tu colega", addNote: "Añadir nota", pdfAll: "PDF: todas las versiones", errShare: "No se pudo guardar la lección compartida.", errLoad: "No se pudo abrir esa lección compartida. El enlace puede haber caducado.", saving: "Guardando...", loadingShared: "Abriendo la lección compartida...",
+    tagline: "el texto adecuado, al nivel adecuado", forAll: "para todos",
     modeText: "A partir de un texto", modeWrite: "Escribir desde cero", genreLabel: "Género", topicLabel: "Tema",
     topicPlaceholder: "p. ej. una excursión de la clase · mi familia · el mercado del sábado", writeHint: "Livella escribe un texto original en el nivel elegido. Escribe un tema, o pega apuntes o datos; puede ser en inglés.",
     errTopic: "Escribe un tema.", write: "Escribir", writing: "Escribiendo...",
@@ -580,7 +584,9 @@ Exactly COUNT items. No text before/after JSON.`;
 }
 
 export default function Livella() {
-  const [lang, setLang] = useState("it");
+  // A link such as …/livella/fr/ arrives here as ?l=fr: open that side, in that interface language.
+  const startLang = (() => { try { const v = new URLSearchParams(window.location.search).get("l"); return ["it", "fr", "es"].includes(v) ? v : null; } catch (e) { return null; } })();
+  const [lang, setLang] = useState(startLang || "it");
   const [input, setInput] = useState("");
   const [mode, setMode] = useState("text");       // "text" = re-level a source · "write" = original text from a topic
   const [genre, setGenre] = useState("postcard");
@@ -594,7 +600,9 @@ export default function Livella() {
   const [heroAuto, setHeroAuto] = useState(true);
   const toolRef = useRef(null);
   const [uiPref, setUiPref] = useState(() => {
-    try { return JSON.parse(window.localStorage.getItem("livella.ui") || "{}") || {}; } catch (e) { return {}; }
+    let saved = {};
+    try { saved = JSON.parse(window.localStorage.getItem("livella.ui") || "{}") || {}; } catch (e) {}
+    return startLang ? { ...saved, [startLang]: startLang } : saved;
   });
   // Compare control: which tab is open, what the right-hand column currently shows, which chip is loading.
   const [cmpTab, setCmpTab] = useState("level");
@@ -644,7 +652,7 @@ export default function Livella() {
   const [scalaIdx, setScalaIdx] = useState([]);    // per-paragraph rung index (0..4)
   const [loadingScala, setLoadingScala] = useState(false);
   const [bumped, setBumped] = useState(null);      // paragraph index that just moved (for the flash)
-  const [level, setLevel] = useState("it2");
+  const [level, setLevel] = useState((startLang || "it") + "2");
   const [purpose, setPurpose] = useState("main");
   const [result, setResult] = useState(null);
   const [comparison, setComparison] = useState(null);
@@ -2485,7 +2493,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         <header className="livella-hero">
           <h1 className="livella-logo">Livel<span>la</span></h1>
           <div className="livella-hero-copy">
-            <p className="livella-tagline">il testo giusto, al livello giusto <span className="livella-tagline-all">· per tutti</span></p>
+            <p className="livella-tagline">{T.tagline} <span className="livella-tagline-all">· {T.forAll}</span></p>
             <h2 className="livella-hero-head">{T.heroHead}</h2>
             <hr className="livella-hero-rule" />
             <p className="livella-hero-sub">{T.heroSub}</p>
@@ -3143,7 +3151,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           </div>
         )}
 
-        <div className="livella-footer">uno strumento, un lavoro · v0.15 · © 2026 Assunta Scotto. {T.rights}</div>
+        <div className="livella-footer">uno strumento, un lavoro · v0.15.1 · © 2026 Assunta Scotto. {T.rights}</div>
       </div>
     </div>
   );
