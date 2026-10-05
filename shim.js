@@ -16,13 +16,24 @@
         '<form style="background:#faf6f0;color:#2b1810;border-radius:10px;padding:24px;max-width:360px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.3)">' +
         '<label for="livella-pass" style="display:block;font-weight:700;font-size:16px;margin-bottom:6px">Codice insegnante · Teacher passcode</label>' +
         '<p style="font-size:13px;line-height:1.5;margin:0 0 14px;color:#6b5a48">' + (wrong ? "Codice non valido. That passcode did not work. Try again." : "Livella is open to teachers with a passcode. Enter it once and this device remembers it.") + '</p>' +
-        '<input id="livella-pass" type="password" autocomplete="off" required style="width:100%;box-sizing:border-box;padding:12px;font-size:16px;border:1.5px solid #0d7377;border-radius:6px;margin-bottom:14px">' +
+        '<div style="display:flex;gap:8px;margin-bottom:14px">' +
+        '<input id="livella-pass" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" required style="flex:1;min-width:0;box-sizing:border-box;padding:12px;font-size:16px;border:1.5px solid #0d7377;border-radius:6px">' +
+        '<button type="button" data-eye aria-pressed="false" aria-label="Mostra il codice · Show the passcode" title="Mostra · Show" style="flex:none;width:52px;border:1.5px solid #0d7377;background:#fff;color:#0a5c5f;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer">Mostra</button>' +
+        '</div>' +
         '<div style="display:flex;gap:10px;justify-content:flex-end">' +
         '<button type="button" data-x style="padding:10px 16px;border:1px solid #c9bda8;background:transparent;border-radius:6px;font-size:14px;cursor:pointer;color:#2b1810">Annulla · Cancel</button>' +
         '<button type="submit" style="padding:10px 18px;border:0;background:#0d7377;color:#fff;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer">OK</button>' +
         '</div></form>';
       document.body.appendChild(back);
       var input = back.querySelector("input"); input.focus();
+      var eye = back.querySelector("[data-eye]");
+      eye.addEventListener("click", function () {
+        var show = input.type === "password";
+        input.type = show ? "text" : "password";
+        eye.textContent = show ? "Nascondi" : "Mostra";
+        eye.setAttribute("aria-pressed", String(show));
+        input.focus();
+      });
       back.querySelector("[data-x]").addEventListener("click", function () { back.remove(); reject({ code: "declined", message: "passcode not entered" }); });
       back.querySelector("form").addEventListener("submit", function (e) { e.preventDefault(); var v = input.value.trim(); if (!v) return; back.remove(); resolve(v); });
     });
