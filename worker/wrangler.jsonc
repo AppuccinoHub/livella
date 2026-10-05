@@ -1,0 +1,11 @@
+{
+  // Settings Cloudflare reads when it builds the Worker from this folder.
+  // Secrets (ANTHROPIC_API_KEY, PASSCODE) are NOT here; they are added in the Cloudflare dashboard.
+  "name": "livella-api",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "vars": {
+    "ALLOWED_ORIGINS": "https://appuccinohub.github.io"
+  }
+}
