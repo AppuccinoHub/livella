@@ -21,12 +21,17 @@ export default {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
     if (request.method === "GET") {
       // Health check: open the Worker address in a browser to see what is still missing.
-      return json(200, { ok: true, service: "livella", key: !!env.ANTHROPIC_API_KEY, passcode: !!env.PASSCODE, origins: allowed.length });
+      const k = (env.ANTHROPIC_API_KEY || "").trim();
+      return json(200, { ok: true, service: "livella", key: !!k, keyLooksRight: k.startsWith("sk-ant-") && k.length > 60, passcode: !!env.PASSCODE, origins: allowed.length, build: 2 });
     }
     if (request.method !== "POST") return json(405, { ok: false, code: "method" });
     if (!okOrigin) return json(403, { ok: false, code: "origin", message: "this site is not on the allowed list" });
-    if (!env.PASSCODE || request.headers.get("x-livella-passcode") !== env.PASSCODE) return json(401, { ok: false, code: "passcode" });
-    if (!env.ANTHROPIC_API_KEY) return json(500, { ok: false, code: "no_key", message: "ANTHROPIC_API_KEY is not set" });
+    // Pasted secrets often carry a stray space or line break; ignore them.
+    const apiKey = (env.ANTHROPIC_API_KEY || "").trim();
+    const passcode = (env.PASSCODE || "").trim();
+    if (!passcode || (request.headers.get("x-livella-passcode") || "").trim() !== passcode) return json(401, { ok: false, code: "passcode" });
+    if (!apiKey) return json(500, { ok: false, code: "no_key", message: "ANTHROPIC_API_KEY is not set" });
+    if (!apiKey.startsWith("sk-ant-")) return json(500, { ok: false, code: "key_format", message: "the stored key does not start with sk-ant-" });
 
     let body;
     try { body = await request.json(); } catch (e) { return json(400, { ok: false, code: "bad_json" }); }
@@ -45,7 +50,7 @@ export default {
     try {
       upstream = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
-        headers: { "content-type": "application/json", "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01" },
+        headers: { "content-type": "application/json", "x-api-key": apiKey, "anthropic-version": "2023-06-01" },
         body: JSON.stringify({ model: env.MODEL || "claude-sonnet-5-5", max_tokens: 12000, system: m[0].content, messages: [{ role: "user", content }] }),
       });
     } catch (e) { return json(502, { ok: false, code: "upstream_network" }); }
