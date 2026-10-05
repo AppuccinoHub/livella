@@ -4,6 +4,7 @@
 //   PASSCODE           (Secret)  the teacher passcode you hand out
 //   ALLOWED_ORIGINS    (Text)    sites allowed to call this, comma-separated, e.g. https://appuccinohub.github.io
 //   MODEL              (Text, optional)  defaults to claude-sonnet-5-5
+//   LESSONS            (KV storage)      shared lessons, set up by wrangler.jsonc; each is deleted after 90 days
 export default {
   async fetch(request, env) {
     const origin = request.headers.get("Origin") || "";
@@ -12,13 +13,49 @@ export default {
     const cors = {
       "Access-Control-Allow-Origin": okOrigin ? origin : (allowed[0] || "null"),
       "Access-Control-Allow-Headers": "content-type, x-livella-passcode",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS",
       "Access-Control-Max-Age": "86400",
       "Vary": "Origin",
     };
     const json = (status, body) => new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json", ...cors } });
 
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+
+    // ----- Shared lessons: anyone with the link can read; saving needs the teacher passcode -----
+    const path = new URL(request.url).pathname;
+    const lm = path.match(/^\/lesson(?:\/([a-z0-9]{8,24}))?$/);
+    if (lm) {
+      if (!env.LESSONS) return json(501, { ok: false, code: "no_storage", message: "lesson storage is not set up" });
+      if (!okOrigin) return json(403, { ok: false, code: "origin" });
+      const id = lm[1];
+      if (request.method === "GET") {
+        if (!id) return json(400, { ok: false, code: "bad_request" });
+        const raw = await env.LESSONS.get("lesson:" + id);
+        if (!raw) return json(404, { ok: false, code: "not_found", message: "no lesson at this link; it may have expired" });
+        return json(200, { ok: true, id, lesson: JSON.parse(raw) });
+      }
+      if (request.method === "POST" || request.method === "PUT") {
+        const pc = (env.PASSCODE || "").trim();
+        if (!pc || (request.headers.get("x-livella-passcode") || "").trim() !== pc) return json(401, { ok: false, code: "passcode" });
+        const text = await request.text();
+        if (text.length > 400000) return json(413, { ok: false, code: "too_long", message: "the lesson is too large to share" });
+        let body; try { body = JSON.parse(text); } catch (e) { return json(400, { ok: false, code: "bad_json" }); }
+        const lesson = body && body.lesson;
+        if (!lesson || typeof lesson !== "object" || !lesson.result || typeof lesson.result.passage !== "string") return json(400, { ok: false, code: "bad_request" });
+        let useId = id;
+        if (request.method === "PUT") {
+          if (!id) return json(400, { ok: false, code: "bad_request" });
+          if (!(await env.LESSONS.get("lesson:" + id))) return json(404, { ok: false, code: "not_found" });
+        } else {
+          const bytes = crypto.getRandomValues(new Uint8Array(12));
+          useId = Array.from(bytes, (b) => "abcdefghijkmnpqrstuvwxyz23456789"[b % 32]).join("");
+        }
+        lesson.updatedAt = Date.now();
+        await env.LESSONS.put("lesson:" + useId, JSON.stringify(lesson), { expirationTtl: 60 * 60 * 24 * 90 });
+        return json(200, { ok: true, id: useId });
+      }
+      return json(405, { ok: false, code: "method" });
+    }
     if (request.method === "GET") {
       // Free diagnostic: asks Anthropic whether the stored key and the model name are accepted.
       // Reports status codes only; uses no tokens.
@@ -40,7 +77,7 @@ export default {
       }
       // Health check: open the Worker address in a browser to see what is still missing.
       const k = (env.ANTHROPIC_API_KEY || "").trim();
-      return json(200, { ok: true, service: "livella", key: !!k, keyLooksRight: k.startsWith("sk-ant-") && k.length > 60, passcode: !!env.PASSCODE, origins: allowed.length, build: 2 });
+      return json(200, { ok: true, service: "livella", key: !!k, keyLooksRight: k.startsWith("sk-ant-") && k.length > 60, passcode: !!env.PASSCODE, origins: allowed.length, storage: !!env.LESSONS, build: 3 });
     }
     if (request.method !== "POST") return json(405, { ok: false, code: "method" });
     if (!okOrigin) return json(403, { ok: false, code: "origin", message: "this site is not on the allowed list" });

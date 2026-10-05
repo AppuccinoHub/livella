@@ -13,11 +13,12 @@
       var back = document.createElement("div");
       back.setAttribute("style", "position:fixed;inset:0;background:rgba(10,40,42,.55);display:flex;align-items:center;justify-content:center;padding:16px;z-index:9999;font-family:Inter,system-ui,sans-serif");
       back.innerHTML =
-        '<form style="background:#faf6f0;color:#2b1810;border-radius:10px;padding:24px;max-width:360px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.3)">' +
+        '<form autocomplete="on" style="background:#faf6f0;color:#2b1810;border-radius:10px;padding:24px;max-width:360px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.3)">' +
         '<label for="livella-pass" style="display:block;font-weight:700;font-size:16px;margin-bottom:6px">Codice insegnante · Teacher passcode</label>' +
-        '<p style="font-size:13px;line-height:1.5;margin:0 0 14px;color:#6b5a48">' + (wrong ? "Codice non valido. That passcode did not work. Try again." : "Livella is open to teachers with a passcode. Enter it once and this device remembers it.") + '</p>' +
+        '<input type="text" name="username" autocomplete="username" value="livella-teacher" readonly tabindex="-1" aria-hidden="true" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">' +
+        '<p style="font-size:13px;line-height:1.5;margin:0 0 14px;color:#6b5a48">' + (wrong ? "Codice non valido. That passcode did not work. Try again." : "Livella is open to teachers with a passcode. Enter it once: this device remembers it, and your browser may offer to save it for your other devices.") + '</p>' +
         '<div style="display:flex;gap:8px;margin-bottom:14px">' +
-        '<input id="livella-pass" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" required style="flex:1;min-width:0;box-sizing:border-box;padding:12px;font-size:16px;border:1.5px solid #0d7377;border-radius:6px">' +
+        '<input id="livella-pass" name="password" type="password" autocomplete="current-password" autocapitalize="none" spellcheck="false" required style="flex:1;min-width:0;box-sizing:border-box;padding:12px;font-size:16px;border:1.5px solid #0d7377;border-radius:6px">' +
         '<button type="button" data-eye aria-pressed="false" aria-label="Mostra il codice · Show the passcode" title="Mostra · Show" style="flex:none;width:52px;border:1.5px solid #0d7377;background:#fff;color:#0a5c5f;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer">Mostra</button>' +
         '</div>' +
         '<div style="display:flex;gap:10px;justify-content:flex-end">' +
@@ -25,7 +26,7 @@
         '<button type="submit" style="padding:10px 18px;border:0;background:#0d7377;color:#fff;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer">OK</button>' +
         '</div></form>';
       document.body.appendChild(back);
-      var input = back.querySelector("input"); input.focus();
+      var input = back.querySelector("#livella-pass"); input.focus();
       var eye = back.querySelector("[data-eye]");
       eye.addEventListener("click", function () {
         var show = input.type === "password";
@@ -54,24 +55,33 @@
     });
   }
 
-  async function call(payload) {
+  // One door to the Worker. needPass = attach (and if needed ask for) the teacher passcode.
+  async function send(method, path, payload, needPass) {
     var api = (window.LIVELLA_CONFIG || {}).api;
     if (!api) throw { code: "not_configured", message: "the Worker address is missing in config.js" };
-    var pass = getPass();
-    if (!pass) { pass = await askPass(false); setPass(pass); }
+    var pass = "";
+    if (needPass) { pass = getPass(); if (!pass) { pass = await askPass(false); setPass(pass); } }
     for (var attempt = 0; attempt < 3; attempt++) {
-      var res;
-      try {
-        res = await fetch(api, { method: "POST", headers: { "content-type": "application/json", "x-livella-passcode": pass }, body: JSON.stringify(payload) });
-      } catch (e) { throw { code: "network", message: String(e && e.message || e) }; }
-      if (res.status === 401) { clearPass(); pass = await askPass(true); setPass(pass); continue; }
+      var res, init = { method: method };
+      if (needPass || payload) { init.headers = {}; if (payload) init.headers["content-type"] = "application/json"; if (needPass) init.headers["x-livella-passcode"] = pass; }
+      if (payload) init.body = JSON.stringify(payload);
+      try { res = await fetch(api + path, init); }
+      catch (e) { throw { code: "network", message: String(e && e.message || e) }; }
+      if (res.status === 401 && needPass) { clearPass(); pass = await askPass(true); setPass(pass); continue; }
       if (res.status === 429) throw { code: "rate_limited", message: "busy" };
       var out = await res.json().catch(function () { return null; });
       if (!res.ok || !out || !out.ok) throw { code: (out && out.code) || ("http_" + res.status), message: (out && out.message) || "" };
-      return out.data;
+      return out;
     }
     throw { code: "passcode", message: "passcode rejected three times" };
   }
+  async function call(payload) { return (await send("POST", "", payload, true)).data; }
+
+  // Shared lessons: save returns the lesson's id; load needs no passcode.
+  window.LIVELLA_SHARE = {
+    save: async function (lesson, id) { return { id: (await send(id ? "PUT" : "POST", "lesson" + (id ? "/" + id : ""), { lesson: lesson }, true)).id }; },
+    load: async function (id) { return (await send("GET", "lesson/" + id, null, false)).lesson; },
+  };
 
   var sample = {
     json: async function (messages, opts) {

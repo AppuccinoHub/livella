@@ -5,6 +5,10 @@
   "main": "worker.js",
   "compatibility_date": "2026-09-01",
   "workers_dev": true,
+  // Storage for shared lessons. No id is given on purpose: Cloudflare creates it on the first deploy.
+  "kv_namespaces": [
+    { "binding": "LESSONS" }
+  ],
   "vars": {
     "ALLOWED_ORIGINS": "https://appuccinohub.github.io"
   }

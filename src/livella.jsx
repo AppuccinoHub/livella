@@ -165,6 +165,7 @@ const UI = {
     listen: "Ascolta", stopListen: "Ferma", slow: "Lento", hideText: "Nascondi il testo", showText: "Mostra il testo", hiddenNote: "Testo nascosto. Ascolta e rispondi.", errVoice: "Questo dispositivo non ha una voce per questa lingua.", listenNote: "Voce del browser: la qualità dipende dal dispositivo.",
     rights: "Tutti i diritti riservati.",
     learnersLabel: "Studenti", learnersHint: "Il livello indica la competenza. Qui scegli l'età: cambiano temi, lunghezza e compiti.",
+    shareBtn: "Condividi con un collega", shareTitle: "Lezione condivisa", shareName: "Il tuo nome", shareNamePh: "Così il collega sa chi ha scritto cosa", shareSave: "Crea il link", shareLink: "Link", copyLink: "Copia link", copiedLink: "Link copiato ✓", refresh: "Aggiorna", shareHint: "Chi ha il link può vedere questa lezione. Per modificarla serve il codice insegnante. Le lezioni condivise vengono cancellate dopo 90 giorni.", sharedBy: "Iniziata da {x}.", versions: "Versioni", addLang: "Aggiungi {x}", adding: "Sto scrivendo...", edit: "Modifica", save: "Salva", cancel: "Annulla", editedBy: "Ultimo salvataggio: {x}", notes: "Note", noNotes: "Nessuna nota.", notePh: "Lascia una nota al collega", addNote: "Aggiungi nota", pdfAll: "PDF: tutte le versioni", errShare: "Non riesco a salvare la lezione condivisa.", errLoad: "Non riesco ad aprire questa lezione condivisa. Il link potrebbe essere scaduto.", saving: "Salvo...", loadingShared: "Apro la lezione condivisa...",
     modeText: "Da un testo", modeWrite: "Scrivi da zero", genreLabel: "Genere", topicLabel: "Tema",
     topicPlaceholder: "Es. una gita a Napoli con la classe · la mia famiglia · il mercato del sabato", writeHint: "Livella scrive un testo originale al livello scelto. Scrivi un tema, oppure incolla appunti o fatti; anche in inglese.",
     errTopic: "Scrivi un tema.", write: "Scrivi", writing: "Sto scrivendo...",
@@ -206,6 +207,7 @@ const UI = {
     listen: "Écouter", stopListen: "Arrêter", slow: "Lent", hideText: "Masquer le texte", showText: "Afficher le texte", hiddenNote: "Texte masqué. Écoutez et répondez.", errVoice: "Cet appareil n'a pas de voix pour cette langue.", listenNote: "Voix du navigateur : la qualité dépend de l'appareil.",
     rights: "Tous droits réservés.",
     learnersLabel: "Apprenants", learnersHint: "Le niveau indique la compétence. Ici, choisissez l'âge : thèmes, longueur et tâches changent.",
+    shareBtn: "Partager avec un·e collègue", shareTitle: "Leçon partagée", shareName: "Votre nom", shareNamePh: "Pour que votre collègue sache qui a écrit quoi", shareSave: "Créer le lien", shareLink: "Lien", copyLink: "Copier le lien", copiedLink: "Lien copié ✓", refresh: "Actualiser", shareHint: "Toute personne ayant le lien peut voir cette leçon. Pour la modifier, il faut le code enseignant. Les leçons partagées sont supprimées après 90 jours.", sharedBy: "Commencée par {x}.", versions: "Versions", addLang: "Ajouter {x}", adding: "J'écris...", edit: "Modifier", save: "Enregistrer", cancel: "Annuler", editedBy: "Dernier enregistrement : {x}", notes: "Notes", noNotes: "Aucune note.", notePh: "Laissez une note à votre collègue", addNote: "Ajouter la note", pdfAll: "PDF : toutes les versions", errShare: "Impossible d'enregistrer la leçon partagée.", errLoad: "Impossible d'ouvrir cette leçon partagée. Le lien a peut-être expiré.", saving: "Enregistrement...", loadingShared: "Ouverture de la leçon partagée...",
     modeText: "À partir d'un texte", modeWrite: "Écrire de zéro", genreLabel: "Genre", topicLabel: "Sujet",
     topicPlaceholder: "Ex. une sortie à Lyon avec la classe · ma famille · le marché du samedi", writeHint: "Livella écrit un texte original au niveau choisi. Indiquez un sujet, ou collez des notes ou des faits ; même en anglais.",
     errTopic: "Indiquez un sujet.", write: "Écrire", writing: "J'écris...",
@@ -247,6 +249,7 @@ const UI = {
     listen: "Listen", stopListen: "Stop", slow: "Slow", hideText: "Hide the text", showText: "Show the text", hiddenNote: "Text hidden. Listen and answer.", errVoice: "This device has no voice for this language.", listenNote: "Browser voice: quality depends on the device.",
     rights: "All rights reserved.",
     learnersLabel: "Learners", learnersHint: "The level is proficiency. Here you choose the age: topics, length and tasks change.",
+    shareBtn: "Share with a colleague", shareTitle: "Shared lesson", shareName: "Your name", shareNamePh: "So your colleague knows who wrote what", shareSave: "Create the link", shareLink: "Link", copyLink: "Copy link", copiedLink: "Link copied ✓", refresh: "Refresh", shareHint: "Anyone with the link can view this lesson. Changing it needs the teacher passcode. Shared lessons are deleted after 90 days.", sharedBy: "Started by {x}.", versions: "Versions", addLang: "Add {x}", adding: "Writing...", edit: "Edit", save: "Save", cancel: "Cancel", editedBy: "Last saved by {x}", notes: "Notes", noNotes: "No notes yet.", notePh: "Leave a note for your colleague", addNote: "Add note", pdfAll: "PDF: all versions", errShare: "Couldn't save the shared lesson.", errLoad: "Couldn't open that shared lesson. The link may have expired.", saving: "Saving...", loadingShared: "Opening the shared lesson...",
     modeText: "From a text", modeWrite: "Write from scratch", genreLabel: "Genre", topicLabel: "Topic",
     topicPlaceholder: "e.g. a class trip · my family · the Saturday market", writeHint: "Livella writes an original text at the chosen level. Type a topic, or paste notes or facts; English is fine.",
     errTopic: "Enter a topic.", write: "Write", writing: "Writing...",
@@ -287,6 +290,7 @@ const UI = {
     listen: "Escuchar", stopListen: "Detener", slow: "Lento", hideText: "Ocultar el texto", showText: "Mostrar el texto", hiddenNote: "Texto oculto. Escucha y responde.", errVoice: "Este dispositivo no tiene una voz para este idioma.", listenNote: "Voz del navegador: la calidad depende del dispositivo.",
     rights: "Todos los derechos reservados.",
     learnersLabel: "Estudiantes", learnersHint: "El nivel indica la competencia. Aquí eliges la edad: cambian los temas, la extensión y las tareas.",
+    shareBtn: "Compartir con un colega", shareTitle: "Lección compartida", shareName: "Tu nombre", shareNamePh: "Para que tu colega sepa quién escribió qué", shareSave: "Crear el enlace", shareLink: "Enlace", copyLink: "Copiar enlace", copiedLink: "Enlace copiado ✓", refresh: "Actualizar", shareHint: "Cualquier persona con el enlace puede ver esta lección. Para cambiarla se necesita el código docente. Las lecciones compartidas se borran después de 90 días.", sharedBy: "Iniciada por {x}.", versions: "Versiones", addLang: "Añadir {x}", adding: "Escribiendo...", edit: "Editar", save: "Guardar", cancel: "Cancelar", editedBy: "Último guardado: {x}", notes: "Notas", noNotes: "Aún no hay notas.", notePh: "Deja una nota para tu colega", addNote: "Añadir nota", pdfAll: "PDF: todas las versiones", errShare: "No se pudo guardar la lección compartida.", errLoad: "No se pudo abrir esa lección compartida. El enlace puede haber caducado.", saving: "Guardando...", loadingShared: "Abriendo la lección compartida...",
     modeText: "A partir de un texto", modeWrite: "Escribir desde cero", genreLabel: "Género", topicLabel: "Tema",
     topicPlaceholder: "p. ej. una excursión de la clase · mi familia · el mercado del sábado", writeHint: "Livella escribe un texto original en el nivel elegido. Escribe un tema, o pega apuntes o datos; puede ser en inglés.",
     errTopic: "Escribe un tema.", write: "Escribir", writing: "Escribiendo...",
@@ -704,7 +708,7 @@ export default function Livella() {
   }
   function switchLanguage(nextId) {
     if (nextId === lang) return;
-    setPendingLang(null); stopSpeaking(); setHideText(false); setCmpInfo(null); setCmpTab("level");
+    setPendingLang(null); stopSpeaking(); setHideText(false); setCmpInfo(null); setCmpTab("level"); leaveShared();
     const next = LANGUAGES[nextId];
     setLang(nextId);
     setLevel(next.levels[1] ? next.levels[1].id : next.levels[0].id);
@@ -832,7 +836,7 @@ export default function Livella() {
     setLoading(true); setError(null); setCopied(false);
     setActivities({}); setActiveTab(null);
     setComparison(null); setComparisonLevel(null); setShowOriginal(false); setCmpInfo(null);
-    stopSpeaking(); setHideText(false);
+    stopSpeaking(); setHideText(false); leaveShared();
     setCustomExercises([]);
     try {
       const parsed = await callClaude(buildPassagePrompt(L, mode), buildPassageMessage(modifier), attachment());
@@ -874,14 +878,18 @@ export default function Livella() {
     } finally { setLoadingComparison(false); setCmpBusy(null); }
   }
 
+  async function writeInLanguage(L2, lv2) {
+    const msg = `LEVEL: ${lv2.label} (${lv2.sub})\nLEVEL NOTES: ${lv2.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\n\nTASK: The INPUT below is a ${L.langEn} classroom reading. Write the SAME lesson in ${L2.langEn} at the level above, for a colleague who teaches ${L2.langEn}: same events, same facts, same order and paragraphing. Do not translate word for word; write it the way a ${L2.langEn} teacher would for this level. Where a name, place or cultural detail would not make sense for a ${L2.langEn} class, replace it with an equivalent from ${L2.culture}; otherwise keep it.${ageBlock(result.age)}\n\nINPUT:\n${result.title}\n\n${result.passage}`;
+    return await callClaude(buildPassagePrompt(L2, "text"), msg, null);
+  }
+
   // Same lesson in another language, at the matching rung of that language's ladder.
   async function compareLanguage(otherId) {
     const L2 = LANGUAGES[otherId];
     const lv2 = L2.levels[levelIndex(level)] || L2.levels[0];
     setLoadingComparison(true); setCmpBusy("l:" + otherId); setError(null);
     try {
-      const msg = `LEVEL: ${lv2.label} (${lv2.sub})\nLEVEL NOTES: ${lv2.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\n\nTASK: The INPUT below is a ${L.langEn} classroom reading. Write the SAME lesson in ${L2.langEn} at the level above, for a colleague who teaches ${L2.langEn}: same events, same facts, same order and paragraphing. Do not translate word for word; write it the way a ${L2.langEn} teacher would for this level. Where a name, place or cultural detail would not make sense for a ${L2.langEn} class, replace it with an equivalent from ${L2.culture}; otherwise keep it.${ageBlock(result.age)}\n\nINPUT:\n${result.title}\n\n${result.passage}`;
-      const parsed = await callClaude(buildPassagePrompt(L2, "text"), msg, null);
+      const parsed = await writeInLanguage(L2, lv2);
       setComparison({ ...parsed, profiles: [] }); setComparisonLevel(null);
       setCmpInfo({ kind: "lang", key: otherId, lang: otherId, title: `${L2.name} · ${lv2.label} · ${lv2.sub}` });
     } catch (err) {
@@ -890,6 +898,171 @@ export default function Livella() {
     } finally { setLoadingComparison(false); setCmpBusy(null); }
   }
   function closeCompare() { setComparison(null); setComparisonLevel(null); setCmpInfo(null); }
+
+  // ===== SHARED LESSON: two or more teachers, one lesson, several languages =====
+  // Available on the open web only (the Worker stores it). Anyone with the link can view;
+  // saving needs the teacher passcode. Nothing here holds student names or work.
+  const shareApi = typeof window !== "undefined" ? window.LIVELLA_SHARE : null;
+  const [shared, setShared] = useState(null);        // { id, lesson }
+  const [shareOpen, setShareOpen] = useState(false);
+  const [shareBusy, setShareBusy] = useState(null);  // "save" | "load" | "refresh" | "add:<lang>" | "note" | "edit"
+  const [myName, setMyName] = useState(() => { try { return window.localStorage.getItem("livella.name") || ""; } catch (e) { return ""; } });
+  const [linkCopied, setLinkCopied] = useState(false);
+  const [editing, setEditing] = useState(null);      // { key, title, passage }
+  const [noteText, setNoteText] = useState("");
+  const shareRef = useRef(null);
+  function rememberName(v) { setMyName(v); try { window.localStorage.setItem("livella.name", v); } catch (e) {} }
+  function who() { return myName.trim() || "—"; }
+  function shareUrl(id) { return window.location.origin + window.location.pathname + "#l=" + id; }
+  function setHash(id) { try { window.history.replaceState(null, "", id ? "#l=" + id : window.location.pathname + window.location.search); } catch (e) {} }
+  function leaveShared() { if (shared) setHash(null); setShared(null); setShareOpen(false); setEditing(null); setNoteText(""); }
+  function pickResult(r) { return { title: r.title, passage: r.passage, glosses: r.glosses || [], teacher_note: r.teacher_note || "", translations: r.translations || null, accommodations: r.accommodations || [], word_bank: r.word_bank || null, micro_tasks: r.micro_tasks || null, genre: r.genre || null, profiles: r.profiles || [], age: r.age || "high" }; }
+  // Two people may save close together: the newest copy of each part wins and notes are pooled.
+  function mergeLesson(remote, local) {
+    if (!remote) return local;
+    const out = { ...remote, ...local };
+    if ((remote.resultAt || 0) > (local.resultAt || 0)) { out.result = remote.result; out.resultAt = remote.resultAt; out.resultBy = remote.resultBy; }
+    const versions = { ...(remote.versions || {}) };
+    Object.entries(local.versions || {}).forEach(([k, v]) => { if (!versions[k] || (v.at || 0) >= (versions[k].at || 0)) versions[k] = v; });
+    out.versions = versions;
+    const seen = {};
+    out.notes = (remote.notes || []).concat(local.notes || []).filter((n) => { const k = `${n.at}|${n.name}|${n.text}`; if (seen[k]) return false; seen[k] = 1; return true; }).sort((a, b) => a.at - b.at);
+    return out;
+  }
+  async function createShare() {
+    if (!shareApi || !result) return;
+    setShareBusy("save"); setError(null);
+    try {
+      const lesson = { v: 1, lang, levelId: level, purpose, sourceUrl: sourceUrl.trim(), author: who(), createdAt: Date.now(), result: pickResult(result), resultAt: Date.now(), resultBy: who(), versions: {}, notes: [] };
+      const { id } = await shareApi.save(lesson);
+      setShared({ id, lesson }); setHash(id);
+    } catch (err) { console.error(err); setError(describeError(err, T.errShare)); }
+    finally { setShareBusy(null); }
+  }
+  async function saveShared(nextLesson, busy) {
+    if (!shareApi || !shared) return;
+    setShareBusy(busy); setError(null);
+    try {
+      let remote = null; try { remote = await shareApi.load(shared.id); } catch (e) {}
+      const merged = mergeLesson(remote, nextLesson);
+      await shareApi.save(merged, shared.id);
+      setShared({ id: shared.id, lesson: merged });
+      setResult((prev) => ({ ...(prev || {}), ...merged.result }));
+    } catch (err) { console.error(err); setError(describeError(err, T.errShare)); }
+    finally { setShareBusy(null); }
+  }
+  async function openShared(id, busy = "load") {
+    if (!shareApi) return;
+    setShareBusy(busy); setError(null);
+    try {
+      const lesson = await shareApi.load(id);
+      if (LANGUAGES[lesson.lang]) setLang(lesson.lang);
+      if (lesson.levelId) setLevel(lesson.levelId);
+      if (lesson.purpose) setPurpose(lesson.purpose);
+      setAgeBand((lesson.result && lesson.result.age) || "high");
+      setProfiles((lesson.result && lesson.result.profiles) || []);
+      setSourceUrl(lesson.sourceUrl || "");
+      setComparison(null); setComparisonLevel(null); setCmpInfo(null);
+      if (busy === "load") { setActivities({}); setActiveTab(null); setCustomExercises([]); setScala(null); setScalaIdx([]); }
+      setResult({ ...lesson.result }); setShared({ id, lesson }); setEditing(null);
+    } catch (err) { console.error(err); setError(describeError(err, T.errLoad)); if (busy === "load") setHash(null); }
+    finally { setShareBusy(null); }
+  }
+  useEffect(() => {
+    const m = typeof window !== "undefined" && /^#l=([a-z0-9]{8,24})$/.exec(window.location.hash || "");
+    if (m && shareApi) openShared(m[1]);
+  }, []);
+  async function addVersion(otherId) {
+    const L2 = LANGUAGES[otherId]; const lv2 = L2.levels[levelIndex(level)] || L2.levels[0];
+    setShareBusy("add:" + otherId); setError(null);
+    try {
+      const parsed = await writeInLanguage(L2, lv2);
+      const version = { title: parsed.title, passage: parsed.passage, glosses: parsed.glosses || [], translations: parsed.translations || null, level: `${lv2.label} · ${lv2.sub}`, by: who(), at: Date.now() };
+      await saveShared({ ...shared.lesson, versions: { ...(shared.lesson.versions || {}), [otherId]: version } }, "add:" + otherId);
+    } catch (err) { console.error(err); setError(describeError(err, T.errCompare)); setShareBusy(null); }
+  }
+  function saveEdit() {
+    if (!editing || !shared) return;
+    const now = Date.now(); let next;
+    if (editing.key === "origin") next = { ...shared.lesson, result: { ...shared.lesson.result, title: editing.title, passage: editing.passage }, resultAt: now, resultBy: who() };
+    else next = { ...shared.lesson, versions: { ...shared.lesson.versions, [editing.key]: { ...shared.lesson.versions[editing.key], title: editing.title, passage: editing.passage, by: who(), at: now } } };
+    setEditing(null); saveShared(next, "edit");
+  }
+  function addNote() {
+    const text = noteText.trim(); if (!text || !shared) return;
+    setNoteText("");
+    saveShared({ ...shared.lesson, notes: (shared.lesson.notes || []).concat([{ name: who(), text, at: Date.now() }]) }, "note");
+  }
+  function copyShareLink() {
+    const done = () => { setLinkCopied(true); setTimeout(() => setLinkCopied(false), 2000); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(shareUrl(shared.id)).then(done).catch(() => {});
+  }
+  function startShare() {
+    setShareOpen(true);
+    setTimeout(() => { if (shareRef.current && shareRef.current.scrollIntoView) shareRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); }, 60);
+  }
+  // Every version of the shared lesson, the starting language first.
+  const sharedVersions = !shared ? [] : (() => {
+    const ls = shared.lesson; const L0 = LANGUAGES[ls.lang] || L;
+    const lv0 = L0.levels.find((x) => x.id === ls.levelId) || L0.levels[0];
+    const first = { key: "origin", langId: L0.id, title: ls.result.title, passage: ls.result.passage, glosses: ls.result.glosses || [], level: `${lv0.label} · ${lv0.sub}`, by: ls.resultBy || ls.author };
+    return [first].concat(LANGUAGE_ORDER.filter((k) => (ls.versions || {})[k]).map((k) => ({ key: k, langId: k, ...ls.versions[k] })));
+  })();
+  // One handout with the versions side by side, two per row, paragraph against paragraph.
+  function buildSharedPdf() {
+    const JsPDF = window.jspdf && window.jspdf.jsPDF;
+    if (!JsPDF) throw { code: "unavailable", message: "jsPDF not loaded" };
+    const doc = new JsPDF({ unit: "pt", format: "letter" });
+    const M = 54, W = 612 - 2 * M, BOTTOM = 792 - 54, GUT = 24, CW = (W - GUT) / 2;
+    const ink = [43, 24, 16], copper = [138, 80, 40], muted = [120, 100, 80], teal = [10, 92, 95];
+    let y = M;
+    const need = (h) => { if (y + h > BOTTOM) { doc.addPage(); y = M; } };
+    const set = (size, style, color) => { doc.setFont("helvetica", style || "normal"); doc.setFontSize(size); doc.setTextColor(...(color || ink)); };
+    // draw one row: the same kind of text in the left and right column, top-aligned
+    const row = (cells, size, style, color, gapAfter) => {
+      set(size, style, color);
+      const lines = cells.map((t) => (t ? doc.splitTextToSize(String(t), CW) : []));
+      const lh = size * 1.5, h = Math.max(...lines.map((l) => l.length)) * lh;
+      if (!h) return;
+      need(h);
+      lines.forEach((ls, c) => ls.forEach((ln, i) => doc.text(ln, M + c * (CW + GUT), y + i * lh)));
+      y += h + (gapAfter || 0);
+    };
+    set(9, "bold", copper); doc.text(T.shareTitle.toUpperCase(), M, y); y += 16;
+    set(9, "normal", muted); doc.text(`${selectedPurpose.label[UIL]}${ageMeta(result)}${profileMeta(result)}`.replace(/^ · /, ""), M, y); y += 10;
+    doc.setDrawColor(184, 116, 58); doc.setLineWidth(0.8); doc.line(M, y, M + W, y); y += 18;
+    for (let i = 0; i < sharedVersions.length; i += 2) {
+      const pair = sharedVersions.slice(i, i + 2);
+      row(pair.map((v) => `${LANGUAGES[v.langId].name.toUpperCase()} · ${v.level}`), 8, "bold", teal, 4);
+      row(pair.map((v) => v.title), 15, "bold", ink, 6);
+      const paras = pair.map((v) => String(v.passage).split(/\n\s*\n/));
+      const n = Math.max(...paras.map((p) => p.length));
+      for (let k = 0; k < n; k++) row(paras.map((p) => p[k] || ""), 11, "normal", ink, 8);
+      const gl = pair.map((v) => (v.glosses || []).map((g) => `${g.word} — ${g.translation}`));
+      const gn = Math.max(...gl.map((g) => g.length));
+      if (gn) { y += 4; row(pair.map(() => T.vocab.toUpperCase()), 8, "bold", copper, 2); for (let k = 0; k < gn; k++) row(gl.map((g) => g[k] || ""), 10, "normal", ink, 0); }
+      y += 18;
+    }
+    const notes = shared.lesson.notes || [];
+    if (notes.length) {
+      need(40); set(8, "bold", teal); doc.text(T.notes.toUpperCase(), M, y); y += 14;
+      notes.forEach((nt) => { set(10, "normal", ink); const ls = doc.splitTextToSize(`${nt.name}: ${nt.text}`, W); need(ls.length * 15); ls.forEach((ln) => { doc.text(ln, M, y); y += 15; }); y += 3; });
+    }
+    const pages = doc.getNumberOfPages();
+    for (let p = 1; p <= pages; p++) { doc.setPage(p); set(8, "normal", muted); doc.text(`Livella · ${T.shareTitle} · ${p}/${pages}`, M, 792 - 30); }
+    return doc;
+  }
+  async function downloadSharedPdf() {
+    setPdfBusy(true); setError(null);
+    try {
+      const doc = buildSharedPdf();
+      const dl = (window.claude && window.claude.use) ? await window.claude.use("downloads") : null;
+      if (!dl) throw { code: "unavailable", message: "downloads unavailable" };
+      const slug = String(shared.lesson.result.title || "livella").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40);
+      await dl.save({ filename: `livella-${slug || "lesson"}-shared.pdf`, data: doc.output("blob") });
+    } catch (err) { console.error(err); setError(err && err.code === "declined" ? T.pdfDeclined : `${T.errPdf} [${(err && err.code) || "error"}]`); }
+    finally { setPdfBusy(false); }
+  }
 
   function levelIndex(id) { const i = LEVELS.findIndex((l) => l.id === id); return i < 0 ? 1 : i; }
 
@@ -1502,6 +1675,23 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         .livella-ui-choice button.active { background: var(--teal-dark); color: white; border-color: var(--teal-dark); }
         .livella-ui-choice button:focus-visible { outline: 3px solid var(--teal-pale); outline-offset: 2px; }
         @media print { .livella-ui-choice { display: none !important; } }
+        /* ====== SHARED LESSON ====== */
+        .livella-share-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--teal-dark); color: white; border: 0; border-radius: 6px; padding: 12px 18px; font: 600 14px 'Inter', sans-serif; cursor: pointer; }
+        .livella-share-btn:hover { background: var(--teal); }
+        .livella-share-btn:focus-visible { outline: 3px solid var(--teal-pale); outline-offset: 2px; }
+        .livella-share { border-top: 3px solid var(--teal-dark); }
+        .livella-share-name { max-width: 360px; }
+        .livella-share-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 6px; }
+        .livella-share-row .livella-link-input { flex: 1 1 240px; min-width: 0; }
+        .livella-version { display: flex; flex-direction: column; gap: 8px; }
+        .livella-version .livella-comparison-col-head { margin: 0; }
+        .livella-version-edit { min-height: 180px; font-family: 'Cormorant Garamond', serif; font-size: 17px; background: white; }
+        .livella-version-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 8px; font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray-500); }
+        .livella-notes { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+        .livella-notes li { background: var(--copper-pale); border-left: 3px solid var(--copper); border-radius: 0 6px 6px 0; padding: 9px 12px; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--espresso); }
+        .livella-notes li span { font-size: 11.5px; color: var(--gray-500); margin-left: 6px; }
+        .livella-notes li p { margin: 4px 0 0; line-height: 1.45; }
+        @media print { .livella-share, .livella-share-btn { display: none !important; } }
         /* ====== COMPARE · LISTEN · LANGUAGE-SWITCH WARNING ====== */
         .livella-cmp { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--gray-200); }
         .livella-cmp-head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 10px; }
@@ -2491,6 +2681,10 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           </div>
         )}
 
+        {shareBusy === "load" && !result && (
+          <div className="livella-card"><div className="livella-loading">{T.loadingShared}</div></div>
+        )}
+
         {loadingScala && (
           <div className="livella-card">
             <div className="livella-loading">{T.scalaBuilding}</div>
@@ -2738,8 +2932,101 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                   {pdfBusy ? T.pdfBuilding : T.pdfTeacher}
                 </button>
                 <button className="livella-action-btn" onClick={() => generate("harder")} disabled={loading}>{T.harder}</button>
+                {shareApi && (
+                  <button type="button" className="livella-share-btn" onClick={startShare}>
+                    <span aria-hidden="true">⇄</span> {shared ? T.shareTitle : T.shareBtn}
+                  </button>
+                )}
               </div>
             </div>
+
+            {shareApi && (shareOpen || shared) && (
+              <div className="livella-card livella-share" ref={shareRef}>
+                <h3 className="livella-section-title">{T.shareTitle}</h3>
+                <div className="livella-share-name">
+                  <label className="livella-label" htmlFor="livella-myname">{T.shareName}</label>
+                  <input id="livella-myname" className="livella-link-input" type="text" autoComplete="name" value={myName}
+                    onChange={(e) => rememberName(e.target.value)} placeholder={T.shareNamePh} />
+                </div>
+
+                {!shared && (
+                  <>
+                    <p className="livella-section-subtitle" style={{ marginTop: 14 }}>{T.shareHint}</p>
+                    <button type="button" className="livella-primary-btn" style={{ marginTop: 14 }} onClick={createShare} disabled={shareBusy === "save"}>
+                      {shareBusy === "save" ? T.saving : T.shareSave}
+                    </button>
+                  </>
+                )}
+
+                {shared && (
+                  <>
+                    <label className="livella-label" style={{ marginTop: 18 }} htmlFor="livella-sharelink">{T.shareLink}</label>
+                    <div className="livella-share-row">
+                      <input id="livella-sharelink" className="livella-link-input" type="text" readOnly value={shareUrl(shared.id)} onFocus={(e) => e.target.select()} />
+                      <button type="button" className="livella-compare-mini-btn active" onClick={copyShareLink}>{linkCopied ? T.copiedLink : T.copyLink}</button>
+                      <button type="button" className="livella-compare-mini-btn" onClick={() => openShared(shared.id, "refresh")} disabled={!!shareBusy}>{shareBusy === "refresh" ? "…" : T.refresh}</button>
+                    </div>
+                    <span className="livella-link-hint">{T.shareHint} {T.sharedBy.replace("{x}", shared.lesson.author || "—")}</span>
+
+                    <label className="livella-label" style={{ marginTop: 22 }}>{T.versions}</label>
+                    <div className="livella-comparison-grid two-col">
+                      {sharedVersions.map((v) => {
+                        const LG = LANGUAGES[v.langId];
+                        const ed = editing && editing.key === v.key;
+                        return (
+                          <div key={v.key} className="livella-comparison-col livella-version">
+                            <div className="livella-comparison-col-title"><span aria-hidden="true">{LG.flag}</span> {LG.name} · {v.level}</div>
+                            {ed ? (
+                              <>
+                                <input className="livella-link-input" type="text" aria-label={`${LG.name}: title`} value={editing.title} onChange={(e) => setEditing({ ...editing, title: e.target.value })} />
+                                <textarea className="livella-textarea livella-version-edit" aria-label={`${LG.name}: text`} value={editing.passage} onChange={(e) => setEditing({ ...editing, passage: e.target.value })} />
+                                <div className="livella-compare-row">
+                                  <button type="button" className="livella-compare-mini-btn active" onClick={saveEdit}>{T.save}</button>
+                                  <button type="button" className="livella-compare-mini-btn" onClick={() => setEditing(null)}>{T.cancel}</button>
+                                </div>
+                              </>
+                            ) : (
+                              <>
+                                <div className="livella-comparison-col-head">{v.title}</div>
+                                <div className="livella-comparison-col-text">{v.passage}</div>
+                                {v.glosses && v.glosses.length > 0 && (
+                                  <div className="livella-comparison-col-gloss">{v.glosses.map((g, i) => <span key={i}><b>{g.word}</b> {g.translation}</span>)}</div>
+                                )}
+                                <div className="livella-version-foot">
+                                  <span>{v.by ? T.editedBy.replace("{x}", v.by) : ""}</span>
+                                  <button type="button" className="livella-compare-mini-btn" onClick={() => setEditing({ key: v.key, title: v.title, passage: v.passage })} disabled={!!shareBusy}>{T.edit}</button>
+                                </div>
+                              </>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="livella-compare-row">
+                      {LANGUAGE_ORDER.filter((id) => id !== shared.lesson.lang && !(shared.lesson.versions || {})[id]).map((id) => (
+                        <button key={id} type="button" className="livella-compare-mini-btn" onClick={() => addVersion(id)} disabled={!!shareBusy}>
+                          {shareBusy === "add:" + id ? T.adding : <>+ <span aria-hidden="true">{LANGUAGES[id].flag}</span> {T.addLang.replace("{x}", LANGUAGES[id].name)}</>}
+                        </button>
+                      ))}
+                      <button type="button" className="livella-compare-mini-btn" onClick={downloadSharedPdf} disabled={pdfBusy}>{pdfBusy ? T.pdfBuilding : T.pdfAll}</button>
+                    </div>
+
+                    <label className="livella-label" style={{ marginTop: 22 }} htmlFor="livella-note">{T.notes}</label>
+                    {(shared.lesson.notes || []).length === 0 && <span className="livella-link-hint">{T.noNotes}</span>}
+                    <ul className="livella-notes">
+                      {(shared.lesson.notes || []).map((n, i) => (
+                        <li key={i}><b>{n.name}</b> <span>{new Date(n.at).toLocaleString()}</span><p>{n.text}</p></li>
+                      ))}
+                    </ul>
+                    <div className="livella-share-row">
+                      <input id="livella-note" className="livella-link-input" type="text" value={noteText} placeholder={T.notePh}
+                        onChange={(e) => setNoteText(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") addNote(); }} />
+                      <button type="button" className="livella-compare-mini-btn active" onClick={addNote} disabled={!!shareBusy || !noteText.trim()}>{shareBusy === "note" ? "…" : T.addNote}</button>
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
 
             <div className="livella-card">
               <h3 className="livella-section-title">{T.buildTitle}</h3>
@@ -2856,7 +3143,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           </div>
         )}
 
-        <div className="livella-footer">uno strumento, un lavoro · v0.14.1 · © 2026 Assunta Scotto. {T.rights}</div>
+        <div className="livella-footer">uno strumento, un lavoro · v0.15 · © 2026 Assunta Scotto. {T.rights}</div>
       </div>
     </div>
   );
