@@ -662,8 +662,9 @@ export default function Livella() {
 
   const L = LANGUAGES[lang];
   // Interface language. Teachers plan in English, so English is the default on the Italian side;
-  // the French side keeps French (as asked earlier). The teacher can switch, and the choice is remembered.
-  const UI_CHOICES = { it: ["en", "it", "fr", "es"], fr: ["fr", "en", "it", "es"], es: ["en", "es", "it", "fr"], esl: ["en", "es", "it", "fr"] };
+  // every side opens in English. The teacher can switch to any of the four, and the choice is remembered.
+  const ALL_UI = ["en", "it", "fr", "es"];   // English first: it is the default everywhere
+  const UI_CHOICES = { it: ALL_UI, fr: ALL_UI, es: ALL_UI, esl: ALL_UI };
   const UI_NAMES = { en: "English", it: "Italiano", fr: "Français", es: "Español" };
   const uiOptions = UI_CHOICES[lang] || ["en"];
   const UIL = uiOptions.includes(uiPref[lang]) ? uiPref[lang] : uiOptions[0];
@@ -1362,6 +1363,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         .livella-logo span { color: #e3ad7c; }
         .livella-hero-copy { grid-area: copy; min-width: 0; padding: 24px 0 18px; }
         .livella-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; color: rgba(214, 241, 239, 0.85); margin: 0 0 12px; }
+        .livella-tagline-all { color: #e3ad7c; white-space: nowrap; }
         .livella-hero-head { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(36px, 5.6vw, 56px); line-height: 1.03; letter-spacing: -0.015em; margin: 0 0 18px; text-wrap: balance; color: var(--cream); }
         .livella-hero-rule { width: 60px; height: 2px; background: var(--copper); border: 0; margin: 0 0 18px; }
         .livella-hero-sub { font-size: 16px; line-height: 1.6; color: rgba(214, 241, 239, 0.82); max-width: 40ch; margin: 0 0 24px; }
@@ -2293,7 +2295,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         <header className="livella-hero">
           <h1 className="livella-logo">Livel<span>la</span></h1>
           <div className="livella-hero-copy">
-            <p className="livella-tagline">il testo giusto, al livello giusto</p>
+            <p className="livella-tagline">il testo giusto, al livello giusto <span className="livella-tagline-all">· per tutti</span></p>
             <h2 className="livella-hero-head">{T.heroHead}</h2>
             <hr className="livella-hero-rule" />
             <p className="livella-hero-sub">{T.heroSub}</p>
@@ -2854,7 +2856,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           </div>
         )}
 
-        <div className="livella-footer">uno strumento, un lavoro · v0.14 · © 2026 Assunta Scotto. {T.rights}</div>
+        <div className="livella-footer">uno strumento, un lavoro · v0.14.1 · © 2026 Assunta Scotto. {T.rights}</div>
       </div>
     </div>
   );
