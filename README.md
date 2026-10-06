@@ -2,7 +2,7 @@
 
 *il testo giusto, al livello giusto*
 
-Livella rewrites any text, or writes one from a topic, at five proficiency levels, with reading supports (dyslexia, ADHD, neurodivergent, reading support), in Italian, French, Spanish and ESL. Built by a high school Italian teacher.
+Livella rewrites any text, or writes one from a topic, at five proficiency levels, with reading supports (clear format, short chunks, literal language, reading support), in Italian, French, Spanish and ESL. Built by a high school Italian teacher.
 
 ## What is in this folder
 
