@@ -171,7 +171,7 @@ const UI = {
     modeText: "Da un testo", modeWrite: "Scrivi da zero", genreLabel: "Genere", topicLabel: "Tema",
     topicPlaceholder: "Es. una gita a Napoli con la classe · la mia famiglia · il mercato del sabato", writeHint: "Livella scrive un testo originale al livello scelto. Scrivi un tema, oppure incolla appunti o fatti; anche in inglese.",
     errTopic: "Scrivi un tema.", write: "Scrivi", writing: "Sto scrivendo...",
-    profileLabel: "Supporti", profileHint: "Il livello non cambia. Scegline uno o più.", pagesView: "Pagine", notWritten: "non è ancora scritto.", writeLevel: "Scrivi questo livello", scalaHint: "La Scala li scrive tutti e cinque insieme.", fromScala: "Da La Scala: solo il testo.", fullVersion: "Aggiungi vocabolario e note per docenti", heroExample: "Questo è un esempio. La tua lettura apparirà qui.", make: "Crea le mie pagine", moreOptions: "Altre opzioni", exampleTag: "Esempio", standard: "Standard", standardSub: "nessun adattamento",
+    profileLabel: "Supporti", profileHint: "Il livello non cambia. Scegline uno o più.", pagesView: "Pagine", notWritten: "non è ancora scritto.", writeLevel: "Scrivi questo livello", scalaHint: "La Scala li scrive tutti e cinque insieme.", fromScala: "Da La Scala: solo il testo.", fullVersion: "Aggiungi vocabolario e note per docenti", heroExample: "Questo è un esempio. La tua lettura apparirà qui.", make: "Crea le mie pagine", moreOptions: "Altre opzioni", exampleTag: "Esempio", demoStop: "Ferma", demoPlay: "Riprendi", standard: "Standard", standardSub: "nessun adattamento",
     wordBank: "Banca di parole", microTask: "Mini-compito", of: "di", accommodations: "Adattamenti applicati", pdfFontNote: "Nel PDF il carattere Lexend non è disponibile: spaziatura e lunghezza delle righe seguono comunque le regole.",
   },
   fr: {
@@ -215,7 +215,7 @@ const UI = {
     modeText: "À partir d'un texte", modeWrite: "Écrire de zéro", genreLabel: "Genre", topicLabel: "Sujet",
     topicPlaceholder: "Ex. une sortie à Lyon avec la classe · ma famille · le marché du samedi", writeHint: "Livella écrit un texte original au niveau choisi. Indiquez un sujet, ou collez des notes ou des faits ; même en anglais.",
     errTopic: "Indiquez un sujet.", write: "Écrire", writing: "J'écris...",
-    profileLabel: "Aides", profileHint: "Le niveau ne change pas. Choisissez-en une ou plusieurs.", pagesView: "Pages", notWritten: "n'est pas encore écrit.", writeLevel: "Écrire ce niveau", scalaHint: "La Scala écrit les cinq d'un coup.", fromScala: "De La Scala : texte seul.", fullVersion: "Ajouter vocabulaire et notes pour l'enseignant", heroExample: "Ceci est un exemple. Votre lecture apparaîtra ici.", make: "Créer mes pages", moreOptions: "Plus d'options", exampleTag: "Exemple", standard: "Standard", standardSub: "aucune adaptation",
+    profileLabel: "Aides", profileHint: "Le niveau ne change pas. Choisissez-en une ou plusieurs.", pagesView: "Pages", notWritten: "n'est pas encore écrit.", writeLevel: "Écrire ce niveau", scalaHint: "La Scala écrit les cinq d'un coup.", fromScala: "De La Scala : texte seul.", fullVersion: "Ajouter vocabulaire et notes pour l'enseignant", heroExample: "Ceci est un exemple. Votre lecture apparaîtra ici.", make: "Créer mes pages", moreOptions: "Plus d'options", exampleTag: "Exemple", demoStop: "Arrêter", demoPlay: "Reprendre", standard: "Standard", standardSub: "aucune adaptation",
     wordBank: "Banque de mots", microTask: "Mini-tâche", of: "sur", accommodations: "Adaptations appliquées", pdfFontNote: "Dans le PDF, la police Lexend n'est pas disponible : l'espacement et la longueur des lignes suivent quand même les règles.",
   },
   en: {
@@ -259,7 +259,7 @@ const UI = {
     modeText: "From a text", modeWrite: "Write from scratch", genreLabel: "Genre", topicLabel: "Topic",
     topicPlaceholder: "e.g. a class trip · my family · the Saturday market", writeHint: "Livella writes an original text at the chosen level. Type a topic, or paste notes or facts; English is fine.",
     errTopic: "Enter a topic.", write: "Write", writing: "Writing...",
-    profileLabel: "Supports", profileHint: "The level never changes. Pick one or more.", pagesView: "Pages", notWritten: "is not written yet.", writeLevel: "Write this level", scalaHint: "La Scala writes all five at once.", fromScala: "From La Scala: text only.", fullVersion: "Add vocabulary and teacher notes", heroExample: "This is an example. Your own reading will appear here.", make: "Make my pages", moreOptions: "More options", exampleTag: "Example", standard: "Standard", standardSub: "no adaptations",
+    profileLabel: "Supports", profileHint: "The level never changes. Pick one or more.", pagesView: "Pages", notWritten: "is not written yet.", writeLevel: "Write this level", scalaHint: "La Scala writes all five at once.", fromScala: "From La Scala: text only.", fullVersion: "Add vocabulary and teacher notes", heroExample: "This is an example. Your own reading will appear here.", make: "Make my pages", moreOptions: "More options", exampleTag: "Example", demoStop: "Stop", demoPlay: "Play", standard: "Standard", standardSub: "no adaptations",
     wordBank: "Word bank", microTask: "Micro-task", of: "of", accommodations: "Accommodations applied", pdfFontNote: "The Lexend font isn't available in the PDF; spacing and line length still follow the rules.",
   },  es: {
     inputLabel: "Texto o tema",
@@ -302,7 +302,7 @@ const UI = {
     modeText: "A partir de un texto", modeWrite: "Escribir desde cero", genreLabel: "Género", topicLabel: "Tema",
     topicPlaceholder: "p. ej. una excursión de la clase · mi familia · el mercado del sábado", writeHint: "Livella escribe un texto original en el nivel elegido. Escribe un tema, o pega apuntes o datos; puede ser en inglés.",
     errTopic: "Escribe un tema.", write: "Escribir", writing: "Escribiendo...",
-    profileLabel: "Apoyos", profileHint: "El nivel no cambia. Elige uno o más.", pagesView: "Páginas", notWritten: "aún no está escrito.", writeLevel: "Escribir este nivel", scalaHint: "La Scala escribe los cinco a la vez.", fromScala: "De La Scala: solo el texto.", fullVersion: "Añadir vocabulario y notas para docentes", heroExample: "Esto es un ejemplo. Tu lectura aparecerá aquí.", make: "Crear mis páginas", moreOptions: "Más opciones", exampleTag: "Ejemplo", standard: "Estándar", standardSub: "sin adaptaciones",
+    profileLabel: "Apoyos", profileHint: "El nivel no cambia. Elige uno o más.", pagesView: "Páginas", notWritten: "aún no está escrito.", writeLevel: "Escribir este nivel", scalaHint: "La Scala escribe los cinco a la vez.", fromScala: "De La Scala: solo el texto.", fullVersion: "Añadir vocabulario y notas para docentes", heroExample: "Esto es un ejemplo. Tu lectura aparecerá aquí.", make: "Crear mis páginas", moreOptions: "Más opciones", exampleTag: "Ejemplo", demoStop: "Parar", demoPlay: "Reanudar", standard: "Estándar", standardSub: "sin adaptaciones",
     wordBank: "Banco de palabras", microTask: "Mini-tarea", of: "de", accommodations: "Adaptaciones aplicadas", pdfFontNote: "La fuente Lexend no está disponible en el PDF; el espaciado y la longitud de línea siguen las reglas.",
   },
 };
@@ -855,6 +855,14 @@ export default function Livella() {
     setPages(pg); setResult(mk(idx)); pagesSig.current = "sample"; setView("pages");
   }
   const isReal = (r) => !!(r && !r.sample);
+  // The example turns its own pages, one level every few seconds, until someone stops it or starts working.
+  const [demoAuto, setDemoAuto] = useState(() => !(typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches));
+  function stopDemo(backToStart) {
+    if (!demoAuto) return;
+    setDemoAuto(false);
+    const start = LEVELS[1] ? LEVELS[1].id : LEVELS[0].id;
+    if (backToStart && result && result.sample && level !== start) pickLevel(start);
+  }
   function pickLevel(id) {
     if (id === level || loading || loadingScala) return;
     if (!result && Object.keys(pages).length === 0) { setLevel(id); return; }
@@ -1033,6 +1041,11 @@ export default function Livella() {
     if (m && shareApi) openShared(m[1]); else loadSample(lang, level);
   }, []);
   // The moment a reading starts, the screen goes to where it will appear.
+  useEffect(() => {
+    if (!demoAuto || !result || !result.sample || loading || loadingScala || speaking || error || pendingLang) return;
+    const t = setTimeout(() => { const i = LEVELS.findIndex((l) => l.id === level); pickLevel(LEVELS[(i + 1) % LEVELS.length].id); }, 4000);
+    return () => clearTimeout(t);
+  }, [demoAuto, level, result, loading, loadingScala, speaking, error, pendingLang]);
   // It goes again when the reading arrives, because the page is longer by then.
   const scrolledOnce = useRef(false);
   useEffect(() => {
@@ -1468,7 +1481,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           return (
             <button key={l.id} type="button" role="tab" aria-selected={l.id === level} title={`${l.label} · ${l.sub}`}
               aria-label={written ? l.label : `${l.label} · ${T.writeLevel}`}
-              className={`livella-desk-tab ${written ? "" : "empty"}`} onClick={() => pickLevel(l.id)}>
+              className={`livella-desk-tab ${written ? "" : "empty"}`} onClick={() => { setDemoAuto(false); pickLevel(l.id); }}>
               {LEVEL_SHORT[l.label] || i + 1}{!written && <small aria-hidden="true">+</small>}
             </button>
           );
@@ -2641,6 +2654,17 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         .livella-desk > .livella-card { margin: 0 30px; }
         .livella-desk-tabs { padding: 0 calc(30px + 3%); height: 50px; }
         .livella-sample-note { margin: 0 0 14px; padding: 9px 12px; border-radius: 8px; background: var(--teal-pale); color: var(--teal-dark); font: 500 13.5px 'Inter', sans-serif; }
+        .livella-sample-note { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 14px; }
+        .livella-demo-btn { border: 1.5px solid var(--teal-dark); background: white; color: var(--teal-dark); border-radius: 999px; min-height: 44px; padding: 0 16px; font: 600 13.5px 'Inter', sans-serif; cursor: pointer; white-space: nowrap; }
+        .livella-demo-btn span { font-size: 11px; margin-right: 4px; }
+        .livella-demo-btn:focus-visible { outline: 3px solid var(--copper-light); outline-offset: 2px; }
+        @keyframes livella-fanout { from { transform: rotate(0deg); } }
+        @keyframes livella-pagein { from { opacity: 0.35; transform: translateY(6px); } }
+        @media (prefers-reduced-motion: no-preference) {
+          .livella-desk-fan i { animation: livella-fanout 0.9s cubic-bezier(.2,.8,.2,1) both; }
+          .livella-desk-fan i:nth-child(3), .livella-desk-fan i:nth-child(4) { animation-delay: 0.12s; }
+          .livella-desk > .livella-card { animation: livella-pagein 0.35s ease-out; }
+        }
         .livella-sample-note b { text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; margin-right: 6px; }
         .livella-actions2 { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
         .livella-main-btn { flex: 1 1 200px; min-height: 52px; border: 0; border-radius: 12px; background: var(--action); color: white; font: 700 16px 'Inter', sans-serif; cursor: pointer; box-shadow: 0 3px 0 var(--action-dark); }
@@ -2701,7 +2725,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         )}
 
 
-        <div className="livella-card livella-card-input" ref={toolRef}>
+        <div className="livella-card livella-card-input" ref={toolRef} onFocusCapture={() => stopDemo(true)}>
         <nav className="livella-lang-bar" aria-label="Language">
           {LANGUAGE_ORDER.map((id) => {
             const lg = LANGUAGES[id];
@@ -2980,7 +3004,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             <div className="livella-desk">
             <div className="livella-desk-fan" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
             {renderLevelTabs()}
-            <div className={`livella-card ${profileClass(result)} ${ageClass(result)}`}>
+            <div key={level} className={`livella-card ${profileClass(result)} ${ageClass(result)}`}>
               <div className="livella-print-header">
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8pt" }}>
                   <span>{T.name}: ______________________________</span>
@@ -3005,7 +3029,14 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                 )}
               </div>
 
-              {result.sample && <div className="livella-sample-note"><b>{T.exampleTag}</b> {T.heroExample}</div>}
+              {result.sample && (
+                <div className="livella-sample-note">
+                  <span><b>{T.exampleTag}</b> {T.heroExample}</span>
+                  <button type="button" className="livella-demo-btn" aria-pressed={!demoAuto} onClick={() => setDemoAuto(!demoAuto)}>
+                    <span aria-hidden="true">{demoAuto ? "❚❚" : "▶"}</span> {demoAuto ? T.demoStop : T.demoPlay}
+                  </button>
+                </div>
+              )}
               {result.fromScala && (
                 <div className="livella-fromscala">
                   <span>{T.fromScala}</span>
@@ -3378,7 +3409,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             ))}
           </div>
         )}
-        <div className="livella-footer">uno strumento, un lavoro · v0.17 · © 2026 Assunta Scotto. {T.rights}</div>
+        <div className="livella-footer">uno strumento, un lavoro · v0.17.1 · © 2026 Assunta Scotto. {T.rights}</div>
       </div>
     </div>
   );
