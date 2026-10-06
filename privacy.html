@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livella · Privacy</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#101c3d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101c3d'/%3E%3Crect x='9' y='7' width='14' height='18' rx='2' fill='%23fffdf8' transform='rotate(-12 16 16)'/%3E%3Crect x='9' y='7' width='14' height='18' rx='2' fill='%23fffdf8' opacity='.6' transform='rotate(12 16 16)'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  :root { color-scheme: light; --navy: #101c3d; --blue: #1d5be0; --cream: #faf6f0; --ink: #1c1b22; --muted: #4d4a55; --rule: #e4dccf; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.6; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 28px 16px 64px; }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 26px; }
+  .wm { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 28px; color: var(--navy); text-decoration: none; }
+  .wm i { font-style: italic; color: #b8743a; }
+  a { color: var(--blue); text-underline-offset: 3px; }
+  .back { font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; min-height: 44px; }
+  h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 40px; line-height: 1.05; margin: 0 0 6px; color: var(--navy); }
+  .date { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+  h2 { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--navy); margin: 30px 0 8px; }
+  p, li { margin: 0 0 10px; max-width: 64ch; }
+  ul { padding-left: 20px; }
+  .box { border: 1px solid var(--rule); background: #fffdf8; border-radius: 10px; padding: 16px 18px; margin: 18px 0; }
+  .box p:last-child { margin-bottom: 0; }
+  .lang { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="wm" href="./">Livel<i>la</i></a><a class="back" href="./">← Back to Livella</a></div>
+  <h1>Privacy</h1>
+  <p class="date">Last updated October 6, 2026</p>
+
+  <div class="box">
+    <p><strong>In short:</strong> Livella is for teachers. It never asks for a student's name, and nothing you type is used to train any AI. The only thing it keeps is a lesson you choose to share with a colleague, for 90 days.</p>
+  </div>
+
+  <h2>What Livella is</h2>
+  <p>Livella is a tool for language teachers. You paste a reading or type a topic, and it returns that reading at five proficiency levels. It is made and run by one teacher, Assunta Scotto, in New Jersey, USA.</p>
+
+  <h2>Who it is for</h2>
+  <p>Teachers and other adults. Students do not use Livella directly; they receive the printed or shared pages their teacher makes. Please do not enter a student's name, grade, plan, or any other detail about an individual student. Livella does not need it and does not ask for it.</p>
+
+  <h2>What happens to the text you enter</h2>
+  <ul>
+    <li>When you press the button, the text or topic you entered is sent to Livella's own server and from there to an AI service (Anthropic's Claude) to write the reading. The AI provider does not use this text to train its models.</li>
+    <li>Livella's server does not keep a copy of your text or of the reading, unless you share the lesson (below).</li>
+    <li>Your last lesson is kept on your own device, in your browser, so a refresh does not lose it. It stays on your device and is not sent anywhere.</li>
+  </ul>
+
+  <h2>Shared lessons</h2>
+  <p>When you press "Share with a colleague," that lesson is saved on Livella's server so the link works. It holds the reading, the versions and notes colleagues add, and the first name each person chose to show. It is deleted automatically after 90 days. Anyone with the link can open it, so share links the way you would share a document.</p>
+
+  <h2>The passcode</h2>
+  <p>Livella asks teachers for a passcode before writing a reading. This keeps the cost of the AI service under control. The passcode is stored on your device only. Your browser may offer to save it, as it would any password.</p>
+
+  <h2>What Livella does not do</h2>
+  <ul>
+    <li>No accounts, no sign-in, no email collection.</li>
+    <li>No advertising, no trackers, no analytics scripts.</li>
+    <li>No sale or sharing of any data with anyone, other than sending your text to the AI service to write the reading.</li>
+  </ul>
+
+  <h2>Services Livella runs on</h2>
+  <ul>
+    <li>The pages are hosted on GitHub Pages.</li>
+    <li>Livella's server runs on Cloudflare Workers, and shared lessons are stored in Cloudflare's storage.</li>
+    <li>Readings are written by Anthropic's Claude.</li>
+  </ul>
+  <p>Each of these providers has its own privacy policy. Livella sends them only what is needed to do the work described above.</p>
+
+  <h2>Printing and PDFs</h2>
+  <p>PDFs are made in your browser and saved to your device. They are not sent to Livella. The student sheet carries no support or plan names; only the teacher copy lists what was applied.</p>
+
+  <h2>Questions or deletion</h2>
+  <p>To have a shared lesson removed before its 90 days are up, or for any question, contact Assunta Scotto through the Livella page on GitHub: <a href="https://github.com/AppuccinoHub/livella">github.com/AppuccinoHub/livella</a>.</p>
+
+  <p class="lang">This notice is in English. It describes a tool that may be used in Italian, French, Spanish and English. If you need it in another language, ask and it will be provided.</p>
+</div>
+</body>
+</html>

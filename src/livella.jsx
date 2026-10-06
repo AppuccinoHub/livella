@@ -135,7 +135,7 @@ const UI = {
     placeholder: "Incolla un articolo, una canzone, un capitolo del libro... oppure scrivi un argomento in inglese.",
     purposeLabel: "Tipo di lettura", levelLabel: "Livello",
     go: "Livella", going: "Sto livellando...",
-    errEmpty: "Inserisci del testo o un argomento.", errGeneric: "Qualcosa è andato storto. Riprova.",
+    errEmpty: "Inserisci del testo o un argomento.", errGeneric: "Qualcosa è andato storto. Riprova.", errNetwork: "Nessuna connessione. Controlla la rete e riprova: il testo che hai scritto è ancora qui.", errPasscode: "Codice non accettato. Chiedi il codice a chi ti ha inviato Livella.", errServer: "Livella non risponde in questo momento. Riprova tra un minuto.", errLong: "Il testo è troppo lungo. Accorcialo e riprova.", moreTools: "Altri strumenti", privacy: "Privacy", interfaceLabel: "Lingua dell'interfaccia",
     errCompare: "Errore nel confronto.", errActivity: "Errore nella generazione dell'attività.", errExercise: "Errore nella generazione degli esercizi.",
     errNotGranted: "Questa pagina non ha il permesso di usare Claude. Apri il menu Permessi della pagina e consenti l'accesso, poi riprova.",
     errRate: "Troppe richieste in poco tempo. Aspetta un momento e riprova.",
@@ -179,7 +179,7 @@ const UI = {
     placeholder: "Collez un article, une chanson, un chapitre du livre... ou écrivez un sujet en anglais.",
     purposeLabel: "Type de lecture", levelLabel: "Niveau",
     go: "Livella", going: "Je nivelle...",
-    errEmpty: "Entrez un texte ou un sujet.", errGeneric: "Quelque chose n'a pas fonctionné. Réessayez.",
+    errEmpty: "Entrez un texte ou un sujet.", errGeneric: "Quelque chose n'a pas fonctionné. Réessayez.", errNetwork: "Pas de connexion. Vérifiez le réseau et réessayez : votre texte est toujours là.", errPasscode: "Code refusé. Demandez le code à la personne qui vous a envoyé Livella.", errServer: "Livella ne répond pas pour le moment. Réessayez dans une minute.", errLong: "Le texte est trop long. Raccourcissez-le et réessayez.", moreTools: "Autres outils", privacy: "Confidentialité", interfaceLabel: "Langue de l'interface",
     errCompare: "Erreur lors de la comparaison.", errActivity: "Erreur lors de la génération de l'activité.", errExercise: "Erreur lors de la génération des exercices.",
     errNotGranted: "Cette page n'a pas la permission d'utiliser Claude. Ouvrez le menu Permissions de la page, autorisez l'accès, puis réessayez.",
     errRate: "Trop de demandes en peu de temps. Attendez un instant et réessayez.",
@@ -223,7 +223,7 @@ const UI = {
     placeholder: "Paste an article, a song, a chapter from the book... or type a topic in English.",
     purposeLabel: "Reading purpose", levelLabel: "Level",
     go: "Livella", going: "Leveling...",
-    errEmpty: "Enter some text or a topic.", errGeneric: "Something went wrong. Try again.",
+    errEmpty: "Enter some text or a topic.", errGeneric: "Something went wrong. Try again.", errNetwork: "No connection. Check your network and try again; the text you typed is still here.", errPasscode: "Passcode not accepted. Ask the person who sent you Livella for it.", errServer: "Livella is not responding right now. Try again in a minute.", errLong: "The text is too long. Shorten it and try again.", moreTools: "More tools", privacy: "Privacy", interfaceLabel: "Interface language",
     errCompare: "Comparison failed.", errActivity: "Could not generate that activity.", errExercise: "Could not generate the exercises.",
     errNotGranted: "This page isn't allowed to use Claude yet. Open the page's Permissions menu, allow access, then try again.",
     errRate: "Too many requests at once. Wait a moment and try again.",
@@ -266,7 +266,7 @@ const UI = {
     placeholder: "Pega un artículo, una canción, un capítulo del libro... o escribe un tema en inglés.",
     purposeLabel: "Tipo de lectura", levelLabel: "Nivel",
     go: "Livella", going: "Nivelando...",
-    errEmpty: "Escribe un texto o un tema.", errGeneric: "Algo salió mal. Inténtalo de nuevo.",
+    errEmpty: "Escribe un texto o un tema.", errGeneric: "Algo salió mal. Inténtalo de nuevo.", errNetwork: "Sin conexión. Revisa la red e inténtalo de nuevo: tu texto sigue aquí.", errPasscode: "Código no aceptado. Pídeselo a quien te envió Livella.", errServer: "Livella no responde en este momento. Inténtalo en un minuto.", errLong: "El texto es demasiado largo. Acórtalo e inténtalo de nuevo.", moreTools: "Más herramientas", privacy: "Privacidad", interfaceLabel: "Idioma de la interfaz",
     errCompare: "La comparación falló.", errActivity: "No se pudo generar la actividad.", errExercise: "No se pudieron generar los ejercicios.",
     errNotGranted: "Esta página aún no tiene permiso para usar Claude. Abre el menú Permisos de la página, permite el acceso e inténtalo de nuevo.",
     errRate: "Demasiadas solicitudes a la vez. Espera un momento e inténtalo de nuevo.",
@@ -309,10 +309,10 @@ const UI = {
 
 
 const PURPOSES = [
-  { id: "warmup", label: { it: "Riscaldamento", fr: "Échauffement", en: "Warm-up", es: "Calentamiento" }, sub: { it: "Warm-up", fr: "Warm-up", en: "60–100 words", es: "60–100 palabras" }, promptName: "Riscaldamento", promptSub: "Warm-up", description: "short passage (60-100 words), simple comprehension, activates background knowledge" },
-  { id: "main", label: { it: "Lezione principale", fr: "Leçon principale", en: "Main lesson", es: "Lección principal" }, sub: { it: "Main lesson", fr: "Main lesson", en: "140–200 words", es: "140–200 palabras" }, promptName: "Lezione principale", promptSub: "Main lesson", description: "full passage (140-200 words), full activity suite, balances skills" },
-  { id: "homework", label: { it: "Compito a casa", fr: "Devoir à la maison", en: "Homework", es: "Tarea" }, sub: { it: "Homework", fr: "Homework", en: "180–250 words", es: "180–250 palabras" }, promptName: "Compito a casa", promptSub: "Homework", description: "longer passage (180-250 words), independent work, clearer scaffolding in questions" },
-  { id: "assessment", label: { it: "Verifica", fr: "Évaluation", en: "Assessment", es: "Evaluación" }, sub: { it: "Assessment", fr: "Assessment", en: "includes inference", es: "incluye inferencia" }, promptName: "Verifica", promptSub: "Assessment", description: "full passage (140-200 words), sharper questions, no hints, includes inference" },
+  { id: "warmup", label: { it: "Riscaldamento", fr: "Échauffement", en: "Warm-up", es: "Calentamiento" }, sub: { it: "60–100 parole", fr: "60–100 mots", en: "60–100 words", es: "60–100 palabras" }, promptName: "Riscaldamento", promptSub: "Warm-up", description: "short passage (60-100 words), simple comprehension, activates background knowledge" },
+  { id: "main", label: { it: "Lezione principale", fr: "Leçon principale", en: "Main lesson", es: "Lección principal" }, sub: { it: "140–200 parole", fr: "140–200 mots", en: "140–200 words", es: "140–200 palabras" }, promptName: "Lezione principale", promptSub: "Main lesson", description: "full passage (140-200 words), full activity suite, balances skills" },
+  { id: "homework", label: { it: "Compito a casa", fr: "Devoir à la maison", en: "Homework", es: "Tarea" }, sub: { it: "180–250 parole", fr: "180–250 mots", en: "180–250 words", es: "180–250 palabras" }, promptName: "Compito a casa", promptSub: "Homework", description: "longer passage (180-250 words), independent work, clearer scaffolding in questions" },
+  { id: "assessment", label: { it: "Verifica", fr: "Évaluation", en: "Assessment", es: "Evaluación" }, sub: { it: "con inferenza", fr: "avec inférence", en: "includes inference", es: "incluye inferencia" }, promptName: "Verifica", promptSub: "Assessment", description: "full passage (140-200 words), sharper questions, no hints, includes inference" },
 ];
 
 const EXERCISE_TYPES = [
@@ -336,9 +336,9 @@ const DIFFICULTIES = [
 const GENRES = [
   { id: "auto", label: { it: "Il più adatto", fr: "Le plus adapté", en: "Best fit", es: "El más adecuado" }, sub: { it: "sceglie Livella", fr: "Livella choisit", en: "Livella picks", es: "elige Livella" }, promptName: "Best fit for the topic",
     conventions: "Choose the text type that fits the topic best. If the topic itself names a text type (a discussion, a dialogue, a letter, a song, a story, an article), write exactly that type. Otherwise pick the most natural one for the topic and the learners. Follow that type's real conventions. Length follows the reading purpose." },
-  { id: "postcard", label: { it: "Cartolina", fr: "Carte postale", en: "Postcard", es: "Postal" }, sub: { it: "Postcard", fr: "Postcard", en: "50–90 words", es: "50–90 palabras" }, promptName: "Postcard",
+  { id: "postcard", label: { it: "Cartolina", fr: "Carte postale", en: "Postcard", es: "Postal" }, sub: { it: "50–90 parole", fr: "50–90 mots", en: "50–90 words", es: "50–90 palabras" }, promptName: "Postcard",
     conventions: "A postcard: a greeting line, 3-6 sentences about where the writer is and what they are doing, a closing and a signature. 50-90 words at the middle rung; the genre's length wins over the purpose length. Informal register. Lowest rung: fixed, high-frequency chunks (greeting, 'I am in...', weather, one food, one activity). Highest rung: vivid detail, varied connectors, a touch of humour." },
-  { id: "letter", label: { it: "Lettera / Email", fr: "Lettre / Courriel", en: "Letter / Email", es: "Carta / Correo" }, sub: { it: "Letter / Email", fr: "Letter / Email", en: "formal or informal", es: "formal o informal" }, promptName: "Letter or email",
+  { id: "letter", label: { it: "Lettera / Email", fr: "Lettre / Courriel", en: "Letter / Email", es: "Carta / Correo" }, sub: { it: "formale o informale", fr: "formel ou informel", en: "formal or informal", es: "formal o informal" }, promptName: "Letter or email",
     conventions: "A letter or email with an opening, body and closing. The register (formal or informal) must fit the addressee named in the topic; if none is named, write to a friend. Lower rungs: informal and short. Highest rung: may be formal (a request, a complaint, an application) using the language's real conventions of formal correspondence." },
   { id: "story", label: { it: "Racconto", fr: "Récit", en: "Story", es: "Cuento" }, sub: { it: "Short story", fr: "Short story", en: "narrative", es: "narración" }, promptName: "Short story",
     conventions: "A short narrative with a beginning, a complication and an ending. Named characters and a concrete setting in the target culture. Where the rung's calibration forbids past tenses, narrate in the present. Higher rungs: past narration and dialogue as the calibration allows." },
@@ -662,7 +662,7 @@ export default function Livella() {
   const [scalaIdx, setScalaIdx] = useState([]);    // per-paragraph rung index (0..4)
   // Pages: one finished reading per level for the SAME subject. The level in front lives in
   // result/activities/shared; the others wait here as { result, activities, activeTab, customExercises, shared }.
-  const [pages, setPages] = useState({});
+  const [pages, setPages] = useState(() => { try { const k = JSON.parse(window.localStorage.getItem("livella.last") || "null"); return (k && k.pages) || {}; } catch (e) { return {}; } });
   const [view, setView] = useState("pages");       // "pages" | "ladder" (La Scala, paragraph by paragraph)
   const pagesSig = useRef("");
   const resultRef = useRef(null);                   // where the screen goes when a reading starts
@@ -671,7 +671,7 @@ export default function Livella() {
   const [bumped, setBumped] = useState(null);      // paragraph index that just moved (for the flash)
   const [level, setLevel] = useState((startLang || "it") + "2");
   const [purpose, setPurpose] = useState("main");
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState(() => { try { const k = JSON.parse(window.localStorage.getItem("livella.last") || "null"); return (k && k.result) || null; } catch (e) { return null; } });
   const [comparison, setComparison] = useState(null);
   const [comparisonLevel, setComparisonLevel] = useState(null);
   const [showOriginal, setShowOriginal] = useState(false);
@@ -697,6 +697,7 @@ export default function Livella() {
   const UI_NAMES = { en: "English", it: "Italiano", fr: "Français", es: "Español" };
   const uiOptions = UI_CHOICES[lang] || ["en"];
   const UIL = uiOptions.includes(uiPref[lang]) ? uiPref[lang] : uiOptions[0];
+  useEffect(() => { try { document.documentElement.setAttribute("data-ui", UIL); document.documentElement.lang = UIL; } catch (e) {} }, [UIL]);
   function chooseUi(code) {
     const next = { ...uiPref, [lang]: code };
     setUiPref(next);
@@ -824,6 +825,10 @@ export default function Livella() {
     const code = err && err.code;
     if (code === "not_granted" || code === "sampling_disabled" || code === "not_declared") return T.errNotGranted;
     if (code === "rate_limited") return T.errRate;
+    if (code === "network") return T.errNetwork;
+    if (code === "passcode" || code === "declined" || code === "http_401") return T.errPasscode;
+    if (code === "http_413" || code === "too_large") return T.errLong;
+    if (/^(http_5\d\d|upstream_5\d\d|upstream_overloaded|upstream_529)$/.test(String(code))) return T.errServer;
     return `${fallback} [${code || "error"}]`;
   }
 
@@ -1041,7 +1046,15 @@ export default function Livella() {
   }
   useEffect(() => {
     const m = typeof window !== "undefined" && /^#l=([a-z0-9]{8,24})$/.exec(window.location.hash || "");
-    if (m && shareApi) openShared(m[1]);
+    if (m && shareApi) { openShared(m[1]); return; }
+    try {
+      const k = JSON.parse(window.localStorage.getItem("livella.last") || "null");
+      if (k && k.v === 1 && k.result && LANGUAGES[k.lang]) {
+        setLang(k.lang); if (k.level) setLevel(k.level); if (k.purpose) setPurpose(k.purpose);
+        setInput(k.input || ""); setSourceUrl(k.sourceUrl || ""); pagesSig.current = "restored";
+        if (k.result.profiles) setProfiles(k.result.profiles); if (k.result.age) setAgeBand(k.result.age);
+      }
+    } catch (e) {}
   }, []);
   // The moment a reading starts, the screen goes to where it will appear.
   useEffect(() => {
@@ -1049,6 +1062,13 @@ export default function Livella() {
     const t = setTimeout(() => { const i = LEVELS.findIndex((l) => l.id === level); pickLevel(LEVELS[(i + 1) % LEVELS.length].id); }, 4000);
     return () => clearTimeout(t);
   }, [demoAuto, level, result, loading, loadingScala, speaking, error, pendingLang]);
+  // The last lesson stays on this device (no student names are ever in it), so a refresh or a closed tab loses nothing.
+  useEffect(() => {
+    try {
+      if (result && !result.sample) window.localStorage.setItem("livella.last", JSON.stringify({ v: 1, lang, level, purpose, input, sourceUrl, result, pages, at: Date.now() }));
+      else if (!result && Object.keys(pages).length === 0) window.localStorage.removeItem("livella.last");
+    } catch (e) {}
+  }, [result, pages, lang, level, purpose, input, sourceUrl]);
   // It goes again when the reading arrives, because the page is longer by then.
   const scrolledOnce = useRef(false);
   useEffect(() => {
@@ -2763,6 +2783,37 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           .livella-card-input .livella-primary-btn { margin-top: 12px; }
         }
         @media print { .livella-invite-row, .livella-mode-line, .livella-demo-row { display: none !important; } }
+
+        /* ================= v0.19: audit fixes ================= */
+        .livella-footer { color: var(--gray-700); }
+        .livella-footer-link { color: var(--action); text-decoration: underline; text-underline-offset: 3px; }
+        .livella-ui-choice span { color: var(--gray-700); font-size: 11px; }
+        .livella-option-sub { color: var(--gray-700); font-size: 12px; }
+        .livella-teacher-note-label, .livella-accommodations-label { font-size: 11px; }
+        .livella-teacher-note-label { color: var(--copper-text, #8a5028); }
+        .livella-result-head-btns { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex: none; }
+        .livella-main-btn.small { flex: none; min-height: 44px; padding: 0 18px; font-size: 14px; border-radius: 10px; }
+        @media (max-width: 560px) { .livella-result-header { flex-direction: column; } .livella-result-head-btns { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: flex-start; width: 100%; } }
+        /* small phones and short laptops: the cards shrink so the button stays on the first screen */
+        @media (max-height: 740px) and (max-width: 560px) {
+          .livella-hero2 .livella-fan { max-width: 196px; aspect-ratio: 5 / 3.6; margin: 46px 0 10px; }
+          .livella-hero2 .livella-hero-head { margin-bottom: -2px; }
+          .livella-hero2 .livella-sheet-text { font-size: 14px; } .livella-hero2 .livella-sheet-gloss { display: none; }
+          .livella-hero2 .livella-hero-head { font-size: 24px; } .livella-hero2-top { margin-bottom: 6px; }
+          .livella-card-input .livella-textarea { min-height: 56px; }
+          .livella-hero2 .livella-fan-tabs { top: -40px; height: 40px; } .livella-hero2 .livella-fan-tab { min-height: 40px; }
+          .livella-demo-row { margin-top: -4px; } .livella-demo-row .livella-demo-btn { min-height: 40px; }
+          .livella-hero.livella-hero2 { padding-bottom: 10px; margin-bottom: 10px; }
+          .livella-card-input { padding-top: 12px; } .livella-card-input .livella-label { margin-bottom: 4px; }
+          .livella-lv-wrap { margin-top: 8px; } .livella-lv-btn { min-height: calc(40px + var(--s, 0) * 3px); padding-bottom: 9px; } .livella-lv-name { margin-top: 4px; }
+          .livella-card-input .livella-primary-btn { margin-top: 8px; min-height: 50px; }
+        }
+        @media (min-width: 860px) and (max-height: 820px) {
+          .livella-hero.livella-hero2 { padding: 16px 30px 18px; margin-bottom: 12px; }
+          .livella-hero2 .livella-fan { max-width: 210px; aspect-ratio: 5 / 4; margin: 48px 0 10px; }
+          .livella-hero2 .livella-sheet-text { font-size: 15px; } .livella-hero2 .livella-hero-head { font-size: 36px; }
+          .livella-card-input { padding-top: 18px; } .livella-card-input .livella-textarea { min-height: 70px; } .livella-lv-wrap { margin-top: 12px; }
+        }
       `}</style>
 
       <div className="livella-container">
@@ -3098,13 +3149,16 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                     {sourceUrl.trim() && !result.genre && <> · {T.source}: <a className="livella-source-link" href={sourceUrl.trim()} target="_blank" rel="noopener noreferrer">{sourceUrl.trim()}</a></>}
                   </div>
                 </div>
-                {!result.genre && !result.sample && (
-                  <button
-                    className={`livella-toggle-btn ${showOriginal ? "active" : ""}`}
-                    onClick={() => setShowOriginal(!showOriginal)}>
-                    {showOriginal ? T.hideOriginal : T.showOriginal}
-                  </button>
-                )}
+                <div className="livella-result-head-btns">
+                  <button className="livella-main-btn small" onClick={() => downloadPdf(false)} disabled={pdfBusy}>{pdfBusy ? T.pdfBuilding : T.pdfStudent}</button>
+                  {!result.genre && !result.sample && (
+                    <button
+                      className={`livella-toggle-btn ${showOriginal ? "active" : ""}`}
+                      onClick={() => setShowOriginal(!showOriginal)}>
+                      {showOriginal ? T.hideOriginal : T.showOriginal}
+                    </button>
+                  )}
+                </div>
               </div>
 
               {result.sample && (
@@ -3267,7 +3321,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                 )}
               </div>
               {!result.sample && (<details className="livella-fold">
-                <summary>{T.moreOptions}</summary>
+                <summary>{T.moreTools}</summary>
                 <div className="livella-actions">
                   <button className="livella-action-btn" onClick={() => generate("easier")} disabled={loading}>{T.easier}</button>
                   <button className="livella-action-btn" onClick={() => generate("harder")} disabled={loading}>{T.harder}</button>
@@ -3486,13 +3540,13 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         )}
         {uiOptions.length > 1 && (
           <div className="livella-ui-choice" role="group" aria-label="Interface language">
-            <span>Interface</span>
+            <span>{T.interfaceLabel}</span>
             {uiOptions.map((code) => (
               <button key={code} type="button" aria-pressed={UIL === code} className={UIL === code ? "active" : ""} onClick={() => chooseUi(code)}>{UI_NAMES[code]}</button>
             ))}
           </div>
         )}
-        <div className="livella-footer">uno strumento, un lavoro · v0.18 · © 2026 Assunta Scotto. {T.rights}</div>
+        <div className="livella-footer">uno strumento, un lavoro · v0.19 · © 2026 Assunta Scotto. {T.rights} · <a className="livella-footer-link" href={(typeof window !== "undefined" && window.LIVELLA_CONFIG && window.LIVELLA_CONFIG.privacy) || "privacy.html"}>{T.privacy}</a></div>
       </div>
     </div>
   );
