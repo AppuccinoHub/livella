@@ -159,7 +159,7 @@ const UI = {
     errScala: "Non riesco a costruire la scala.", scalaCount: "paragrafi",
     pdfStudent: "PDF studente", pdfTeacher: "PDF insegnante", pdfBuilding: "Creo il PDF...", teacherGuide: "Guida per l'insegnante", studentSheet: "Scheda dello studente",
     errPdf: "Non riesco a scaricare il PDF in questa vista.", pdfDeclined: "Download annullato.",
-    heroHead: "Il livello giusto per ogni studente.", heroSub: "Incolla un testo, o scrivi solo un tema. Livella ti restituisce la stessa pagina a ogni livello della tua classe, con i supporti per chi ne ha bisogno.", heroCta: "Livella un testo", heroMicro: "Cinque livelli · quattro lingue · profili di lettura",
+    heroHead: "Una lettura. Cinque livelli di competenza.", heroSub: "Da Novice Mid a Intermediate High, per classi di italiano, francese, spagnolo e inglese.", heroCta: "Livella un testo", heroMicro: "Cinque livelli · quattro lingue · profili di lettura",
     cmpTitle: "Confronta", cmpLevel: "Livello", cmpProfile: "Supporto", cmpLang: "Lingua", cmpHint: "Ogni confronto è una nuova generazione: la tua pagina resta a sinistra.", cmpWorking: "Preparo il confronto...",
     switchWarn: "Passare a {x} cancella la lezione sullo schermo.", switchYes: "Passa a {x}", switchNo: "Resta qui", switchTip: "Per vedere la stessa lezione in un'altra lingua, usa Confronta → Lingua.",
     listen: "Ascolta", stopListen: "Ferma", slow: "Lento", hideText: "Nascondi il testo", showText: "Mostra il testo", hiddenNote: "Testo nascosto. Ascolta e rispondi.", errVoice: "Questo dispositivo non ha una voce per questa lingua.", listenNote: "Voce del browser: la qualità dipende dal dispositivo.",
@@ -171,7 +171,7 @@ const UI = {
     modeText: "Da un testo", modeWrite: "Scrivi da zero", genreLabel: "Genere", topicLabel: "Tema",
     topicPlaceholder: "Es. una gita a Napoli con la classe · la mia famiglia · il mercato del sabato", writeHint: "Livella scrive un testo originale al livello scelto. Scrivi un tema, oppure incolla appunti o fatti; anche in inglese.",
     errTopic: "Scrivi un tema.", write: "Scrivi", writing: "Sto scrivendo...",
-    profileLabel: "Supporti", profileHint: "Il livello non cambia. Scegline uno o più.", pagesView: "Pagine", notWritten: "non è ancora scritto.", writeLevel: "Scrivi questo livello", writeHint: "La Scala li scrive tutti e cinque insieme.", fromScala: "Da La Scala: solo il testo.", fullVersion: "Aggiungi vocabolario e note per docenti", heroExample: "Questo è un esempio. Incolla la tua lettura qui sotto.", standard: "Standard", standardSub: "nessun adattamento",
+    profileLabel: "Supporti", profileHint: "Il livello non cambia. Scegline uno o più.", pagesView: "Pagine", notWritten: "non è ancora scritto.", writeLevel: "Scrivi questo livello", scalaHint: "La Scala li scrive tutti e cinque insieme.", fromScala: "Da La Scala: solo il testo.", fullVersion: "Aggiungi vocabolario e note per docenti", heroExample: "Questo è un esempio. La tua lettura apparirà qui.", make: "Crea le mie pagine", moreOptions: "Altre opzioni", exampleTag: "Esempio", standard: "Standard", standardSub: "nessun adattamento",
     wordBank: "Banca di parole", microTask: "Mini-compito", of: "di", accommodations: "Adattamenti applicati", pdfFontNote: "Nel PDF il carattere Lexend non è disponibile: spaziatura e lunghezza delle righe seguono comunque le regole.",
   },
   fr: {
@@ -203,7 +203,7 @@ const UI = {
     errScala: "Impossible de construire l'échelle.", scalaCount: "paragraphes",
     pdfStudent: "PDF élève", pdfTeacher: "PDF enseignant·e", pdfBuilding: "Création du PDF...", teacherGuide: "Guide de l'enseignant·e", studentSheet: "Fiche de l'élève",
     errPdf: "Impossible de télécharger le PDF dans cette vue.", pdfDeclined: "Téléchargement annulé.",
-    heroHead: "Le bon niveau pour chaque élève.", heroSub: "Collez un texte, ou indiquez seulement un sujet. Livella vous rend la même page à chaque niveau de votre classe, avec des aides pour les lecteurs qui en ont besoin.", heroCta: "Niveler un texte", heroMicro: "Cinq niveaux · quatre langues · profils de lecture",
+    heroHead: "Une lecture. Cinq niveaux de compétence.", heroSub: "De Novice Mid à Intermediate High, pour les cours d'italien, de français, d'espagnol et d'anglais.", heroCta: "Niveler un texte", heroMicro: "Cinq niveaux · quatre langues · profils de lecture",
     cmpTitle: "Comparer", cmpLevel: "Niveau", cmpProfile: "Aide", cmpLang: "Langue", cmpHint: "Chaque comparaison est une nouvelle génération : votre page reste à gauche.", cmpWorking: "Je prépare la comparaison...",
     switchWarn: "Passer à {x} efface la leçon affichée.", switchYes: "Passer à {x}", switchNo: "Rester ici", switchTip: "Pour voir la même leçon dans une autre langue, utilisez Comparer → Langue.",
     listen: "Écouter", stopListen: "Arrêter", slow: "Lent", hideText: "Masquer le texte", showText: "Afficher le texte", hiddenNote: "Texte masqué. Écoutez et répondez.", errVoice: "Cet appareil n'a pas de voix pour cette langue.", listenNote: "Voix du navigateur : la qualité dépend de l'appareil.",
@@ -215,7 +215,7 @@ const UI = {
     modeText: "À partir d'un texte", modeWrite: "Écrire de zéro", genreLabel: "Genre", topicLabel: "Sujet",
     topicPlaceholder: "Ex. une sortie à Lyon avec la classe · ma famille · le marché du samedi", writeHint: "Livella écrit un texte original au niveau choisi. Indiquez un sujet, ou collez des notes ou des faits ; même en anglais.",
     errTopic: "Indiquez un sujet.", write: "Écrire", writing: "J'écris...",
-    profileLabel: "Aides", profileHint: "Le niveau ne change pas. Choisissez-en une ou plusieurs.", pagesView: "Pages", notWritten: "n'est pas encore écrit.", writeLevel: "Écrire ce niveau", writeHint: "La Scala écrit les cinq d'un coup.", fromScala: "De La Scala : texte seul.", fullVersion: "Ajouter vocabulaire et notes pour l'enseignant", heroExample: "Ceci est un exemple. Collez votre lecture ci-dessous.", standard: "Standard", standardSub: "aucune adaptation",
+    profileLabel: "Aides", profileHint: "Le niveau ne change pas. Choisissez-en une ou plusieurs.", pagesView: "Pages", notWritten: "n'est pas encore écrit.", writeLevel: "Écrire ce niveau", scalaHint: "La Scala écrit les cinq d'un coup.", fromScala: "De La Scala : texte seul.", fullVersion: "Ajouter vocabulaire et notes pour l'enseignant", heroExample: "Ceci est un exemple. Votre lecture apparaîtra ici.", make: "Créer mes pages", moreOptions: "Plus d'options", exampleTag: "Exemple", standard: "Standard", standardSub: "aucune adaptation",
     wordBank: "Banque de mots", microTask: "Mini-tâche", of: "sur", accommodations: "Adaptations appliquées", pdfFontNote: "Dans le PDF, la police Lexend n'est pas disponible : l'espacement et la longueur des lignes suivent quand même les règles.",
   },
   en: {
@@ -247,7 +247,7 @@ const UI = {
     errScala: "Couldn't build the ladder.", scalaCount: "paragraphs",
     pdfStudent: "Student PDF", pdfTeacher: "Teacher PDF", pdfBuilding: "Building the PDF...", teacherGuide: "Teacher guide", studentSheet: "Student sheet",
     errPdf: "Can't download the PDF in this view.", pdfDeclined: "Download cancelled.",
-    heroHead: "The right level for every student.", heroSub: "Paste a text, or just a topic. Livella hands back the same page at every level in your room, with supports for the readers who need them.", heroCta: "Level a text now", heroMicro: "Five levels · four languages · reader profiles",
+    heroHead: "One reading. Five proficiency levels.", heroSub: "Novice Mid to Intermediate High, for Italian, French, Spanish and English classes.", heroCta: "Level a text now", heroMicro: "Five levels · four languages · reader profiles",
     cmpTitle: "Compare", cmpLevel: "Level", cmpProfile: "Support", cmpLang: "Language", cmpHint: "Each comparison is a new generation. Your page stays on the left.", cmpWorking: "Preparing the comparison...",
     switchWarn: "Switching to {x} clears the lesson on screen.", switchYes: "Switch to {x}", switchNo: "Stay here", switchTip: "To see the same lesson in another language, use Compare → Language.",
     listen: "Listen", stopListen: "Stop", slow: "Slow", hideText: "Hide the text", showText: "Show the text", hiddenNote: "Text hidden. Listen and answer.", errVoice: "This device has no voice for this language.", listenNote: "Browser voice: quality depends on the device.",
@@ -259,7 +259,7 @@ const UI = {
     modeText: "From a text", modeWrite: "Write from scratch", genreLabel: "Genre", topicLabel: "Topic",
     topicPlaceholder: "e.g. a class trip · my family · the Saturday market", writeHint: "Livella writes an original text at the chosen level. Type a topic, or paste notes or facts; English is fine.",
     errTopic: "Enter a topic.", write: "Write", writing: "Writing...",
-    profileLabel: "Supports", profileHint: "The level never changes. Pick one or more.", pagesView: "Pages", notWritten: "is not written yet.", writeLevel: "Write this level", writeHint: "La Scala writes all five at once.", fromScala: "From La Scala: text only.", fullVersion: "Add vocabulary and teacher notes", heroExample: "This is an example. Paste your own reading below.", standard: "Standard", standardSub: "no adaptations",
+    profileLabel: "Supports", profileHint: "The level never changes. Pick one or more.", pagesView: "Pages", notWritten: "is not written yet.", writeLevel: "Write this level", scalaHint: "La Scala writes all five at once.", fromScala: "From La Scala: text only.", fullVersion: "Add vocabulary and teacher notes", heroExample: "This is an example. Your own reading will appear here.", make: "Make my pages", moreOptions: "More options", exampleTag: "Example", standard: "Standard", standardSub: "no adaptations",
     wordBank: "Word bank", microTask: "Micro-task", of: "of", accommodations: "Accommodations applied", pdfFontNote: "The Lexend font isn't available in the PDF; spacing and line length still follow the rules.",
   },  es: {
     inputLabel: "Texto o tema",
@@ -290,7 +290,7 @@ const UI = {
     errScala: "No se pudo construir la escalera.", scalaCount: "párrafos",
     pdfStudent: "PDF del estudiante", pdfTeacher: "PDF del docente", pdfBuilding: "Creando el PDF...", teacherGuide: "Guía del docente", studentSheet: "Hoja del estudiante",
     errPdf: "No se puede descargar el PDF en esta vista.", pdfDeclined: "Descarga cancelada.",
-    heroHead: "El nivel adecuado para cada estudiante.", heroSub: "Pega un texto, o solo un tema. Livella te devuelve la misma página en cada nivel de tu clase, con apoyos para los lectores que los necesitan.", heroCta: "Nivelar un texto", heroMicro: "Cinco niveles · cuatro idiomas · perfiles de lectura",
+    heroHead: "Una lectura. Cinco niveles de competencia.", heroSub: "De Novice Mid a Intermediate High, para clases de italiano, francés, español e inglés.", heroCta: "Nivelar un texto", heroMicro: "Cinco niveles · cuatro idiomas · perfiles de lectura",
     cmpTitle: "Comparar", cmpLevel: "Nivel", cmpProfile: "Apoyo", cmpLang: "Idioma", cmpHint: "Cada comparación es una nueva generación. Tu página queda a la izquierda.", cmpWorking: "Preparando la comparación...",
     switchWarn: "Cambiar a {x} borra la lección en pantalla.", switchYes: "Cambiar a {x}", switchNo: "Quedarme aquí", switchTip: "Para ver la misma lección en otro idioma, usa Comparar → Idioma.",
     listen: "Escuchar", stopListen: "Detener", slow: "Lento", hideText: "Ocultar el texto", showText: "Mostrar el texto", hiddenNote: "Texto oculto. Escucha y responde.", errVoice: "Este dispositivo no tiene una voz para este idioma.", listenNote: "Voz del navegador: la calidad depende del dispositivo.",
@@ -302,7 +302,7 @@ const UI = {
     modeText: "A partir de un texto", modeWrite: "Escribir desde cero", genreLabel: "Género", topicLabel: "Tema",
     topicPlaceholder: "p. ej. una excursión de la clase · mi familia · el mercado del sábado", writeHint: "Livella escribe un texto original en el nivel elegido. Escribe un tema, o pega apuntes o datos; puede ser en inglés.",
     errTopic: "Escribe un tema.", write: "Escribir", writing: "Escribiendo...",
-    profileLabel: "Apoyos", profileHint: "El nivel no cambia. Elige uno o más.", pagesView: "Páginas", notWritten: "aún no está escrito.", writeLevel: "Escribir este nivel", writeHint: "La Scala escribe los cinco a la vez.", fromScala: "De La Scala: solo el texto.", fullVersion: "Añadir vocabulario y notas para docentes", heroExample: "Esto es un ejemplo. Pega tu lectura abajo.", standard: "Estándar", standardSub: "sin adaptaciones",
+    profileLabel: "Apoyos", profileHint: "El nivel no cambia. Elige uno o más.", pagesView: "Páginas", notWritten: "aún no está escrito.", writeLevel: "Escribir este nivel", scalaHint: "La Scala escribe los cinco a la vez.", fromScala: "De La Scala: solo el texto.", fullVersion: "Añadir vocabulario y notas para docentes", heroExample: "Esto es un ejemplo. Tu lectura aparecerá aquí.", make: "Crear mis páginas", moreOptions: "Más opciones", exampleTag: "Ejemplo", standard: "Estándar", standardSub: "sin adaptaciones",
     wordBank: "Banco de palabras", microTask: "Mini-tarea", of: "de", accommodations: "Adaptaciones aplicadas", pdfFontNote: "La fuente Lexend no está disponible en el PDF; el espaciado y la longitud de línea siguen las reglas.",
   },
 };
@@ -334,6 +334,8 @@ const DIFFICULTIES = [
 // Conventions are written for the model in English and apply to every language;
 // examples are described, not quoted, so no language's phrasing leaks into another's prompt.
 const GENRES = [
+  { id: "auto", label: { it: "Il più adatto", fr: "Le plus adapté", en: "Best fit", es: "El más adecuado" }, sub: { it: "sceglie Livella", fr: "Livella choisit", en: "Livella picks", es: "elige Livella" }, promptName: "Best fit for the topic",
+    conventions: "Choose the text type that fits the topic best. If the topic itself names a text type (a discussion, a dialogue, a letter, a song, a story, an article), write exactly that type. Otherwise pick the most natural one for the topic and the learners. Follow that type's real conventions. Length follows the reading purpose." },
   { id: "postcard", label: { it: "Cartolina", fr: "Carte postale", en: "Postcard", es: "Postal" }, sub: { it: "Postcard", fr: "Postcard", en: "50–90 words", es: "50–90 palabras" }, promptName: "Postcard",
     conventions: "A postcard: a greeting line, 3-6 sentences about where the writer is and what they are doing, a closing and a signature. 50-90 words at the middle rung; the genre's length wins over the purpose length. Informal register. Lowest rung: fixed, high-frequency chunks (greeting, 'I am in...', weather, one food, one activity). Highest rung: vivid detail, varied connectors, a touch of humour." },
   { id: "letter", label: { it: "Lettera / Email", fr: "Lettre / Courriel", en: "Letter / Email", es: "Carta / Correo" }, sub: { it: "Letter / Email", fr: "Letter / Email", en: "formal or informal", es: "formal o informal" }, promptName: "Letter or email",
@@ -595,7 +597,7 @@ export default function Livella() {
   const [lang, setLang] = useState(startLang || "it");
   const [input, setInput] = useState("");
   const [mode, setMode] = useState("text");       // "text" = re-level a source · "write" = original text from a topic
-  const [genre, setGenre] = useState("postcard");
+  const [genre, setGenre] = useState("auto");
   const [topic, setTopic] = useState("");
   const [profiles, setProfiles] = useState([]);   // ids from PROFILES; [] = Standard
   const [ageBand, setAgeBand] = useState("high");  // id from AGE_BANDS
@@ -660,7 +662,9 @@ export default function Livella() {
   // result/activities/shared; the others wait here as { result, activities, activeTab, customExercises, shared }.
   const [pages, setPages] = useState({});
   const [view, setView] = useState("pages");       // "pages" | "ladder" (La Scala, paragraph by paragraph)
-  const pagesSig = useRef("");                      // what the pages were written from
+  const pagesSig = useRef("");
+  const resultRef = useRef(null);                   // where the screen goes when a reading starts
+  const [moreOpen, setMoreOpen] = useState(false);  // the folded choices under the button                      // what the pages were written from
   const [loadingScala, setLoadingScala] = useState(false);
   const [bumped, setBumped] = useState(null);      // paragraph index that just moved (for the flash)
   const [level, setLevel] = useState((startLang || "it") + "2");
@@ -724,7 +728,7 @@ export default function Livella() {
   // language is cleared rather than left on screen mislabeled.
   function askSwitchLanguage(nextId) {
     if (nextId === lang) { setPendingLang(null); return; }
-    if (result || scala) { setPendingLang(nextId); return; }   // something on screen would be lost: ask first
+    if (isReal(result) || scala || Object.keys(pages).some((k) => isReal(pages[k].result))) { setPendingLang(nextId); return; }   // real work on screen would be lost: ask first
     switchLanguage(nextId);
   }
   function switchLanguage(nextId) {
@@ -737,6 +741,7 @@ export default function Livella() {
     setActivities({}); setActiveTab(null); setCustomExercises([]);
     setScala(null); setScalaIdx([]); setPages({}); setView("pages"); pagesSig.current = "";
     setError(null); setCopied(false); setShowOriginal(false);
+    loadSample(nextId, next.levels[1] ? next.levels[1].id : next.levels[0].id);
   }
 
   // The page asks Claude through the viewer's own account (the `sample` capability).
@@ -839,6 +844,17 @@ export default function Livella() {
     return JSON.stringify([lang, mode, writing ? [genre, topic.trim()] : [input, sourceUrl.trim(), imageFile ? String(imageFile.name || "") + ":" + String(imageFile.size || (imageFile.data ? imageFile.data.length : 1)) : ""], profiles.slice().sort(), ageBand, purpose]);
   }
   // Bring a level to the front. With pages on the desk this swaps the page; with none it only sets the level.
+  // The built-in example: the same short reading at all five levels, on the desk before anyone
+  // types a word. It costs nothing and needs no passcode.
+  function loadSample(langId, levelId) {
+    const Lx = LANGUAGES[langId]; if (!Lx || !Lx.heroSheets) return;
+    const mk = (i) => ({ title: Lx.heroTitle, passage: Lx.heroSheets[i].txt, glosses: Lx.heroSheets[i].gloss.map((g) => ({ word: g[0], translation: g[1] })), teacher_note: "", sample: true, genre: null, profiles: [], age: "high" });
+    let idx = Lx.levels.findIndex((l) => l.id === levelId); if (idx < 0) idx = 1;
+    const pg = {};
+    Lx.levels.forEach((l, i) => { if (i !== idx && Lx.heroSheets[i]) pg[l.id] = { result: mk(i), activities: {}, activeTab: null, customExercises: [], shared: null }; });
+    setPages(pg); setResult(mk(idx)); pagesSig.current = "sample"; setView("pages");
+  }
+  const isReal = (r) => !!(r && !r.sample);
   function pickLevel(id) {
     if (id === level || loading || loadingScala) return;
     if (!result && Object.keys(pages).length === 0) { setLevel(id); return; }
@@ -1014,8 +1030,17 @@ export default function Livella() {
   }
   useEffect(() => {
     const m = typeof window !== "undefined" && /^#l=([a-z0-9]{8,24})$/.exec(window.location.hash || "");
-    if (m && shareApi) openShared(m[1]);
+    if (m && shareApi) openShared(m[1]); else loadSample(lang, level);
   }, []);
+  // The moment a reading starts, the screen goes to where it will appear.
+  // It goes again when the reading arrives, because the page is longer by then.
+  const scrolledOnce = useRef(false);
+  useEffect(() => {
+    if (!scrolledOnce.current) { scrolledOnce.current = true; if (!loading && !loadingScala) return; }
+    if (resultRef.current && resultRef.current.scrollIntoView) {
+      try { resultRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); } catch (e) { resultRef.current.scrollIntoView(); }
+    }
+  }, [loading, loadingScala]);
   async function addVersion(otherId) {
     const L2 = LANGUAGES[otherId]; const lv2 = L2.levels[levelIndex(level)] || L2.levels[0];
     setShareBusy("add:" + otherId); setError(null);
@@ -1071,7 +1096,7 @@ export default function Livella() {
     if (!JsPDF) throw { code: "unavailable", message: "jsPDF not loaded" };
     const doc = new JsPDF({ unit: "pt", format: "letter" });
     const M = 54, W = 612 - 2 * M, BOTTOM = 792 - 54, GUT = 24, CW = (W - GUT) / 2;
-    const ink = [43, 24, 16], copper = [138, 80, 40], muted = [120, 100, 80], teal = [10, 92, 95];
+    const ink = [43, 24, 16], copper = [138, 80, 40], muted = [120, 100, 80], teal = [16, 28, 61];
     let y = M;
     const need = (h) => { if (y + h > BOTTOM) { doc.addPage(); y = M; } };
     const set = (size, style, color) => { doc.setFont("helvetica", style || "normal"); doc.setFontSize(size); doc.setTextColor(...(color || ink)); };
@@ -1248,7 +1273,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
     };
     const gap = (h) => { y += h; };
     const rule = () => { need(10); doc.setDrawColor(184, 116, 58); doc.setLineWidth(0.8); doc.line(M, y, M + W, y); y += 12; };
-    const copper = [138, 80, 40], muted = [120, 100, 80], teal = [10, 92, 95];
+    const copper = [138, 80, 40], muted = [120, 100, 80], teal = [16, 28, 61];
 
     // header
     if (teacher) {
@@ -1427,7 +1452,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
   }
 
   function genreMeta(obj) {
-    const g = obj && obj.genre && GENRES.find((x) => x.id === obj.genre);
+    const g = obj && obj.genre && obj.genre !== "auto" && GENRES.find((x) => x.id === obj.genre);
     return g ? ` · ${g.label[UIL]}` : "";
   }
 
@@ -1552,7 +1577,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           /* Brand */
           --espresso: #2b1810;
           --espresso-light: #4a2d20;
-          --copper: #b8743a;
+          --copper: #9c5a2a;
           --copper-light: #d49a6a;
           --copper-pale: #f4e4d4;
           --cream: #faf6f0;
@@ -1574,10 +1599,13 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           --answer-darker: #14532d;
 
           /* Teal - interactive UI color */
-          --teal: #0d7377;
-          --teal-light: #14a098;
-          --teal-pale: #d6f1ef;
-          --teal-dark: #0a5c5f;
+          /* v0.17: navy for structure, one royal blue kept for the main action only */
+          --teal: #22346b;
+          --teal-light: #4a63b0;
+          --teal-pale: #e3e9f8;
+          --teal-dark: #101c3d;
+          --action: #1d5be0;
+          --action-dark: #1648b8;
 
           font-family: 'Inter', sans-serif;
           color: var(--ink);
@@ -1618,7 +1646,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           background: var(--teal);
           color: #fff;
           border-color: var(--teal);
-          box-shadow: 0 4px 14px rgba(13, 115, 119, 0.25);
+          box-shadow: 0 4px 14px rgba(29, 91, 224, 0.25);
         }
         .livella-lang-flag { font-size: 16px; line-height: 1; }
         @media (max-width: 640px) {
@@ -1634,17 +1662,17 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         .livella-logo { grid-area: logo; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 32px; letter-spacing: -0.01em; margin: 0; line-height: 1; color: var(--cream); }
         .livella-logo span { color: #e3ad7c; }
         .livella-hero-copy { grid-area: copy; min-width: 0; padding: 24px 0 18px; }
-        .livella-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; color: rgba(214, 241, 239, 0.85); margin: 0 0 12px; }
+        .livella-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; color: rgba(222, 229, 247, 0.85); margin: 0 0 12px; }
         .livella-tagline-all { color: #e3ad7c; white-space: nowrap; }
         .livella-hero-head { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(36px, 5.6vw, 56px); line-height: 1.03; letter-spacing: -0.015em; margin: 0 0 18px; text-wrap: balance; color: var(--cream); }
         .livella-hero-rule { width: 60px; height: 2px; background: var(--copper); border: 0; margin: 0 0 18px; }
-        .livella-hero-sub { font-size: 16px; line-height: 1.6; color: rgba(214, 241, 239, 0.82); max-width: 40ch; margin: 0 0 24px; }
+        .livella-hero-sub { font-size: 16px; line-height: 1.6; color: rgba(222, 229, 247, 0.82); max-width: 40ch; margin: 0 0 24px; }
         .livella-hero-cta { background: var(--cream); color: #8a5028; border: 0; border-radius: 6px; padding: 13px 24px; font: 600 15px 'Inter', sans-serif; cursor: pointer; transition: background 0.2s, color 0.2s; }
         .livella-hero-cta:hover, .livella-hero-cta:focus-visible { background: var(--copper); color: var(--cream); outline: 2px solid var(--cream); outline-offset: 3px; }
         .livella-hero-btns { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
         .livella-hero-invite { background: transparent; color: var(--cream); border: 1.5px solid rgba(250, 246, 240, 0.55); border-radius: 6px; padding: 11.5px 18px; font: 600 15px 'Inter', sans-serif; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
         .livella-hero-invite:hover, .livella-hero-invite:focus-visible { background: rgba(250, 246, 240, 0.12); border-color: var(--cream); outline: none; }
-        .livella-hero-micro { display: block; font-size: 12.5px; color: rgba(214, 241, 239, 0.75); margin-top: 12px; letter-spacing: 0.02em; }
+        .livella-hero-micro { display: block; font-size: 12.5px; color: rgba(222, 229, 247, 0.75); margin-top: 12px; letter-spacing: 0.02em; }
 
         .livella-fanwrap { grid-area: fan; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; }
         .livella-fan { position: relative; width: 100%; max-width: 310px; aspect-ratio: 4 / 5; margin: 40px 0 30px; }
@@ -1654,7 +1682,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         .livella-fan-tab:focus-visible { outline: 2px solid var(--copper); outline-offset: 2px; }
         .livella-sheet {
           position: absolute; inset: 0; background: #f0e7d7; color: var(--espresso); border-radius: 3px; cursor: pointer;
-          box-shadow: 0 10px 26px rgba(4, 34, 36, 0.42), 0 1px 2px rgba(4, 34, 36, 0.42);
+          box-shadow: 0 10px 26px rgba(8, 14, 34, 0.42), 0 1px 2px rgba(8, 14, 34, 0.42);
           transform-origin: 50% 120%; transform: rotate(0deg); z-index: calc(var(--n) + 1);
           transition: transform 0.9s cubic-bezier(.2,.8,.2,1) calc(var(--n) * 110ms), background 0.5s;
           padding: 20px 20px 16px; box-sizing: border-box; text-align: left;
@@ -1676,15 +1704,15 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         .livella-sheet-ctext { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 17px; line-height: 1.32; margin: 0; }
         .livella-sheet-mini { display: flex; gap: 7px; align-items: flex-start; font-size: 12px; line-height: 1.35; color: var(--teal-dark); border-top: 1px dashed #f0e7d7; margin: 6px 0 0; padding-top: 6px; }
         .livella-sheet-mini i { flex: none; width: 11px; height: 11px; border: 1.5px solid var(--teal); border-radius: 2px; margin-top: 2px; }
-        .livella-hero-prof { display: inline-flex; border: 1px solid rgba(214, 241, 239, 0.3); border-radius: 999px; overflow: hidden; }
-        .livella-hero-prof button { border: 0; background: transparent; color: rgba(214, 241, 239, 0.85); font: 600 12.5px 'Inter', sans-serif; padding: 7px 16px; cursor: pointer; }
+        .livella-hero-prof { display: inline-flex; border: 1px solid rgba(222, 229, 247, 0.3); border-radius: 999px; overflow: hidden; }
+        .livella-hero-prof button { border: 0; background: transparent; color: rgba(222, 229, 247, 0.85); font: 600 12.5px 'Inter', sans-serif; padding: 7px 16px; cursor: pointer; }
         .livella-hero-prof button[aria-pressed="true"] { background: var(--cream); color: var(--teal-dark); }
         .livella-hero-prof button:focus-visible { outline: 2px solid var(--cream); outline-offset: 2px; }
-        .livella-hero-example { margin: 12px 0 0; font: 500 12.5px 'Inter', sans-serif; color: rgba(214, 241, 239, 0.85); text-align: center; }
+        .livella-hero-example { margin: 12px 0 0; font: 500 12.5px 'Inter', sans-serif; color: rgba(222, 229, 247, 0.85); text-align: center; }
 
         /* ====== THE DESK: the reading as tabbed pages, the same picture the front page shows ====== */
         .livella-desk { position: relative; background: var(--teal-dark); border-radius: 10px; padding: 16px 14px 18px; margin-bottom: 24px; overflow: hidden; }
-        .livella-desk > .livella-card { position: relative; z-index: 2; margin: 0; background: #fffdf8; box-shadow: 0 10px 26px rgba(4, 34, 36, 0.4); }
+        .livella-desk > .livella-card { position: relative; z-index: 2; margin: 0; background: #fffdf8; box-shadow: 0 10px 26px rgba(8, 14, 34, 0.4); }
         .livella-desk::before, .livella-desk::after { content: ""; position: absolute; z-index: 1; left: 14px; right: 14px; top: 62px; bottom: 18px; background: #f0e7d7; border-radius: 6px; transform-origin: 50% 0; }
         .livella-desk::before { transform: rotate(-0.55deg); } .livella-desk::after { transform: rotate(0.55deg); }
         .livella-desk-tabs { position: relative; z-index: 3; display: flex; gap: 6px; padding: 0 4%; height: 44px; margin-bottom: -1px; }
@@ -1740,7 +1768,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           transition: all 0.18s;
           line-height: 1.5;
         }
-        .livella-textarea:focus { outline: none; border-color: var(--teal); background: white; box-shadow: 0 0 0 3px rgba(13, 115, 119, 0.1); }
+        .livella-textarea:focus { outline: none; border-color: var(--teal); background: white; box-shadow: 0 0 0 3px rgba(29, 91, 224, 0.1); }
         .livella-textarea::placeholder { color: var(--gray-400); }
 
         /* ====== MODE: from a text · write from scratch ====== */
@@ -1881,7 +1909,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           border: 1px solid var(--gray-200); border-radius: 6px; background: var(--gray-100);
           font-family: 'Inter', sans-serif; font-size: 14px; color: var(--ink);
         }
-        .livella-link-input:focus { outline: none; border-color: var(--teal); background: white; box-shadow: 0 0 0 3px rgba(13, 115, 119, 0.1); }
+        .livella-link-input:focus { outline: none; border-color: var(--teal); background: white; box-shadow: 0 0 0 3px rgba(29, 91, 224, 0.1); }
         .livella-link-hint { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--gray-500); }
         .livella-source-link { color: var(--teal-dark); word-break: break-all; }
         @media print { .livella-source-row, .livella-image-chip, .livella-link-row { display: none !important; } }
@@ -1900,7 +1928,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         .livella-option-btn.active {
           border-color: var(--teal);
           background: var(--teal-pale);
-          box-shadow: 0 1px 3px rgba(13, 115, 119, 0.15);
+          box-shadow: 0 1px 3px rgba(29, 91, 224, 0.15);
         }
         .livella-option-name {
           font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;
@@ -1915,7 +1943,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           font-weight: 600; letter-spacing: 0.02em; cursor: pointer; border-radius: 6px;
           margin-top: 24px; transition: all 0.18s;
         }
-        .livella-primary-btn:hover:not(:disabled) { background: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(13, 115, 119, 0.3); }
+        .livella-primary-btn:hover:not(:disabled) { background: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(29, 91, 224, 0.3); }
         .livella-primary-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
         /* ====== LA SCALA ====== */
@@ -1956,11 +1984,11 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: white;
         }
         /* five rungs: pale → deep teal. The darker the rung, the higher the level. */
-        .r0 { --rung: #8fcfca; --rung-ink: #0a5c5f; }
-        .r1 { --rung: #4fb3ad; --rung-ink: #0a5c5f; }
-        .r2 { --rung: #14a098; --rung-ink: #ffffff; }
-        .r3 { --rung: #0d7377; --rung-ink: #ffffff; }
-        .r4 { --rung: #0a5c5f; --rung-ink: #ffffff; }
+        .r0 { --rung: #9fb0de; --rung-ink: #101c3d; }
+        .r1 { --rung: #6f86c8; --rung-ink: #101c3d; }
+        .r2 { --rung: #4a63b0; --rung-ink: #ffffff; }
+        .r3 { --rung: #22346b; --rung-ink: #ffffff; }
+        .r4 { --rung: #101c3d; --rung-ink: #ffffff; }
         .livella-rung-dot { background: var(--rung); color: var(--rung-ink); }
 
         .livella-scala { display: flex; flex-direction: column; gap: 18px; }
@@ -1968,7 +1996,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           border-left: 4px solid var(--rung); padding: 4px 0 4px 18px;
           transition: border-color 0.25s, background-color 0.4s; border-radius: 0 6px 6px 0;
         }
-        .livella-scala-para.bump { background-color: rgba(20, 160, 152, 0.10); }
+        .livella-scala-para.bump { background-color: rgba(74, 99, 176, 0.10); }
         @media (prefers-reduced-motion: reduce) { .livella-scala-para { transition: none; } }
         .livella-scala-ctrl { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
         .livella-scala-arrow {
@@ -2084,7 +2112,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           border-radius: 0 8px 8px 0;
         }
         .livella-translations.compact { margin: 10px 0 0; padding: 10px 14px; }
-        .livella-translation-row + .livella-translation-row { margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(13,115,119,0.3); }
+        .livella-translation-row + .livella-translation-row { margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(29,91,224,0.3); }
         .livella-translation-label {
           display: block; font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
           letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 4px;
@@ -2577,9 +2605,103 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         }
         .livella-print-btn:disabled { opacity: 0.55; cursor: wait; }
         .livella-print-btn.teacher { border-style: dashed; }
+
+        /* ================= v0.17: one box, then the pages do the rest ================= */
+        .livella-hero.livella-hero2 { display: block; padding: 22px 26px 26px; margin-bottom: 16px; }
+        .livella-hero2-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+        .livella-hero2 .livella-logo { font-size: 30px; }
+        .livella-hero2 .livella-hero-head { font-size: clamp(30px, 6.4vw, 48px); line-height: 1.04; margin: 0 0 10px; text-wrap: balance; }
+        .livella-hero2 .livella-hero-sub { margin: 0; max-width: 58ch; font-size: 15.5px; line-height: 1.5; }
+        .livella-hero2 .livella-hero-invite { min-height: 44px; padding: 0 14px; font-size: 13px; white-space: nowrap; }
+        .livella-card-input .livella-lang-bar { justify-content: flex-start; margin: 0 0 16px; }
+        .livella-card-input .livella-textarea { min-height: 120px; }
+        .livella-card-input .livella-topic-box { font-size: 17px; }
+        .livella-lv-wrap { margin-top: 18px; }
+        .livella-lv { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-top: 6px; }
+        .livella-lv-btn { min-height: 48px; border: 1.5px solid var(--gray-200); border-radius: 8px; background: white; color: var(--espresso); font: 600 15px 'Inter', sans-serif; cursor: pointer; padding: 0; }
+        .livella-lv-btn.active { background: var(--teal-dark); border-color: var(--teal-dark); color: var(--cream); }
+        .livella-lv-btn:focus-visible { outline: 3px solid var(--copper-light); outline-offset: 2px; }
+        .livella-lv-name { margin: 7px 0 0; font: 500 13px 'Inter', sans-serif; color: var(--gray-700); }
+        .livella-primary-btn { background: var(--action); min-height: 54px; font-size: 17px; font-weight: 700; border-radius: 12px; margin-top: 18px; box-shadow: 0 3px 0 var(--action-dark); }
+        .livella-primary-btn:hover:not(:disabled) { background: var(--action-dark); box-shadow: 0 3px 0 var(--teal-dark); }
+        .livella-more-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 14px; margin-top: 12px; }
+        .livella-sum { font: 500 13px 'Inter', sans-serif; color: var(--gray-700); min-width: 0; }
+        .livella-more-btn { border: 0; background: none; min-height: 44px; padding: 0; font: 600 14px 'Inter', sans-serif; color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+        .livella-more-btn:focus-visible { outline: 3px solid var(--copper-light); outline-offset: 2px; }
+        .livella-more { border-top: 1px solid var(--gray-200); margin-top: 8px; padding-top: 4px; }
+        .livella-more .livella-source-row { margin-top: 18px; }
+        .livella-more .livella-write, .livella-more > div:first-child { margin-top: 18px; }
+        .livella-result-anchor { scroll-margin-top: 10px; height: 0; }
+        /* the fan: four back pages tilted behind the top of the reading */
+        .livella-desk::before, .livella-desk::after { display: none; }
+        .livella-desk { padding: 16px 10px 18px; }
+        .livella-desk-fan i { position: absolute; z-index: 1; left: 16px; right: 16px; top: 82px; height: 320px; background: #f0e7d7; border-radius: 6px; transform-origin: 50% 120%; box-shadow: 0 6px 16px rgba(8, 14, 34, 0.35); }
+        .livella-desk-fan i:nth-child(1) { transform: rotate(-2.2deg); } .livella-desk-fan i:nth-child(2) { transform: rotate(2.2deg); }
+        .livella-desk-fan i:nth-child(3) { transform: rotate(-1.1deg); background: #f6eede; } .livella-desk-fan i:nth-child(4) { transform: rotate(1.1deg); background: #f6eede; }
+        .livella-desk > .livella-card { margin: 0 30px; }
+        .livella-desk-tabs { padding: 0 calc(30px + 3%); height: 50px; }
+        .livella-sample-note { margin: 0 0 14px; padding: 9px 12px; border-radius: 8px; background: var(--teal-pale); color: var(--teal-dark); font: 500 13.5px 'Inter', sans-serif; }
+        .livella-sample-note b { text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; margin-right: 6px; }
+        .livella-actions2 { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .livella-main-btn { flex: 1 1 200px; min-height: 52px; border: 0; border-radius: 12px; background: var(--action); color: white; font: 700 16px 'Inter', sans-serif; cursor: pointer; box-shadow: 0 3px 0 var(--action-dark); }
+        .livella-main-btn:hover:not(:disabled) { background: var(--action-dark); } .livella-main-btn:disabled { opacity: 0.55; cursor: wait; }
+        .livella-main-btn:focus-visible { outline: 3px solid var(--copper-light); outline-offset: 2px; }
+        .livella-actions2 .livella-share-btn { flex: 1 1 200px; min-height: 52px; margin: 0; justify-content: center; }
+        .livella-fold { border-top: 1px solid var(--gray-200); margin-top: 14px; }
+        .livella-fold > summary, .livella-fold-card > summary { cursor: pointer; list-style: none; min-height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font: 600 14.5px 'Inter', sans-serif; color: var(--espresso); }
+        .livella-fold > summary::-webkit-details-marker, .livella-fold-card > summary::-webkit-details-marker { display: none; }
+        .livella-fold > summary::after, .livella-fold-card > summary::after { content: "›"; font-size: 20px; color: var(--gray-500); transition: transform 0.15s; }
+        .livella-fold[open] > summary::after, .livella-fold-card[open] > summary::after { transform: rotate(90deg); }
+        .livella-fold > summary:focus-visible, .livella-fold-card > summary:focus-visible { outline: 3px solid var(--copper-light); outline-offset: 2px; }
+        .livella-fold .livella-cmp { border-top: 0; margin-top: 0; padding-top: 0; }
+        .livella-fold .livella-actions { margin-top: 4px; }
+        .livella-fold-card { padding-top: 10px; padding-bottom: 10px; }
+        .livella-fold-card[open] { padding-bottom: 24px; }
+        .livella-fold-card > summary { flex-wrap: wrap; }
+        .livella-fold-card > summary .livella-section-title { margin: 0; flex: 1 1 auto; }
+        .livella-fold-card > summary .livella-section-subtitle { display: none; }
+        .livella-fold-card[open] > summary { margin-bottom: 12px; }
+        /* thumb-sized controls */
+        .livella-compare-mini-btn, .livella-lang-btn, .livella-ui-choice button, .livella-toggle-btn, .livella-mode-btn, .livella-view button, .livella-action-btn, .livella-print-btn, .livella-share-btn, .livella-scala-mini, .livella-cmp-tab, .livella-listen-btn, .livella-option-btn, .livella-count-btn, .livella-diff-btn, .livella-builder-btn { min-height: 44px; }
+        .livella-scala-arrow { min-width: 44px; min-height: 44px; }
+        .livella-ui-choice { margin: 26px 0 0; justify-content: center; }
+        @media (max-width: 560px) {
+          .livella-hero.livella-hero2 { padding: 18px 18px 22px; }
+          .livella-desk { padding: 12px 4px 14px; } .livella-desk > .livella-card { margin: 0 14px; } .livella-desk-fan i { left: 18px; right: 18px; top: 80px; height: 300px; }
+          .livella-desk-fan i:nth-child(1) { transform: rotate(-5.5deg); } .livella-desk-fan i:nth-child(2) { transform: rotate(5.5deg); } .livella-desk-fan i:nth-child(3) { transform: rotate(-2.7deg); } .livella-desk-fan i:nth-child(4) { transform: rotate(2.7deg); }
+          .livella-desk-tabs { padding: 0 calc(14px + 2%); }
+          .livella-card-input .livella-textarea { min-height: 96px; } .livella-card-input .livella-lang-bar { margin-bottom: 12px; gap: 6px; }
+          .livella-hero2 .livella-hero-sub { font-size: 14.5px; }
+        }
+        @media print { .livella-desk-fan, .livella-sample-note, .livella-fold, .livella-fold-card, .livella-actions2, .livella-more-row, .livella-result-anchor { display: none !important; } .livella-desk > .livella-card { margin: 0 !important; } }
       `}</style>
 
       <div className="livella-container">
+        <header className="livella-hero livella-hero2">
+          <div className="livella-hero2-top">
+            <h1 className="livella-logo">Livel<span>la</span></h1>
+              {shareApi && (
+                <button type="button" className="livella-hero-invite" onClick={inviteTeachers} aria-live="polite">
+                  {invited ? T.inviteCopied : <><span aria-hidden="true">↗</span> {T.inviteBtn}</>}
+                </button>
+              )}
+          </div>
+          <h2 className="livella-hero-head">{T.heroHead}</h2>
+          <p className="livella-hero-sub">{T.heroSub}</p>
+        </header>
+
+        {pendingLang && (
+          <div className="livella-switch-warn" role="alertdialog" aria-label={T.switchWarn.replace("{x}", LANGUAGES[pendingLang].name)}>
+            <p><strong>{T.switchWarn.replace("{x}", LANGUAGES[pendingLang].name)}</strong> {T.switchTip}</p>
+            <div className="livella-switch-actions">
+              <button type="button" className="livella-compare-mini-btn" onClick={() => setPendingLang(null)}>{T.switchNo}</button>
+              <button type="button" className="livella-compare-mini-btn active" onClick={() => switchLanguage(pendingLang)}>{T.switchYes.replace("{x}", LANGUAGES[pendingLang].name)}</button>
+            </div>
+          </div>
+        )}
+
+
+        <div className="livella-card livella-card-input" ref={toolRef}>
         <nav className="livella-lang-bar" aria-label="Language">
           {LANGUAGE_ORDER.map((id) => {
             const lg = LANGUAGES[id];
@@ -2594,93 +2716,69 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             );
           })}
         </nav>
-        {uiOptions.length > 1 && (
-          <div className="livella-ui-choice" role="group" aria-label="Interface language">
-            <span>Interface</span>
-            {uiOptions.map((code) => (
-              <button key={code} type="button" aria-pressed={UIL === code} className={UIL === code ? "active" : ""} onClick={() => chooseUi(code)}>{UI_NAMES[code]}</button>
-            ))}
-          </div>
-        )}
-        {pendingLang && (
-          <div className="livella-switch-warn" role="alertdialog" aria-label={T.switchWarn.replace("{x}", LANGUAGES[pendingLang].name)}>
-            <p><strong>{T.switchWarn.replace("{x}", LANGUAGES[pendingLang].name)}</strong> {T.switchTip}</p>
-            <div className="livella-switch-actions">
-              <button type="button" className="livella-compare-mini-btn" onClick={() => setPendingLang(null)}>{T.switchNo}</button>
-              <button type="button" className="livella-compare-mini-btn active" onClick={() => switchLanguage(pendingLang)}>{T.switchYes.replace("{x}", LANGUAGES[pendingLang].name)}</button>
-            </div>
-          </div>
-        )}
 
-        <header className="livella-hero">
-          <h1 className="livella-logo">Livel<span>la</span></h1>
-          <div className="livella-hero-copy">
-            <p className="livella-tagline">{T.tagline} <span className="livella-tagline-all">· {T.forAll}</span></p>
-            <h2 className="livella-hero-head">{T.heroHead}</h2>
-            <hr className="livella-hero-rule" />
-            <p className="livella-hero-sub">{T.heroSub}</p>
-            <div className="livella-hero-btns">
-              <button type="button" className="livella-hero-cta" onClick={scrollToTool}>{T.heroCta}</button>
-              {shareApi && (
-                <button type="button" className="livella-hero-invite" onClick={inviteTeachers} aria-live="polite">
-                  {invited ? T.inviteCopied : <><span aria-hidden="true">↗</span> {T.inviteBtn}</>}
-                </button>
-              )}
-            </div>
-            <span className="livella-hero-micro">{T.heroMicro}</span>
-          </div>
-          <div className="livella-fanwrap">
-            <div className={`livella-fan ${heroOpen ? "open" : ""}`}>
-              <div className="livella-fan-tabs" role="tablist" aria-label={T.levelLabel}>
-                {LEVELS.map((l, i) => (
-                  <button key={l.id} type="button" role="tab" aria-selected={heroIdx === i} aria-label={l.label}
-                    className="livella-fan-tab" onClick={() => pickHero(i)}>
-                    {LEVEL_SHORT[l.label] || i + 1}
-                  </button>
-                ))}
-              </div>
-              {LEVELS.map((l, i) => {
-                const sh = L.heroSheets[i];
-                const front = heroIdx === i;
-                return (
-                  <div key={l.id} className={`livella-sheet ${front ? "front" : ""}`} style={{ "--n": i }} onClick={() => pickHero(i)}>
-                    {front && (
-                      <div className="livella-sheet-body">
-                        <p className="livella-sheet-lvl">{l.label} · {l.sub}</p>
-                        <p className={`livella-sheet-title ${heroAdhd ? "small" : ""}`}>{L.heroTitle}</p>
-                        {!heroAdhd && (<>
-                          <p className="livella-sheet-text">{sh.txt}</p>
-                          <div className="livella-sheet-gloss">{sh.gloss.map((g, j) => <span key={j}><b>{g[0]}</b> {g[1]}</span>)}</div>
-                        </>)}
-                        {heroAdhd && sh.chunks.map((c, j) => (
-                          <div key={j} className="livella-sheet-chunk">
-                            <p className="livella-sheet-count">{j + 1} {T.of} {sh.chunks.length}</p>
-                            <p className="livella-sheet-ctext">{c[0]}</p>
-                            <p className="livella-sheet-mini"><i aria-hidden="true"></i>{c[1]}</p>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-            <div className="livella-hero-prof" role="group" aria-label={T.profileLabel}>
-              <button type="button" aria-pressed={!heroAdhd} onClick={() => setHeroAdhd(false)}>{T.standard}</button>
-              <button type="button" aria-pressed={heroAdhd} onClick={() => { setHeroAuto(false); setHeroAdhd(true); }}>{PROFILES[1].label[UIL]}</button>
-            </div>
-            <p className="livella-hero-example">{T.heroExample}</p>
-          </div>
-        </header>
-
-        <div className="livella-card" ref={toolRef}>
           <div className="livella-mode" role="tablist" aria-label={`${T.modeText} / ${T.modeWrite}`}>
             <button role="tab" aria-selected={!writing} className={`livella-mode-btn ${!writing ? "active" : ""}`} onClick={() => { setMode("text"); setError(null); }}>{T.modeText}</button>
             <button role="tab" aria-selected={writing} className={`livella-mode-btn ${writing ? "active" : ""}`} onClick={() => { setMode("write"); setError(null); }}>{T.modeWrite}</button>
           </div>
 
-          {writing && (
+
+          {writing ? (
             <div className="livella-write">
+              <label className="livella-label" htmlFor="livella-topic">{T.topicLabel}</label>
+              <textarea id="livella-topic" className="livella-link-input livella-topic-box" rows={3}
+                placeholder={T.topicPlaceholder} value={topic} onChange={(e) => setTopic(e.target.value)}
+                onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); generate(); } }} />
+            </div>
+          ) : (<>
+          {imageUrl && (
+            <div className="livella-image-chip">
+              <img src={imageUrl} alt="" />
+              <span className="livella-image-name">{imageFile.name}</span>
+              <button className="livella-image-remove" onClick={clearImage} title={T.remove} aria-label={T.remove}>×</button>
+            </div>
+          )}
+
+
+          <label className="livella-label">{T.inputLabel}</label>
+          <textarea
+            className="livella-textarea"
+            placeholder={T.placeholder}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onPaste={onPasteInput}
+            onDrop={onDropInput}
+            onDragOver={(e) => { if (e.dataTransfer && Array.prototype.indexOf.call(e.dataTransfer.types || [], "Files") >= 0) e.preventDefault(); }}
+            onKeyDown={(e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); generate(); } }}
+          />
+          </>)}
+
+          <div className="livella-lv-wrap">
+            <span className="livella-label">{T.levelLabel}</span>
+            <div className="livella-lv" role="group" aria-label={T.levelLabel}>
+              {LEVELS.map((l, i) => (
+                <button key={l.id} type="button" title={`${l.label} · ${l.sub}`} aria-label={l.label} aria-pressed={level === l.id}
+                  className={`livella-lv-btn ${level === l.id ? "active" : ""}`} onClick={() => pickLevel(l.id)}>
+                  {LEVEL_SHORT[l.label] || i + 1}
+                </button>
+              ))}
+            </div>
+            <p className="livella-lv-name">{selectedLevel.label} · {selectedLevel.sub}</p>
+          </div>
+
+          <button className="livella-primary-btn" onClick={() => generate()} disabled={loading || loadingScala}>
+            {loading ? (writing ? T.writing : T.going) : T.make}
+          </button>
+          {error && <div className="livella-error" role="alert">{error}</div>}
+
+          <div className="livella-more-row">
+            <span className="livella-sum">{[writing && genre !== "auto" ? selectedGenre.label[UIL] : null, selectedPurpose.label[UIL], (AGE_BANDS.find((a) => a.id === ageBand) || AGE_BANDS[0]).label[UIL], profiles.length ? PROFILES.filter((p) => profiles.includes(p.id)).map((p) => p.label[UIL]).join(" + ") : T.standardSub].filter(Boolean).join(" · ")}</span>
+            <button type="button" className="livella-more-btn" aria-expanded={moreOpen} onClick={() => setMoreOpen(!moreOpen)}>{T.moreOptions} <span aria-hidden="true">{moreOpen ? "▴" : "▾"}</span></button>
+          </div>
+
+          {moreOpen && (
+          <div className="livella-more">
+            {writing && (<div>
               <label className="livella-label">{T.genreLabel}</label>
               <div className="livella-options-grid">
                 {GENRES.map((g) => (
@@ -2692,16 +2790,8 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                   </button>
                 ))}
               </div>
-              <div className="livella-link-row">
-                <label className="livella-label" htmlFor="livella-topic">{T.topicLabel}</label>
-                <textarea id="livella-topic" className="livella-link-input livella-topic-box" rows={2}
-                  placeholder={T.topicPlaceholder} value={topic} onChange={(e) => setTopic(e.target.value)} />
-                <span className="livella-link-hint">{T.writeHint}</span>
-              </div>
-            </div>
-          )}
-
-          {!writing && (<>
+            </div>)}
+            {!writing && (<>
           <div className="livella-source-row">
             <label className="livella-upload-btn">
               <input type="file" accept="image/jpeg,image/png,image/webp,image/gif,.txt,text/plain" onChange={onFileChosen} />
@@ -2711,24 +2801,6 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             <span className="livella-upload-hint">{T.uploadHint}</span>
           </div>
 
-          {imageUrl && (
-            <div className="livella-image-chip">
-              <img src={imageUrl} alt="" />
-              <span className="livella-image-name">{imageFile.name}</span>
-              <button className="livella-image-remove" onClick={clearImage} title={T.remove} aria-label={T.remove}>×</button>
-            </div>
-          )}
-
-          <label className="livella-label">{T.inputLabel}</label>
-          <textarea
-            className="livella-textarea"
-            placeholder={T.placeholder}
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onPaste={onPasteInput}
-            onDrop={onDropInput}
-            onDragOver={(e) => { if (e.dataTransfer && Array.prototype.indexOf.call(e.dataTransfer.types || [], "Files") >= 0) e.preventDefault(); }}
-          />
 
           <div className="livella-link-row">
             <label className="livella-label" htmlFor="livella-source-url">{T.linkLabel}</label>
@@ -2736,8 +2808,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
               placeholder="https://…" value={sourceUrl} onChange={(e) => setSourceUrl(e.target.value)} />
             <span className="livella-link-hint">{T.linkHint}</span>
           </div>
-          </>)}
-
+            </>)}
           <div style={{ marginTop: 24 }}>
             <label className="livella-label">{T.purposeLabel}</label>
             <div className="livella-options-grid">
@@ -2752,19 +2823,6 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             </div>
           </div>
 
-          <div style={{ marginTop: 22 }}>
-            <label className="livella-label">{T.levelLabel}</label>
-            <div className="livella-options-grid">
-              {LEVELS.map((l) => (
-                <button key={l.id}
-                  className={`livella-option-btn ${level === l.id ? "active" : ""}`}
-                  onClick={() => pickLevel(l.id)}>
-                  <span className="livella-option-name">{l.label}</span>
-                  <span className="livella-option-sub">{l.sub}</span>
-                </button>
-              ))}
-            </div>
-          </div>
 
           <div style={{ marginTop: 22 }}>
             <label className="livella-label">{T.learnersLabel}</label>
@@ -2780,6 +2838,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             </div>
             <span className="livella-link-hint" style={{ display: "block", marginTop: 8 }}>{T.learnersHint}</span>
           </div>
+
 
           <div style={{ marginTop: 22 }}>
             <label className="livella-label">{T.profileLabel}</label>
@@ -2800,9 +2859,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             <span className="livella-link-hint" style={{ display: "block", marginTop: 8 }}>{T.profileHint}</span>
           </div>
 
-          <button className="livella-primary-btn" onClick={() => generate()} disabled={loading || loadingScala}>
-            {loading ? (writing ? T.writing : T.going) : (writing ? T.write : T.go)}
-          </button>
+
           <button className="livella-scala-btn" onClick={generateScala} disabled={loading || loadingScala}>
             <span className="livella-scala-glyph" aria-hidden="true">
               <i></i><i></i><i></i><i></i><i></i>
@@ -2810,12 +2867,14 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             {loadingScala ? T.scalaBuilding : T.scalaBtn}
           </button>
 
-          {error && <div className="livella-error">{error}</div>}
+          </div>
+          )}
         </div>
 
+        <div ref={resultRef} className="livella-result-anchor" aria-hidden="true"></div>
         {loading && (
           <div className="livella-card">
-            <div className="livella-loading">Un momento</div>
+            <div className="livella-loading">{writing ? T.writing : T.going}</div>
           </div>
         )}
 
@@ -2906,11 +2965,12 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
 
         {!loading && !result && view !== "ladder" && Object.keys(pages).length > 0 && shareBusy !== "load" && (
           <div className="livella-desk">
+            <div className="livella-desk-fan" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
             {renderLevelTabs()}
             <div className="livella-card livella-desk-empty">
               <p>{selectedLevel.label} {T.notWritten}</p>
               <button type="button" className="livella-primary-btn" onClick={() => generate()} disabled={loadingScala}>{T.writeLevel}</button>
-              {!scala && <span className="livella-link-hint">{T.writeHint}</span>}
+              {!scala && <span className="livella-link-hint">{T.scalaHint}</span>}
             </div>
           </div>
         )}
@@ -2918,6 +2978,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
         {!loading && result && view !== "ladder" && (
           <>
             <div className="livella-desk">
+            <div className="livella-desk-fan" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
             {renderLevelTabs()}
             <div className={`livella-card ${profileClass(result)} ${ageClass(result)}`}>
               <div className="livella-print-header">
@@ -2935,7 +2996,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                     {sourceUrl.trim() && !result.genre && <> · {T.source}: <a className="livella-source-link" href={sourceUrl.trim()} target="_blank" rel="noopener noreferrer">{sourceUrl.trim()}</a></>}
                   </div>
                 </div>
-                {!result.genre && (
+                {!result.genre && !result.sample && (
                   <button
                     className={`livella-toggle-btn ${showOriginal ? "active" : ""}`}
                     onClick={() => setShowOriginal(!showOriginal)}>
@@ -2944,6 +3005,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                 )}
               </div>
 
+              {result.sample && <div className="livella-sample-note"><b>{T.exampleTag}</b> {T.heroExample}</div>}
               {result.fromScala && (
                 <div className="livella-fromscala">
                   <span>{T.fromScala}</span>
@@ -3042,9 +3104,10 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                 </div>
               )}
 
+              {!result.sample && (<details className="livella-fold">
+              <summary>{T.cmpTitle}</summary>
               <div className="livella-cmp">
                 <div className="livella-cmp-head">
-                  <span className="livella-label" style={{ margin: 0 }}>{T.cmpTitle}</span>
                   <div className="livella-cmp-tabs" role="tablist" aria-label={T.cmpTitle}>
                     {[["level", T.cmpLevel], ["profile", T.cmpProfile], ["lang", T.cmpLang]].map(([id, name]) => (
                       <button key={id} type="button" role="tab" aria-selected={cmpTab === id}
@@ -3084,25 +3147,25 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                 </div>
                 <span className="livella-link-hint">{loadingComparison ? T.cmpWorking : T.cmpHint}</span>
               </div>
+              </details>)}
 
-              <div className="livella-actions">
-                <button className="livella-action-btn" onClick={() => generate("easier")} disabled={loading}>{T.easier}</button>
-                <button className={`livella-action-btn copy ${copied ? "copied" : ""}`} onClick={copyToClipboard}>
-                  {copied ? T.copied : T.copyAll}
-                </button>
-                <button className="livella-print-btn" onClick={() => downloadPdf(false)} disabled={pdfBusy}>
-                  {pdfBusy ? T.pdfBuilding : T.pdfStudent}
-                </button>
-                <button className="livella-print-btn teacher" onClick={() => downloadPdf(true)} disabled={pdfBusy}>
-                  {pdfBusy ? T.pdfBuilding : T.pdfTeacher}
-                </button>
-                <button className="livella-action-btn" onClick={() => generate("harder")} disabled={loading}>{T.harder}</button>
-                {shareApi && (
+              <div className="livella-actions2">
+                <button className="livella-main-btn" onClick={() => downloadPdf(false)} disabled={pdfBusy}>{pdfBusy ? T.pdfBuilding : T.pdfStudent}</button>
+                {shareApi && !result.sample && (
                   <button type="button" className="livella-share-btn" onClick={startShare}>
                     <span aria-hidden="true">⇄</span> {shared ? T.shareTitle : T.shareBtn}
                   </button>
                 )}
               </div>
+              {!result.sample && (<details className="livella-fold">
+                <summary>{T.moreOptions}</summary>
+                <div className="livella-actions">
+                  <button className="livella-action-btn" onClick={() => generate("easier")} disabled={loading}>{T.easier}</button>
+                  <button className="livella-action-btn" onClick={() => generate("harder")} disabled={loading}>{T.harder}</button>
+                  <button className="livella-print-btn teacher" onClick={() => downloadPdf(true)} disabled={pdfBusy}>{pdfBusy ? T.pdfBuilding : T.pdfTeacher}</button>
+                  <button className={`livella-action-btn copy ${copied ? "copied" : ""}`} onClick={copyToClipboard}>{copied ? T.copied : T.copyAll}</button>
+                </div>
+              </details>)}
             </div>
             </div>
 
@@ -3194,9 +3257,8 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
               </div>
             )}
 
-            <div className="livella-card">
-              <h3 className="livella-section-title">{T.buildTitle}</h3>
-              <p className="livella-section-subtitle">{T.buildSub}</p>
+            {!result.sample && (<details className="livella-card livella-fold-card">
+              <summary><span className="livella-section-title">{T.buildTitle}</span><span className="livella-section-subtitle">{T.buildSub}</span></summary>
 
               <div className="livella-builder-row">
                 <div>
@@ -3267,11 +3329,10 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                   </div>
                 </>
               )}
-            </div>
+            </details>)}
 
-            <div className="livella-card">
-              <h3 className="livella-section-title">{T.whatDoWeDo}</h3>
-              <p className="livella-section-subtitle">{T.activitiesSub}</p>
+            {!result.sample && (<details className="livella-card livella-fold-card">
+              <summary><span className="livella-section-title">{T.whatDoWeDo}</span><span className="livella-section-subtitle">{T.activitiesSub}</span></summary>
 
               <div className="livella-activity-tabs">
                 {ACTIVITY_TABS.map((t) => (
@@ -3299,7 +3360,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                   {T.emptyActivities}
                 </div>
               )}
-            </div>
+            </details>)}
           </>
         )}
 
@@ -3309,7 +3370,15 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           </div>
         )}
 
-        <div className="livella-footer">uno strumento, un lavoro · v0.16 · © 2026 Assunta Scotto. {T.rights}</div>
+        {uiOptions.length > 1 && (
+          <div className="livella-ui-choice" role="group" aria-label="Interface language">
+            <span>Interface</span>
+            {uiOptions.map((code) => (
+              <button key={code} type="button" aria-pressed={UIL === code} className={UIL === code ? "active" : ""} onClick={() => chooseUi(code)}>{UI_NAMES[code]}</button>
+            ))}
+          </div>
+        )}
+        <div className="livella-footer">uno strumento, un lavoro · v0.17 · © 2026 Assunta Scotto. {T.rights}</div>
       </div>
     </div>
   );
