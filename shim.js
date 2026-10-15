@@ -70,7 +70,8 @@
     var api = (window.LIVELLA_CONFIG || {}).api;
     if (!api) throw { code: "not_configured", message: "the Worker address is missing in config.js" };
     var pass = "";
-    if (needPass) { pass = getPass(); if (!pass) { pass = await askPass(false); setPass(pass); } }
+    // No passcode box up front: Livella is open. The box appears only if the Worker still asks for one.
+    if (needPass) pass = getPass();
     for (var attempt = 0; attempt < 3; attempt++) {
       var res, init = { method: method };
       if (needPass || payload) { init.headers = {}; if (payload) init.headers["content-type"] = "application/json"; if (needPass) init.headers["x-livella-passcode"] = pass; }

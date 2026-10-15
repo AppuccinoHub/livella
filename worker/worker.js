@@ -1,7 +1,7 @@
 // Livella Worker: the go-between that holds the Anthropic API key.
 // Settings (Cloudflare dashboard → this Worker → Settings → Variables and Secrets):
 //   ANTHROPIC_API_KEY  (Secret)  your Anthropic API key
-//   PASSCODE           (Secret)  the teacher passcode you hand out
+//   PASSCODE           (no longer used; Livella is open, it can be deleted)
 //   ALLOWED_ORIGINS    (Text)    sites allowed to call this, comma-separated, e.g. https://appuccinohub.github.io
 //   MODEL              (Text, optional)  defaults to claude-sonnet-5-5
 //   LESSONS            (KV storage)      shared lessons, set up by wrangler.jsonc; each is deleted after 90 days
@@ -21,7 +21,7 @@ export default {
 
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
 
-    // ----- Shared lessons: anyone with the link can read; saving needs the teacher passcode -----
+    // ----- Shared lessons: anyone with the link can read and save -----
     const path = new URL(request.url).pathname;
     const lm = path.match(/^\/lesson(?:\/([a-z0-9]{8,24}))?$/);
     if (lm) {
@@ -35,8 +35,6 @@ export default {
         return json(200, { ok: true, id, lesson: JSON.parse(raw) });
       }
       if (request.method === "POST" || request.method === "PUT") {
-        const pc = (env.PASSCODE || "").trim();
-        if (!pc || (request.headers.get("x-livella-passcode") || "").trim() !== pc) return json(401, { ok: false, code: "passcode" });
         const text = await request.text();
         if (text.length > 400000) return json(413, { ok: false, code: "too_long", message: "the lesson is too large to share" });
         let body; try { body = JSON.parse(text); } catch (e) { return json(400, { ok: false, code: "bad_json" }); }
@@ -83,8 +81,6 @@ export default {
     if (!okOrigin) return json(403, { ok: false, code: "origin", message: "this site is not on the allowed list" });
     // Pasted secrets often carry a stray space or line break; ignore them.
     const apiKey = (env.ANTHROPIC_API_KEY || "").trim();
-    const passcode = (env.PASSCODE || "").trim();
-    if (!passcode || (request.headers.get("x-livella-passcode") || "").trim() !== passcode) return json(401, { ok: false, code: "passcode" });
     if (!apiKey) return json(500, { ok: false, code: "no_key", message: "ANTHROPIC_API_KEY is not set" });
     if (!apiKey.startsWith("sk-ant-")) return json(500, { ok: false, code: "key_format", message: "the stored key does not start with sk-ant-" });
 
