@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 // ===== LANGUAGES =====
 // One ladder per language. UI buttons AND the model's calibration both read from here,
 // so the level a teacher clicks and the level the model targets can never drift apart.
-// IT / FR / ES follow ACTFL. ESL follows WIDA.
+// IT / FR / ES: Novice / Intermediate scale with Low-Mid-High sublevels. ESL: five plain-language levels.
 const LANGUAGES = {
   it: {
     id: "it",
@@ -16,7 +16,7 @@ const LANGUAGES = {
     // Front-page sample: one story at this ladder's five levels (shown on the fanned pages).
     heroTitle: "Al mercato",
     heroSheets: [{"txt": "Marco va al mercato. Il mercato è grande.", "gloss": [["mercato", "market"], ["grande", "big"]], "chunks": [["Marco va al mercato.", "Vero o falso? Marco va a scuola."], ["Il mercato è grande.", "Cerchia: grande / piccolo."]]}, {"txt": "Marco va al mercato con sua nonna il sabato. Comprano frutta e pane.", "gloss": [["nonna", "grandmother"], ["comprano", "they buy"]], "chunks": [["Marco va al mercato con sua nonna il sabato.", "Con chi va Marco?"], ["Comprano frutta e pane.", "Cerchia due cose da mangiare."]]}, {"txt": "Ogni sabato Marco accompagnava sua nonna al mercato di Ballarò, dove compravano la frutta.", "gloss": [["accompagnava", "used to go with"], ["dove", "where"]], "chunks": [["Ogni sabato Marco accompagnava sua nonna al mercato di Ballarò.", "Vero o falso? Marco andava da solo."], ["Lì compravano la frutta.", "Che cosa compravano?"]]}, {"txt": "Ogni sabato Marco accompagnava la nonna a Ballarò, dove lei contrattava su ogni prezzo.", "gloss": [["contrattava", "haggled"], ["prezzo", "price"]], "chunks": [["Ogni sabato Marco accompagnava la nonna a Ballarò.", "Quando andavano al mercato?"], ["Lei contrattava su ogni prezzo.", "Dillo a un compagno: chi contrattava?"]]}, {"txt": "Se non fosse stato per la nonna, Marco non avrebbe mai imparato a contrattare tra le bancarelle di Ballarò.", "gloss": [["bancarelle", "stalls"], ["se non fosse stato", "had it not been"]], "chunks": [["Marco ha imparato a contrattare tra le bancarelle di Ballarò.", "Dove ha imparato Marco?"], ["Senza la nonna non l'avrebbe mai imparato.", "Spiega a un compagno: perché?"]]}],
-    framework: "ACTFL",
+    framework: "Novice to Intermediate proficiency scale, with Low, Mid and High sublevels",
     culture: "Italy and the Italian-speaking world",
     cultureRule: "2 questions (1 Italy-specific, 1 Italian/American comparison). No tourist clichés.",
     tf: ["Vero", "Falso"],
@@ -39,7 +39,7 @@ const LANGUAGES = {
     // Front-page sample: one story at this ladder's five levels (shown on the fanned pages).
     heroTitle: "Au marché",
     heroSheets: [{"txt": "Marc va au marché. Le marché est grand.", "gloss": [["marché", "market"], ["grand", "big"]], "chunks": [["Marc va au marché.", "Vrai ou faux ? Marc va à l'école."], ["Le marché est grand.", "Entoure : grand / petit."]]}, {"txt": "Marc va au marché avec sa grand-mère le samedi. Ils achètent des fruits et du pain.", "gloss": [["grand-mère", "grandmother"], ["achètent", "they buy"]], "chunks": [["Marc va au marché avec sa grand-mère le samedi.", "Avec qui va Marc ?"], ["Ils achètent des fruits et du pain.", "Entoure deux choses à manger."]]}, {"txt": "Chaque samedi, Marc accompagnait sa grand-mère au marché, où ils achetaient des fruits.", "gloss": [["accompagnait", "used to go with"], ["où", "where"]], "chunks": [["Chaque samedi, Marc accompagnait sa grand-mère au marché.", "Vrai ou faux ? Marc y allait seul."], ["Là, ils achetaient des fruits.", "Qu'est-ce qu'ils achetaient ?"]]}, {"txt": "Chaque samedi, Marc accompagnait sa grand-mère au marché, où elle marchandait chaque prix.", "gloss": [["marchandait", "haggled"], ["prix", "price"]], "chunks": [["Chaque samedi, Marc accompagnait sa grand-mère au marché.", "Quand allaient-ils au marché ?"], ["Elle marchandait chaque prix.", "Dis-le à un camarade : qui marchandait ?"]]}, {"txt": "Sans sa grand-mère, Marc n'aurait jamais appris à marchander entre les étals du marché.", "gloss": [["étals", "stalls"], ["n'aurait jamais appris", "would never have learned"]], "chunks": [["Marc a appris à marchander entre les étals du marché.", "Où Marc a-t-il appris ?"], ["Sans sa grand-mère, il ne l'aurait jamais appris.", "Explique à un camarade : pourquoi ?"]]}],
-    framework: "ACTFL",
+    framework: "Novice to Intermediate proficiency scale, with Low, Mid and High sublevels",
     culture: "France and the Francophone world (Québec, West Africa, the Maghreb, the Caribbean)",
     cultureRule: "2 questions (1 specific to a Francophone country or region, 1 Francophone/American comparison). No tourist clichés.",
     tf: ["Vrai", "Faux"],
@@ -62,7 +62,7 @@ const LANGUAGES = {
     // Front-page sample: one story at this ladder's five levels (shown on the fanned pages).
     heroTitle: "En el mercado",
     heroSheets: [{"txt": "Marcos va al mercado. El mercado es grande.", "gloss": [["mercado", "market"], ["grande", "big"]], "chunks": [["Marcos va al mercado.", "¿Cierto o falso? Marcos va a la escuela."], ["El mercado es grande.", "Marca: grande / pequeño."]]}, {"txt": "Marcos va al mercado con su abuela los sábados. Compran fruta y pan.", "gloss": [["abuela", "grandmother"], ["compran", "they buy"]], "chunks": [["Marcos va al mercado con su abuela los sábados.", "¿Con quién va Marcos?"], ["Compran fruta y pan.", "Marca dos cosas para comer."]]}, {"txt": "Cada sábado Marcos acompañaba a su abuela al mercado, donde compraban fruta.", "gloss": [["acompañaba", "used to go with"], ["donde", "where"]], "chunks": [["Cada sábado Marcos acompañaba a su abuela al mercado.", "¿Cierto o falso? Marcos iba solo."], ["Allí compraban fruta.", "¿Qué compraban?"]]}, {"txt": "Cada sábado Marcos acompañaba a su abuela al mercado, donde ella regateaba cada precio.", "gloss": [["regateaba", "haggled"], ["precio", "price"]], "chunks": [["Cada sábado Marcos acompañaba a su abuela al mercado.", "¿Cuándo iban al mercado?"], ["Ella regateaba cada precio.", "Díselo a un compañero: ¿quién regateaba?"]]}, {"txt": "Si no hubiera sido por su abuela, Marcos nunca habría aprendido a regatear entre los puestos del mercado.", "gloss": [["puestos", "stalls"], ["si no hubiera sido", "had it not been"]], "chunks": [["Marcos aprendió a regatear entre los puestos del mercado.", "¿Dónde aprendió Marcos?"], ["Sin su abuela, nunca lo habría aprendido.", "Explícale a un compañero: ¿por qué?"]]}],
-    framework: "ACTFL",
+    framework: "Novice to Intermediate proficiency scale, with Low, Mid and High sublevels",
     culture: "Spain and Latin America (do not default to Spain; vary countries)",
     cultureRule: "2 questions (1 specific to a Spanish-speaking country or region, 1 Hispanic/American comparison). No tourist clichés.",
     tf: ["Cierto", "Falso"],
@@ -85,23 +85,25 @@ const LANGUAGES = {
     // Front-page sample: one story at this ladder's five levels (shown on the fanned pages).
     heroTitle: "At the market",
     heroSheets: [{"txt": "Marco goes to the market. The market is big.", "gloss": [["market", "a place to buy food"], ["big", "large"]], "chunks": [["Marco goes to the market.", "True or false? Marco goes to school."], ["The market is big.", "Circle: big / small."]]}, {"txt": "Marco goes to the market with his grandmother on Saturdays. They buy fruit and bread.", "gloss": [["grandmother", "your parent's mother"], ["buy", "pay money for"]], "chunks": [["Marco goes to the market with his grandmother on Saturdays.", "Who goes with Marco?"], ["They buy fruit and bread.", "Circle two things to eat."]]}, {"txt": "Every Saturday, Marco went to the market with his grandmother, where they bought fruit.", "gloss": [["went", "past of go"], ["bought", "past of buy"]], "chunks": [["Every Saturday, Marco went to the market with his grandmother.", "True or false? Marco went alone."], ["They bought fruit there.", "What did they buy?"]]}, {"txt": "Every Saturday, Marco went with his grandmother to the market, where she bargained over every price.", "gloss": [["bargained", "asked for a lower price"], ["price", "how much it costs"]], "chunks": [["Every Saturday, Marco went with his grandmother to the market.", "When did they go to the market?"], ["She bargained over every price.", "Tell a partner: who bargained?"]]}, {"txt": "If it had not been for his grandmother, Marco would never have learned to bargain among the market stalls.", "gloss": [["stalls", "small tables that sell things"], ["bargain", "ask for a lower price"]], "chunks": [["Marco learned to bargain among the market stalls.", "Where did Marco learn?"], ["Without his grandmother, he would never have learned.", "Explain to a partner: why?"]]}],
-    framework: "WIDA",
+    framework: "five-level English language development scale",
     culture: "U.S. school and community life, held next to the students' own home cultures",
     cultureRule: "2 questions (1 about U.S. school or community life as it appears in the passage, 1 inviting the student to compare with their own home culture). Never assume one home culture; phrase for any background.",
     tf: ["True", "False"],
     glossRule: "simple English definition (5 words max) — NOT a translation",
     levels: [
-      { id: "wida1", label: "Entering", sub: "WIDA 1", description: "single words and short phrases, present tense, very concrete, high-frequency words", calibration: "Present tense and present progressive only. Sentences 3-6 words, one idea each. Top 300 words. Concrete nouns, visible actions. Repeat key words often. NO idioms, NO passive voice, NO contractions beyond I'm / it's." },
-      { id: "wida2", label: "Emerging", sub: "WIDA 2", description: "simple sentences, present + regular past, common irregular past, everyday vocabulary", calibration: "Present, present progressive, simple past (regular -ed + was/were/had/went/said). Sentences 5-8 words. Top 800 words. Simple and/but connections. NO perfect tenses, NO passive voice, NO idioms." },
-      { id: "wida3", label: "Developing", sub: "WIDA 3", description: "expanded sentences, past/present/future, compound sentences, some academic words", calibration: "Past, present, future (will / going to). Compound sentences with and/but/because/so. Sentences 8-12 words. Top 1500 words plus a few Tier-2 academic words, each supported by context. Limited idioms, explained by context. NO passive voice." },
-      { id: "wida4", label: "Expanding", sub: "WIDA 4", description: "complex sentences, present perfect, subordinate clauses, grade-level academic vocabulary with support", calibration: "Full tense range incl. present perfect. Subordinate clauses (when, although, if). Sentences 10-16 words. Grade-level Tier-2 academic vocabulary with contextual support. Occasional passive voice. Common idioms allowed." },
-      { id: "wida5", label: "Bridging", sub: "WIDA 5", description: "near grade-level text, full tense range, technical and academic vocabulary, nuance", calibration: "Near grade-level English. Full tense range, passive voice, nuanced meaning, technical and Tier-3 vocabulary where the topic calls for it. Sentences 12-20 words. Idioms and figurative language allowed." },
+      { id: "esl1", label: "First words", sub: "Level 1", description: "single words and short phrases, present tense, very concrete, high-frequency words", calibration: "Present tense and present progressive only. Sentences 3-6 words, one idea each. Top 300 words. Concrete nouns, visible actions. Repeat key words often. NO idioms, NO passive voice, NO contractions beyond I'm / it's." },
+      { id: "esl2", label: "Simple sentences", sub: "Level 2", description: "simple sentences, present + regular past, common irregular past, everyday vocabulary", calibration: "Present, present progressive, simple past (regular -ed + was/were/had/went/said). Sentences 5-8 words. Top 800 words. Simple and/but connections. NO perfect tenses, NO passive voice, NO idioms." },
+      { id: "esl3", label: "Connected sentences", sub: "Level 3", description: "expanded sentences, past/present/future, compound sentences, some academic words", calibration: "Past, present, future (will / going to). Compound sentences with and/but/because/so. Sentences 8-12 words. Top 1500 words plus a few Tier-2 academic words, each supported by context. Limited idioms, explained by context. NO passive voice." },
+      { id: "esl4", label: "Complex sentences", sub: "Level 4", description: "complex sentences, present perfect, subordinate clauses, grade-level academic vocabulary with support", calibration: "Full tense range incl. present perfect. Subordinate clauses (when, although, if). Sentences 10-16 words. Grade-level Tier-2 academic vocabulary with contextual support. Occasional passive voice. Common idioms allowed." },
+      { id: "esl5", label: "Near grade level", sub: "Level 5", description: "near grade-level text, full tense range, technical and academic vocabulary, nuance", calibration: "Near grade-level English. Full tense range, passive voice, nuanced meaning, technical and Tier-3 vocabulary where the topic calls for it. Sentences 12-20 words. Idioms and figurative language allowed." },
     ],
   },
 };
 
+const fixLv = (id) => (typeof id === "string" ? id.replace(/^w[a-z]{3}(\d)$/, "esl$1") : id);   // older ESL level ids
+const fixPages = (pg) => { const o = {}; Object.entries(pg || {}).forEach(([k, v]) => { o[fixLv(k)] = v; }); return o; };
 const LANGUAGE_ORDER = ["it", "fr", "es", "esl"];
-// Short tab names for the ACTFL sublevels (the ESL side uses WIDA numbers 1-5).
+// Short tab names for the sublevels (the ESL side uses numbers 1-5).
 const LEVEL_SHORT = { "Novice Mid": "NM", "Novice High": "NH", "Intermediate Low": "IL", "Intermediate Mid": "IM", "Intermediate High": "IH" };
 // Voice used by the Listen button (the browser's own speech engine).
 const SPEECH = { it: "it-IT", fr: "fr-FR", es: "es-MX", esl: "en-US" };
@@ -165,7 +167,7 @@ const UI = {
     listen: "Ascolta", stopListen: "Ferma", slow: "Lento", hideText: "Nascondi il testo", showText: "Mostra il testo", hiddenNote: "Testo nascosto. Ascolta e rispondi.", errVoice: "Questo dispositivo non ha una voce per questa lingua.", listenNote: "Voce del browser: la qualità dipende dal dispositivo.",
     rights: "Tutti i diritti riservati.",
     learnersLabel: "Studenti", learnersHint: "Il livello indica la competenza. Qui scegli l'età: cambiano temi, lunghezza e compiti.",
-    shareBtn: "Condividi con un collega", shareTitle: "Lezione condivisa", shareName: "Il tuo nome", shareNamePh: "Così il collega sa chi ha scritto cosa", shareSave: "Crea il link", shareLink: "Link", copyLink: "Copia link", copiedLink: "Link copiato ✓", refresh: "Aggiorna", shareHint: "Chi ha il link può vedere questa lezione. Anche chi ha il link può modificarla. Le lezioni condivise vengono cancellate dopo 90 giorni.", sharedBy: "Iniziata da {x}.", versions: "Versioni", addLang: "Aggiungi {x}", adding: "Sto scrivendo...", edit: "Modifica", save: "Salva", cancel: "Annulla", editedBy: "Ultimo salvataggio: {x}", notes: "Note", noNotes: "Nessuna nota.", notePh: "Lascia una nota al collega", addNote: "Aggiungi nota", pdfAll: "PDF: tutte le versioni", errShare: "Non riesco a salvare la lezione condivisa.", errLoad: "Non riesco ad aprire questa lezione condivisa. Il link potrebbe essere scaduto.", saving: "Salvo...", loadingShared: "Apro la lezione condivisa...",
+    shareBtn: "Condividi il link", translating: "Traduzione in arrivo…", levelComing: "Questo livello è in arrivo…", levelFailed: "Questo livello non è arrivato.", shareTitle: "Lezione condivisa", shareName: "Il tuo nome", shareNamePh: "Così il collega sa chi ha scritto cosa", shareSave: "Crea il link", shareLink: "Link", copyLink: "Copia link", copiedLink: "Link copiato ✓", refresh: "Aggiorna", shareHint: "Chi ha il link può vedere questa lezione. Anche chi ha il link può modificarla. Le lezioni condivise vengono cancellate dopo 90 giorni.", sharedBy: "Iniziata da {x}.", versions: "Versioni", addLang: "Aggiungi {x}", adding: "Sto scrivendo...", edit: "Modifica", save: "Salva", cancel: "Annulla", editedBy: "Ultimo salvataggio: {x}", notes: "Note", noNotes: "Nessuna nota.", notePh: "Lascia una nota al collega", addNote: "Aggiungi nota", pdfAll: "PDF: tutte le versioni", errShare: "Non riesco a salvare la lezione condivisa.", errLoad: "Non riesco ad aprire questa lezione condivisa. Il link potrebbe essere scaduto.", saving: "Salvo...", loadingShared: "Apro la lezione condivisa...",
     tagline: "il testo giusto, al livello giusto", forAll: "per tutti",
     inviteBtn: "Condividi Livella", inviteCopied: "Messaggio e link copiati ✓", inviteText: "Imparare una lingua è diverso per ogni studente. Livella prende una lettura e la riscrive al livello di ogni studente, così tutta la classe legge la stessa storia. E il bello: la mandi a un collega, che può aggiungerla nella sua lingua o adattarla alla sua classe.",
     modeText: "Da un testo", modeWrite: "Scrivi da zero", genreLabel: "Genere", topicLabel: "Tema",
@@ -209,7 +211,7 @@ const UI = {
     listen: "Écouter", stopListen: "Arrêter", slow: "Lent", hideText: "Masquer le texte", showText: "Afficher le texte", hiddenNote: "Texte masqué. Écoutez et répondez.", errVoice: "Cet appareil n'a pas de voix pour cette langue.", listenNote: "Voix du navigateur : la qualité dépend de l'appareil.",
     rights: "Tous droits réservés.",
     learnersLabel: "Apprenants", learnersHint: "Le niveau indique la compétence. Ici, choisissez l'âge : thèmes, longueur et tâches changent.",
-    shareBtn: "Partager avec un·e collègue", shareTitle: "Leçon partagée", shareName: "Votre nom", shareNamePh: "Pour que votre collègue sache qui a écrit quoi", shareSave: "Créer le lien", shareLink: "Lien", copyLink: "Copier le lien", copiedLink: "Lien copié ✓", refresh: "Actualiser", shareHint: "Toute personne ayant le lien peut voir cette leçon. Toute personne ayant le lien peut aussi la modifier. Les leçons partagées sont supprimées après 90 jours.", sharedBy: "Commencée par {x}.", versions: "Versions", addLang: "Ajouter {x}", adding: "J'écris...", edit: "Modifier", save: "Enregistrer", cancel: "Annuler", editedBy: "Dernier enregistrement : {x}", notes: "Notes", noNotes: "Aucune note.", notePh: "Laissez une note à votre collègue", addNote: "Ajouter la note", pdfAll: "PDF : toutes les versions", errShare: "Impossible d'enregistrer la leçon partagée.", errLoad: "Impossible d'ouvrir cette leçon partagée. Le lien a peut-être expiré.", saving: "Enregistrement...", loadingShared: "Ouverture de la leçon partagée...",
+    shareBtn: "Partager le lien", translating: "Traduction en cours…", levelComing: "Ce niveau arrive…", levelFailed: "Ce niveau n'est pas arrivé.", shareTitle: "Leçon partagée", shareName: "Votre nom", shareNamePh: "Pour que votre collègue sache qui a écrit quoi", shareSave: "Créer le lien", shareLink: "Lien", copyLink: "Copier le lien", copiedLink: "Lien copié ✓", refresh: "Actualiser", shareHint: "Toute personne ayant le lien peut voir cette leçon. Toute personne ayant le lien peut aussi la modifier. Les leçons partagées sont supprimées après 90 jours.", sharedBy: "Commencée par {x}.", versions: "Versions", addLang: "Ajouter {x}", adding: "J'écris...", edit: "Modifier", save: "Enregistrer", cancel: "Annuler", editedBy: "Dernier enregistrement : {x}", notes: "Notes", noNotes: "Aucune note.", notePh: "Laissez une note à votre collègue", addNote: "Ajouter la note", pdfAll: "PDF : toutes les versions", errShare: "Impossible d'enregistrer la leçon partagée.", errLoad: "Impossible d'ouvrir cette leçon partagée. Le lien a peut-être expiré.", saving: "Enregistrement...", loadingShared: "Ouverture de la leçon partagée...",
     tagline: "le bon texte, au bon niveau", forAll: "pour tous",
     inviteBtn: "Partager Livella", inviteCopied: "Message et lien copiés ✓", inviteText: "Apprendre une langue, c'est différent pour chaque élève. Livella prend une lecture et la réécrit au niveau de chaque élève, pour que toute la classe lise la même histoire. Le plus : envoyez-la à un·e collègue, qui peut l'ajouter dans sa langue ou l'adapter à sa classe.",
     modeText: "À partir d'un texte", modeWrite: "Écrire de zéro", genreLabel: "Genre", topicLabel: "Sujet",
@@ -253,7 +255,7 @@ const UI = {
     listen: "Listen", stopListen: "Stop", slow: "Slow", hideText: "Hide the text", showText: "Show the text", hiddenNote: "Text hidden. Listen and answer.", errVoice: "This device has no voice for this language.", listenNote: "Browser voice: quality depends on the device.",
     rights: "All rights reserved.",
     learnersLabel: "Learners", learnersHint: "The level is proficiency. Here you choose the age: topics, length and tasks change.",
-    shareBtn: "Share with a colleague", shareTitle: "Shared lesson", shareName: "Your name", shareNamePh: "So your colleague knows who wrote what", shareSave: "Create the link", shareLink: "Link", copyLink: "Copy link", copiedLink: "Link copied ✓", refresh: "Refresh", shareHint: "Anyone with the link can view this lesson. Anyone with the link can also change it. Shared lessons are deleted after 90 days.", sharedBy: "Started by {x}.", versions: "Versions", addLang: "Add {x}", adding: "Writing...", edit: "Edit", save: "Save", cancel: "Cancel", editedBy: "Last saved by {x}", notes: "Notes", noNotes: "No notes yet.", notePh: "Leave a note for your colleague", addNote: "Add note", pdfAll: "PDF: all versions", errShare: "Couldn't save the shared lesson.", errLoad: "Couldn't open that shared lesson. The link may have expired.", saving: "Saving...", loadingShared: "Opening the shared lesson...",
+    shareBtn: "Share link", translating: "Translation on its way…", levelComing: "This level is on its way…", levelFailed: "This level did not arrive.", shareTitle: "Shared lesson", shareName: "Your name", shareNamePh: "So your colleague knows who wrote what", shareSave: "Create the link", shareLink: "Link", copyLink: "Copy link", copiedLink: "Link copied ✓", refresh: "Refresh", shareHint: "Anyone with the link can view this lesson. Anyone with the link can also change it. Shared lessons are deleted after 90 days.", sharedBy: "Started by {x}.", versions: "Versions", addLang: "Add {x}", adding: "Writing...", edit: "Edit", save: "Save", cancel: "Cancel", editedBy: "Last saved by {x}", notes: "Notes", noNotes: "No notes yet.", notePh: "Leave a note for your colleague", addNote: "Add note", pdfAll: "PDF: all versions", errShare: "Couldn't save the shared lesson.", errLoad: "Couldn't open that shared lesson. The link may have expired.", saving: "Saving...", loadingShared: "Opening the shared lesson...",
     tagline: "the right text, at the right level", forAll: "for everyone",
     inviteBtn: "Share Livella", inviteCopied: "Message and link copied ✓", inviteText: "Language learning looks different for every student. Livella takes any reading and rewrites it at each student's level, so the whole class reads the same story. Best part: send it to a colleague and they can add it in their language or edit it for their own class.",
     modeText: "From a text", modeWrite: "Write from scratch", genreLabel: "Genre", topicLabel: "Topic",
@@ -296,7 +298,7 @@ const UI = {
     listen: "Escuchar", stopListen: "Detener", slow: "Lento", hideText: "Ocultar el texto", showText: "Mostrar el texto", hiddenNote: "Texto oculto. Escucha y responde.", errVoice: "Este dispositivo no tiene una voz para este idioma.", listenNote: "Voz del navegador: la calidad depende del dispositivo.",
     rights: "Todos los derechos reservados.",
     learnersLabel: "Estudiantes", learnersHint: "El nivel indica la competencia. Aquí eliges la edad: cambian los temas, la extensión y las tareas.",
-    shareBtn: "Compartir con un colega", shareTitle: "Lección compartida", shareName: "Tu nombre", shareNamePh: "Para que tu colega sepa quién escribió qué", shareSave: "Crear el enlace", shareLink: "Enlace", copyLink: "Copiar enlace", copiedLink: "Enlace copiado ✓", refresh: "Actualizar", shareHint: "Cualquier persona con el enlace puede ver esta lección. Cualquier persona con el enlace también puede cambiarla. Las lecciones compartidas se borran después de 90 días.", sharedBy: "Iniciada por {x}.", versions: "Versiones", addLang: "Añadir {x}", adding: "Escribiendo...", edit: "Editar", save: "Guardar", cancel: "Cancelar", editedBy: "Último guardado: {x}", notes: "Notas", noNotes: "Aún no hay notas.", notePh: "Deja una nota para tu colega", addNote: "Añadir nota", pdfAll: "PDF: todas las versiones", errShare: "No se pudo guardar la lección compartida.", errLoad: "No se pudo abrir esa lección compartida. El enlace puede haber caducado.", saving: "Guardando...", loadingShared: "Abriendo la lección compartida...",
+    shareBtn: "Compartir enlace", translating: "Traducción en camino…", levelComing: "Este nivel está en camino…", levelFailed: "Este nivel no llegó.", shareTitle: "Lección compartida", shareName: "Tu nombre", shareNamePh: "Para que tu colega sepa quién escribió qué", shareSave: "Crear el enlace", shareLink: "Enlace", copyLink: "Copiar enlace", copiedLink: "Enlace copiado ✓", refresh: "Actualizar", shareHint: "Cualquier persona con el enlace puede ver esta lección. Cualquier persona con el enlace también puede cambiarla. Las lecciones compartidas se borran después de 90 días.", sharedBy: "Iniciada por {x}.", versions: "Versiones", addLang: "Añadir {x}", adding: "Escribiendo...", edit: "Editar", save: "Guardar", cancel: "Cancelar", editedBy: "Último guardado: {x}", notes: "Notas", noNotes: "Aún no hay notas.", notePh: "Deja una nota para tu colega", addNote: "Añadir nota", pdfAll: "PDF: todas las versiones", errShare: "No se pudo guardar la lección compartida.", errLoad: "No se pudo abrir esa lección compartida. El enlace puede haber caducado.", saving: "Guardando...", loadingShared: "Abriendo la lección compartida...",
     tagline: "el texto adecuado, al nivel adecuado", forAll: "para todos",
     inviteBtn: "Compartir Livella", inviteCopied: "Mensaje y enlace copiados ✓", inviteText: "Aprender un idioma es distinto para cada estudiante. Livella toma una lectura y la reescribe al nivel de cada estudiante, para que toda la clase lea la misma historia. Lo mejor: envíasela a un colega, que puede añadirla en su idioma o adaptarla a su clase.",
     modeText: "A partir de un texto", modeWrite: "Escribir desde cero", genreLabel: "Género", topicLabel: "Tema",
@@ -421,12 +423,13 @@ function genreBlock(genre, topic) {
 }
 
 // ===== PROMPTS (built per language so calibration always matches the chosen ladder) =====
-function buildPassagePrompt(L, mode = "text") {
+function buildPassagePrompt(L, mode = "text", withTr = true) {
   const write = mode === "write";
+  const Lt = withTr ? L : { ...L, support: [] };   // without translations the reading comes back much sooner
   const calibration = L.levels.map((l) => `${l.label.toUpperCase()} (${l.sub}): ${l.calibration}`).join("\n\n");
   const pedagogy = L.id === "esl"
-    ? "WIDA English Language Development standards and Comprehensible Input pedagogy"
-    : "ACTFL proficiency guidelines and Comprehensible Input pedagogy";
+    ? "a five-level English language development scale and Comprehensible Input pedagogy"
+    : "the proficiency scale used by U.S. world-language teachers (Novice, Intermediate, Advanced, each with Low, Mid and High sublevels) and Comprehensible Input pedagogy";
   const natural = L.id === "esl"
     ? `NATURAL ENGLISH: Write the way people actually speak and write today, NOT like a simplified-reader from 1995.`
     : `NATURAL ${L.langEn.toUpperCase()}: Write the way ${L.langEn} speakers actually speak, NOT like a 1995 textbook.`;
@@ -459,7 +462,7 @@ PURPOSE CALIBRATION:
 LEARNER PROFILES: If the request contains LEARNER PROFILE RULES, obey them exactly. They never change the level. Report what you applied in "accommodations". In "accommodations", "teacher_note" and everywhere else, describe what was changed in the text; NEVER name a diagnosis, condition or plan (no dyslexia, ADHD, autism, neurodivergent, IEP, 504).
 LEARNER AGE: If the request contains LEARNER AGE RULES, obey them. They choose topics, length and tone; the level's language rules remain the ceiling.
 
-${translationRule(L)}
+${translationRule(Lt)}
 
 OUTPUT FORMAT (respond with ONLY a JSON object, no other text, no markdown fences):
 {
@@ -469,17 +472,57 @@ OUTPUT FORMAT (respond with ONLY a JSON object, no other text, no markdown fence
   "teacher_note": "1-2 sentence note in English about what you targeted.",
   "accommodations": ["short English list of the changes you made for these rules, described by what changed — empty array when there are none"],
   "word_bank": [{"word": "...", "translation": "..."}] ONLY when a profile asks for it — otherwise omit the key,
-  "micro_tasks": ["..."] ONLY when a profile asks for it — otherwise omit the key${translationSpec(L, "the full passage (title included on its first line)")}
+  "micro_tasks": ["..."] ONLY when a profile asks for it — otherwise omit the key${translationSpec(Lt, "the full passage (title included on its first line)")}
 }
 
 Exactly 5 glosses. No text before/after JSON.`;
 }
 
-// La Scala: one call, the passage at every rung, paragraph-aligned.
+// Teacher translations, asked for separately after the reading is already on screen.
+function buildTranslatePrompt(L) {
+  return `You translate a ${L.langEn} classroom reading for the teacher, who may not read ${L.langEn}.${translationRule(L)}
+
+OUTPUT FORMAT (respond with ONLY a JSON object, no other text, no markdown fences):
+{${translationSpec(L, "the full passage (title included on its first line)").replace(/^,/, "")}
+}`;
+}
+
+// La Scala, in two steps so the first level shows quickly:
+// 1) the teacher's own level, split into paragraphs; 2) every other level re-written from it, at the same time.
+function buildScalaBasePrompt(L, mode, lv) {
+  return buildPassagePrompt(L, mode, false).replace(/OUTPUT FORMAT[\s\S]*$/, `PARAGRAPHS: Choose a paragraph count P between 3 and 5 (P = 4 if a SHORT CHUNKS rule is present). Write at ${lv.label.toUpperCase()} (${lv.sub}).
+
+OUTPUT FORMAT (respond with ONLY a JSON object, no other text, no markdown fences):
+{
+  "title": "${L.langEn} title (3-6 words)",
+  "paragraphs": ["paragraph 1", "paragraph 2", "..."],
+  "teacher_note": "1-2 sentences in English on what you targeted."
+}
+
+No text before/after JSON.`);
+}
+function buildRungPrompt(L, from, to) {
+  return `You are Livella, an expert ${L.langEn} language teacher. You re-write a reading from one proficiency level to another, paragraph by paragraph, using Comprehensible Input pedagogy.
+
+TARGET LEVEL — ${to.label.toUpperCase()} (${to.sub}): ${to.calibration}
+
+RULES — these matter more than anything else:
+1. Return EXACTLY as many paragraphs as you receive, without the [n] numbers. Paragraph i tells the SAME events and facts in the SAME order as source paragraph i. Only the language changes.
+2. You may add descriptive detail, connectors and richer vocabulary when going up; you may NEVER add a new event or character, drop an event, or change a fact.
+3. Obey the target level strictly. Never use a structure above it. The source is at ${from.label} (${from.sub}).
+4. Keep the same title, re-written at the target level if needed.
+5. Keep line breaks as \\n inside the strings where the genre needs them.
+6. If the request contains LEARNER PROFILE RULES or LEARNER AGE RULES, obey them; they never change the level. Never name a diagnosis, condition or plan.
+
+OUTPUT FORMAT (respond with ONLY a JSON object, no other text, no markdown fences):
+{ "title": "...", "paragraphs": ["...", "..."] }`;
+}
+
+// La Scala (older single-call version, kept for reference): one call, the passage at every rung, paragraph-aligned.
 function buildScalaPrompt(L, mode = "text") {
   const write = mode === "write";
   const calibration = L.levels.map((l, i) => `RUNG ${i + 1} — ${l.label.toUpperCase()} (${l.sub}): ${l.calibration}`).join("\n\n");
-  const pedagogy = L.id === "esl" ? "WIDA English Language Development standards" : "ACTFL proficiency guidelines";
+  const pedagogy = L.id === "esl" ? "a five-level English language development scale" : "the proficiency scale used by U.S. world-language teachers (Novice, Intermediate, Advanced, each with Low, Mid and High sublevels)";
   const what = write ? "Write ONE ORIGINAL text, in the GENRE and on the TOPIC given in the request," : "Write ONE passage";
   const genreRules = write ? `
 8. GENRE: the GENRE CONVENTIONS apply at EVERY rung (form, register, layout), adapted to each rung's calibration. A "paragraph" is the genre's natural unit: a stanza for a rhyme or song, a block of 2-4 turns for a dialogue, a paragraph otherwise. Keep line breaks as \\n inside the strings where the genre needs them.
@@ -662,7 +705,7 @@ export default function Livella() {
   const [scalaIdx, setScalaIdx] = useState([]);    // per-paragraph rung index (0..4)
   // Pages: one finished reading per level for the SAME subject. The level in front lives in
   // result/activities/shared; the others wait here as { result, activities, activeTab, customExercises, shared }.
-  const [pages, setPages] = useState(() => { try { const k = JSON.parse(window.localStorage.getItem("livella.last") || "null"); return (k && k.pages) || {}; } catch (e) { return {}; } });
+  const [pages, setPages] = useState(() => { try { const k = JSON.parse(window.localStorage.getItem("livella.last") || "null"); return fixPages(k && k.pages); } catch (e) { return {}; } });
   const [view, setView] = useState("pages");       // "pages" | "ladder" (La Scala, paragraph by paragraph)
   const pagesSig = useRef("");
   const resultRef = useRef(null);                   // where the screen goes when a reading starts
@@ -910,15 +953,33 @@ export default function Livella() {
     stopSpeaking(); setHideText(false); leaveShared();
     setCustomExercises([]);
     const sig = sigNow();
-    if (sig !== pagesSig.current) { setPages({}); setScala(null); setScalaIdx([]); }   // a new subject: the old pages go
+    if (sig !== pagesSig.current) { cancelScala(); setPages({}); setScala(null); setScalaIdx([]); }   // a new subject: the old pages go
     pagesSig.current = sig; setView("pages");
     try {
-      const parsed = await callClaude(buildPassagePrompt(L, mode), buildPassageMessage(modifier), attachment());
-      setResult({ ...parsed, genre: writing ? selectedGenre.id : null, profiles: profiles.slice(), age: ageBand });
+      // Step 1: the reading itself, without the teacher translations, so it reaches the screen sooner.
+      const parsed = await callClaude(buildPassagePrompt(L, mode, false), buildPassageMessage(modifier), attachment());
+      const fresh = { ...parsed, genre: writing ? selectedGenre.id : null, profiles: profiles.slice(), age: ageBand };
+      setResult(fresh);
+      setLoading(false);
+      if (L.support.length && parsed.passage) translateInBackground(L, fresh);
     } catch (err) {
       console.error(err);
       setError(describeError(err, T.errGeneric));
     } finally { setLoading(false); }
+  }
+  // Step 2: the teacher translations arrive a few seconds after the reading and slot in under it.
+  const [translating, setTranslating] = useState(null);   // the passage being translated
+  async function translateInBackground(Lx, r) {
+    setTranslating(r.passage);
+    try {
+      const out = await callClaude(buildTranslatePrompt(Lx), `${r.title}\n\n${r.passage}`, null);
+      const tr = out && (out.translations || out);
+      if (tr && typeof tr === "object") {
+        setResult((prev) => (prev && prev.passage === r.passage ? { ...prev, translations: tr } : prev));
+        setPages((prev) => { let hit = false; const next = { ...prev }; Object.keys(next).forEach((k) => { if (next[k] && next[k].result && next[k].result.passage === r.passage) { next[k] = { ...next[k], result: { ...next[k].result, translations: tr } }; hit = true; } }); return hit ? next : prev; });
+      }
+    } catch (err) { console.error(err); }   // the reading is already there; a missing translation is not worth an error
+    finally { setTranslating((cur) => (cur === r.passage ? null : cur)); }
   }
 
   async function generateComparison(otherLevelId) {
@@ -1012,7 +1073,8 @@ export default function Livella() {
       const lesson = { v: 1, lang, levelId: level, purpose, sourceUrl: sourceUrl.trim(), author: who(), createdAt: Date.now(), result: pickResult(result), resultAt: Date.now(), resultBy: who(), versions: {}, notes: [] };
       const { id } = await shareApi.save(lesson);
       setShared({ id, lesson }); setHash(id);
-    } catch (err) { console.error(err); setError(describeError(err, T.errShare)); }
+      return id;
+    } catch (err) { console.error(err); setError(describeError(err, T.errShare)); return null; }
     finally { setShareBusy(null); }
   }
   async function saveShared(nextLesson, busy) {
@@ -1033,7 +1095,7 @@ export default function Livella() {
     try {
       const lesson = await shareApi.load(id);
       if (LANGUAGES[lesson.lang]) setLang(lesson.lang);
-      if (lesson.levelId) setLevel(lesson.levelId);
+      if (lesson.levelId) setLevel(fixLv(lesson.levelId));
       if (lesson.purpose) setPurpose(lesson.purpose);
       setAgeBand((lesson.result && lesson.result.age) || "high");
       setProfiles((lesson.result && lesson.result.profiles) || []);
@@ -1050,12 +1112,21 @@ export default function Livella() {
     try {
       const k = JSON.parse(window.localStorage.getItem("livella.last") || "null");
       if (k && k.v === 1 && k.result && LANGUAGES[k.lang]) {
-        setLang(k.lang); if (k.level) setLevel(k.level); if (k.purpose) setPurpose(k.purpose);
+        setLang(k.lang); if (k.level) setLevel(fixLv(k.level)); if (k.purpose) setPurpose(k.purpose);
         setInput(k.input || ""); setSourceUrl(k.sourceUrl || ""); pagesSig.current = "restored";
         if (k.result.profiles) setProfiles(k.result.profiles); if (k.result.age) setAgeBand(k.result.age);
       }
     } catch (e) {}
   }, []);
+  // A shared link opened in a tab where Livella is already open: load that lesson too.
+  useEffect(() => {
+    function onHash() {
+      const m = /^#l=([a-z0-9]{8,24})$/.exec(window.location.hash || "");
+      if (m && shareApi && (!shared || shared.id !== m[1])) openShared(m[1]);
+    }
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  });
   // The moment a reading starts, the screen goes to where it will appear.
   useEffect(() => {
     if (!demoAuto || !result || !result.sample || loading || loadingScala || speaking || error || pendingLang) return;
@@ -1115,14 +1186,26 @@ export default function Livella() {
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(full).then(done).catch(byHand);
     else byHand();
   }
-  function startShare() {
+  // One tap: make the link (if there is none yet) and hand it to the phone's share menu.
+  // A laptop, or a phone that refuses the menu, gets the link copied instead.
+  function sendLink(id) {
+    const url = shareUrl(id);
+    const title = (result && result.title) || "Livella";
+    const copy = () => { if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(() => { setLinkCopied(true); setTimeout(() => setLinkCopied(false), 2400); }).catch(() => {}); };
+    if (navigator.share) navigator.share({ title, text: title, url }).catch((e) => { if (!e || e.name !== "AbortError") copy(); });
+    else copy();
+  }
+  async function startShare() {
+    if (shareBusy) return;
     setShareOpen(true);
+    const id = (shared && shared.id) || await createShare();
+    if (id) sendLink(id);
     setTimeout(() => { if (shareRef.current && shareRef.current.scrollIntoView) shareRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); }, 60);
   }
   // Every version of the shared lesson, the starting language first.
   const sharedVersions = !shared ? [] : (() => {
     const ls = shared.lesson; const L0 = LANGUAGES[ls.lang] || L;
-    const lv0 = L0.levels.find((x) => x.id === ls.levelId) || L0.levels[0];
+    const lv0 = L0.levels.find((x) => x.id === fixLv(ls.levelId)) || L0.levels[0];
     const first = { key: "origin", langId: L0.id, title: ls.result.title, passage: ls.result.passage, glosses: ls.result.glosses || [], level: `${lv0.label} · ${lv0.sub}`, by: ls.resultBy || ls.author };
     return [first].concat(LANGUAGE_ORDER.filter((k) => (ls.versions || {})[k]).map((k) => ({ key: k, langId: k, ...ls.versions[k] })));
   })();
@@ -1184,41 +1267,70 @@ export default function Livella() {
 
   function levelIndex(id) { const i = LEVELS.findIndex((l) => l.id === id); return i < 0 ? 1 : i; }
 
+  // La Scala, fast version: the teacher's own level first (on screen in seconds), then the
+  // other four levels at the same time, each one appearing the moment it is ready.
+  const [scalaPending, setScalaPending] = useState([]);   // level ids still on their way
+  const [scalaFailed, setScalaFailed] = useState([]);     // level ids that did not arrive
+  const scalaRun = useRef(0);
+  const levelRef = useRef(level); levelRef.current = level;
+  function cancelScala() { scalaRun.current++; setScalaPending([]); setScalaFailed([]); }
   async function generateScala() {
     if (!hasSubject()) return;
-    setLoadingScala(true); setError(null);
+    const run = ++scalaRun.current;
+    setLoadingScala(true); setError(null); setScalaPending([]); setScalaFailed([]); setScala(null);
     const sig = sigNow(); const same = sig === pagesSig.current; pagesSig.current = sig;
+    const Lx = L, home = selectedLevel, homeIdx = levelIndex(level);
+    const meta = { genre: writing ? selectedGenre.id : null, profiles: profiles.slice(), age: ageBand };
+    const purposeTxt = `PURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}`;
+    const rules = profileWritingBlock(profiles) + ageBlock(ageBand);
+    const page = (title, ps) => ({ title, passage: ps.join("\n\n"), glosses: [], teacher_note: "", fromScala: true, ...meta });
+    const blank = (r) => ({ result: r, activities: {}, activeTab: null, customExercises: [], shared: null });
+    let base;
     try {
-      const msg = `PURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\nTEACHER'S CLASS LEVEL (the middle reference): ${selectedLevel.label} (${selectedLevel.sub})${subjectBlock()}`;
-      const parsed = await callClaude(buildScalaPrompt(L, mode), msg, attachment());
-      // Normalize: rungs in ladder order, equal paragraph counts (truncate to the shortest).
-      const byId = {}; (parsed.rungs || []).forEach((r) => { byId[r.id] = r; });
-      const rungs = LEVELS.map((l) => byId[l.id] || { id: l.id, paragraphs: [] });
-      const P = Math.max(1, Math.min(...rungs.map((r) => (r.paragraphs || []).length)));
-      if (!isFinite(P) || rungs.some((r) => !r.paragraphs || r.paragraphs.length === 0)) throw { code: "invalid_json", message: "rungs incomplete" };
-      rungs.forEach((r) => { r.paragraphs = r.paragraphs.slice(0, P); });
-      const meta = { genre: writing ? selectedGenre.id : null, profiles: profiles.slice(), age: ageBand };
-      setScala({ title: parsed.title, rungs, teacher_note: parsed.teacher_note, ...meta });
-      setScalaIdx(Array.from({ length: P }, () => levelIndex(level)));
-      // La Scala fills every level tab that has no page yet (text only; a full page keeps its place).
-      const page = (i) => ({ title: parsed.title, passage: rungs[i].paragraphs.join("\n\n"), glosses: [], teacher_note: "", fromScala: true, ...meta });
-      const blank = (r) => ({ result: r, activities: {}, activeTab: null, customExercises: [], shared: null });
-      setPages((prev) => {
-        const base = same ? { ...prev } : {};
-        LEVELS.forEach((l, i) => { if (l.id !== level && !base[l.id]) base[l.id] = blank(page(i)); });
-        return base;
-      });
-      if (!same || !result) {
-        leaveShared(); stopSpeaking(); setHideText(false);
-        setResult(page(levelIndex(level))); setActivities({}); setActiveTab(null); setCustomExercises([]);
-        setComparison(null); setComparisonLevel(null); setCmpInfo(null); setShowOriginal(false);
-      }
-      setView("pages");
-      setBumped(null);
+      base = await callClaude(buildScalaBasePrompt(Lx, mode, home), `${purposeTxt}\nLEVEL: ${home.label} (${home.sub})\nLEVEL NOTES: ${home.description}${subjectBlock()}`, attachment());
+      if (!base || !Array.isArray(base.paragraphs) || !base.paragraphs.filter(Boolean).length) throw { code: "invalid_json", message: "no paragraphs" };
     } catch (err) {
-      console.error(err);
-      setError(describeError(err, T.errScala));
-    } finally { setLoadingScala(false); }
+      if (run === scalaRun.current) { console.error(err); setError(describeError(err, T.errScala)); setLoadingScala(false); }
+      return;
+    }
+    if (run !== scalaRun.current) return;
+    const paras = base.paragraphs.filter(Boolean).slice(0, 5); const P = paras.length;
+    const rungs = LEVELS.map((l) => ({ id: l.id, paragraphs: [] })); rungs[homeIdx].paragraphs = paras;
+    const others = LEVELS.filter((l, i) => i !== homeIdx);
+    // The teacher's level goes on the desk now.
+    setPages((prev) => (same ? { ...prev } : {}));
+    if (!same || !result) {
+      leaveShared(); stopSpeaking(); setHideText(false);
+      setResult(page(base.title, paras)); setActivities({}); setActiveTab(null); setCustomExercises([]);
+      setComparison(null); setComparisonLevel(null); setCmpInfo(null); setShowOriginal(false);
+    }
+    setView("pages"); setBumped(null);
+    setScalaPending(others.map((l) => l.id)); setLoadingScala(false);
+    const source = `${purposeTxt}\n\nSOURCE (${home.label}):\nTITLE: ${base.title}\n\n${paras.map((p, j) => `[${j + 1}] ${p}`).join("\n\n")}${rules}`;
+    await Promise.all(others.map(async (lv) => {
+      const i = levelIndex(lv.id);
+      try {
+        const out = await callClaude(buildRungPrompt(Lx, home, lv), source, null);
+        if (run !== scalaRun.current) return;
+        const ps = (out && Array.isArray(out.paragraphs) ? out.paragraphs : []).map((x) => String(x || "").replace(/^\s*\[\d+\]\s*/, "")).filter(Boolean).slice(0, P);
+        if (ps.length !== P) throw { code: "invalid_json", message: "paragraph count" };
+        rungs[i].paragraphs = ps;
+        const pg = page((out && out.title) || base.title, ps);
+        if (levelRef.current === lv.id) setResult((r) => r || pg);
+        else setPages((prev) => (prev[lv.id] ? prev : { ...prev, [lv.id]: blank(pg) }));
+      } catch (err) {
+        console.error(err);
+        if (run === scalaRun.current) setScalaFailed((f) => f.concat(lv.id));
+      } finally {
+        if (run === scalaRun.current) setScalaPending((p) => p.filter((x) => x !== lv.id));
+      }
+    }));
+    if (run !== scalaRun.current) return;
+    // With every level in, the paragraph-by-paragraph ladder opens too.
+    if (rungs.every((r) => r.paragraphs.length === P)) {
+      setScala({ title: base.title, rungs, teacher_note: base.teacher_note, ...meta });
+      setScalaIdx(Array.from({ length: P }, () => homeIdx));
+    }
   }
 
   function moveParagraph(i, delta) {
@@ -1496,16 +1608,17 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
   // numbered paragraphs (reading support), ADHD chunks with micro-tasks, or the plain text.
   // The level tabs on top of the page: every level of this reading, written or not.
   function renderLevelTabs() {
-    if (shared && Object.keys(pages).length === 0) return null;   // a lesson opened from a link is one level
+    if (shared && Object.keys(pages).length === 0 && !scalaPending.length) return null;   // a lesson opened from a link is one level
     return (
       <div className="livella-desk-tabs" role="tablist" aria-label={T.levelLabel}>
         {LEVELS.map((l, i) => {
           const written = l.id === level ? !!result : !!pages[l.id];
+          const coming = !written && scalaPending.includes(l.id);
           return (
             <button key={l.id} type="button" role="tab" aria-selected={l.id === level} title={`${l.label} · ${l.sub}`}
               aria-label={written ? l.label : `${l.label} · ${T.writeLevel}`}
               className={`livella-desk-tab ${written ? "" : "empty"}`} onClick={() => { setDemoAuto(false); pickLevel(l.id); }}>
-              {LEVEL_SHORT[l.label] || i + 1}{!written && <small aria-hidden="true">+</small>}
+              {LEVEL_SHORT[l.label] || i + 1}{!written && <small aria-hidden="true">{coming ? "…" : "+"}</small>}
             </button>
           );
         })}
@@ -3031,7 +3144,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
           </div>
         )}
 
-        {shareBusy === "load" && !result && (
+        {shareBusy === "load" && (
           <div className="livella-card"><div className="livella-loading">{T.loadingShared}</div></div>
         )}
 
@@ -3121,8 +3234,12 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             <div className="livella-desk-fan" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
             {renderLevelTabs()}
             <div className="livella-card livella-desk-empty">
-              <p>{selectedLevel.label} {T.notWritten}</p>
-              <button type="button" className="livella-primary-btn" onClick={() => generate()} disabled={loadingScala}>{T.writeLevel}</button>
+              {scalaPending.includes(level)
+                ? <div className="livella-loading">{T.levelComing}</div>
+                : <>
+                    <p>{scalaFailed.includes(level) ? T.levelFailed : `${selectedLevel.label} ${T.notWritten}`}</p>
+                    <button type="button" className="livella-primary-btn" onClick={() => generate()} disabled={loadingScala}>{T.writeLevel}</button>
+                  </>}
               {!scala && <span className="livella-link-hint">{T.scalaHint}</span>}
             </div>
           </div>
@@ -3208,6 +3325,9 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                 <>
                   {renderBody(result)}
                   {renderTranslations(result.translations)}
+                  {!result.translations && translating === result.passage && L.support.length > 0 && (
+                    <div className="livella-translations compact"><div className="livella-loading" style={{ fontSize: 13 }}>{T.translating}</div></div>
+                  )}
                 </>
               )}
 
@@ -3316,7 +3436,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                 <button className="livella-main-btn" onClick={() => downloadPdf(false)} disabled={pdfBusy}>{pdfBusy ? T.pdfBuilding : T.pdfStudent}</button>
                 {shareApi && !result.sample && (
                   <button type="button" className="livella-share-btn" onClick={startShare}>
-                    <span aria-hidden="true">⇄</span> {shared ? T.shareTitle : T.shareBtn}
+                    <span aria-hidden="true">⇄</span> {shareBusy === "save" ? T.saving : linkCopied ? T.copiedLink : T.shareBtn}
                   </button>
                 )}
               </div>
@@ -3355,7 +3475,8 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                     <label className="livella-label" style={{ marginTop: 18 }} htmlFor="livella-sharelink">{T.shareLink}</label>
                     <div className="livella-share-row">
                       <input id="livella-sharelink" className="livella-link-input" type="text" readOnly value={shareUrl(shared.id)} onFocus={(e) => e.target.select()} />
-                      <button type="button" className="livella-compare-mini-btn active" onClick={copyShareLink}>{linkCopied ? T.copiedLink : T.copyLink}</button>
+                      {typeof navigator !== "undefined" && navigator.share && <button type="button" className="livella-compare-mini-btn active" onClick={() => sendLink(shared.id)}>{T.shareBtn}</button>}
+                      <button type="button" className={`livella-compare-mini-btn ${typeof navigator !== "undefined" && navigator.share ? "" : "active"}`} onClick={copyShareLink}>{linkCopied ? T.copiedLink : T.copyLink}</button>
                       <button type="button" className="livella-compare-mini-btn" onClick={() => openShared(shared.id, "refresh")} disabled={!!shareBusy}>{shareBusy === "refresh" ? "…" : T.refresh}</button>
                     </div>
                     <span className="livella-link-hint">{T.shareHint} {T.sharedBy.replace("{x}", shared.lesson.author || "—")}</span>
@@ -3546,7 +3667,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             ))}
           </div>
         )}
-        <div className="livella-footer">uno strumento, un lavoro · v0.19 · © 2026 Assunta Scotto. {T.rights} · <a className="livella-footer-link" href={(typeof window !== "undefined" && window.LIVELLA_CONFIG && window.LIVELLA_CONFIG.privacy) || "privacy.html"}>{T.privacy}</a></div>
+        <div className="livella-footer">uno strumento, un lavoro · v0.20 · © 2026 Assunta Scotto. {T.rights} · <a className="livella-footer-link" href={(typeof window !== "undefined" && window.LIVELLA_CONFIG && window.LIVELLA_CONFIG.privacy) || "privacy.html"}>{T.privacy}</a></div>
       </div>
     </div>
   );
