@@ -703,6 +703,9 @@ export default function Livella() {
   const [pdfBusy, setPdfBusy] = useState(false);
   const [scala, setScala] = useState(null);        // { title, rungs[], teacher_note }
   const [scalaIdx, setScalaIdx] = useState([]);    // per-paragraph rung index (0..4)
+  // v0.21: La Scala can be listened to. A paragraph moved to another step stops the voice,
+  // so it never reads text that is no longer on screen.
+  useEffect(() => { stopSpeaking(); }, [scalaIdx]);
   // Pages: one finished reading per level for the SAME subject. The level in front lives in
   // result/activities/shared; the others wait here as { result, activities, activeTab, customExercises, shared }.
   const [pages, setPages] = useState(() => { try { const k = JSON.parse(window.localStorage.getItem("livella.last") || "null"); return fixPages(k && k.pages); } catch (e) { return {}; } });
@@ -3184,6 +3187,17 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
               <span className="livella-scala-legend-text">{LEVELS[0].sub} → {LEVELS[LEVELS.length - 1].sub}</span>
             </div>
 
+            {canSpeak && (
+              <div className="livella-listen">
+                <button type="button" className={`livella-listen-btn ${speaking ? "on" : ""}`} aria-pressed={speaking}
+                  onClick={() => speak(`${scala.title}. ${scala.rungs[0].paragraphs.map((_, i) => scala.rungs[scalaIdx[i] ?? levelIndex(level)].paragraphs[i]).join(" ")}`)}>
+                  <span aria-hidden="true">{speaking ? "■" : "▶"}</span> {speaking ? T.stopListen : T.listen}
+                </button>
+                <button type="button" className={`livella-compare-mini-btn ${slowVoice ? "active" : ""}`} aria-pressed={slowVoice} onClick={() => { stopSpeaking(); setSlowVoice(!slowVoice); }}>{T.slow}</button>
+                <span className="livella-link-hint">{T.listenNote}</span>
+              </div>
+            )}
+
             <div className="livella-scala">
               {scala.rungs[0].paragraphs.map((_, i) => {
                 const ri = scalaIdx[i] ?? levelIndex(level);
@@ -3667,7 +3681,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             ))}
           </div>
         )}
-        <div className="livella-footer">uno strumento, un lavoro · v0.20 · © 2026 Assunta Scotto. {T.rights} · <a className="livella-footer-link" href={(typeof window !== "undefined" && window.LIVELLA_CONFIG && window.LIVELLA_CONFIG.privacy) || "privacy.html"}>{T.privacy}</a></div>
+        <div className="livella-footer">uno strumento, un lavoro · v0.21 · © 2026 Assunta Scotto. {T.rights} · <a className="livella-footer-link" href={(typeof window !== "undefined" && window.LIVELLA_CONFIG && window.LIVELLA_CONFIG.privacy) || "privacy.html"}>{T.privacy}</a></div>
       </div>
     </div>
   );
