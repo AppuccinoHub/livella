@@ -22,11 +22,11 @@ const LANGUAGES = {
     tf: ["Vero", "Falso"],
     glossRule: "english gloss",
     levels: [
-      { id: "it1", label: "Novice Mid", sub: "~ 1° anno", description: "present tense of essere/avere/chiamarsi/abitare + regular -are verbs, articles, numbers, concrete self/family/school topics", calibration: "Present tense only: essere, avere, chiamarsi, abitare, piacere (mi piace), regular -are verbs. Articles, numbers, days, colors. Sentences 5-8 words. Top 500 words. NO past tense, NO future, NO conditional, NO subjunctive, NO reflexives beyond chiamarsi. Topics: self, family, school, likes." },
-      { id: "it2", label: "Novice High", sub: "~ 2° anno", description: "high-frequency vocab, simple present tense, basic past forms", calibration: "Present tense + most common irregulars, very limited passato prossimo, sentences 6-10 words, top 1000 words, no subjunctive/conditional/future, concrete topics." },
-      { id: "it3", label: "Intermediate Low", sub: "~ 3° anno", description: "passato prossimo, imperfetto contrast, expanded thematic vocab", calibration: "Passato prossimo fluent, imperfetto introduced, future introduced, sentences 8-14 words, top 2000 words, reflexives, conditional only in fixed expressions." },
-      { id: "it4", label: "Intermediate Mid", sub: "~ 4° anno", description: "subjunctive intro, conditional, complex sentence structures", calibration: "All indicative tenses fluent, present subjunctive introduced, conditional fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
-      { id: "itap", label: "Intermediate High", sub: "~ 5° anno+", description: "full register range, idiomatic usage, cultural depth, advanced themes", calibration: "Full tense/mood range, idiomatic expressions, register variation, advanced themes (identity, family and community, science and technology, global challenges), sophisticated discourse markers." },
+      { id: "it1", label: "Livello 1", scale: "Novice Mid", sub: "~ 1° anno", description: "present tense of essere/avere/chiamarsi/abitare + regular -are verbs, articles, numbers, concrete self/family/school topics", calibration: "Present tense only: essere, avere, chiamarsi, abitare, piacere (mi piace), regular -are verbs. Articles, numbers, days, colors. Sentences 5-8 words. Top 500 words. NO past tense, NO future, NO conditional, NO subjunctive, NO reflexives beyond chiamarsi. Topics: self, family, school, likes." },
+      { id: "it2", label: "Livello 2", scale: "Novice High", sub: "~ 2° anno", description: "high-frequency vocab, simple present tense, basic past forms", calibration: "Present tense + most common irregulars, very limited passato prossimo, sentences 6-10 words, top 1000 words, no subjunctive/conditional/future, concrete topics." },
+      { id: "it3", label: "Livello 3", scale: "Intermediate Low", sub: "~ 3° anno", description: "passato prossimo, imperfetto contrast, expanded thematic vocab", calibration: "Passato prossimo fluent, imperfetto introduced, future introduced, sentences 8-14 words, top 2000 words, reflexives, conditional only in fixed expressions." },
+      { id: "it4", label: "Livello 4", scale: "Intermediate Mid", sub: "~ 4° anno", description: "subjunctive intro, conditional, complex sentence structures", calibration: "All indicative tenses fluent, present subjunctive introduced, conditional fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
+      { id: "itap", label: "Livello 5", scale: "Intermediate High", sub: "~ 5° anno+", description: "full register range, idiomatic usage, cultural depth, advanced themes", calibration: "Full tense/mood range, idiomatic expressions, register variation, advanced themes (identity, family and community, science and technology, global challenges), sophisticated discourse markers." },
     ],
   },
   fr: {
@@ -45,11 +45,11 @@ const LANGUAGES = {
     tf: ["Vrai", "Faux"],
     glossRule: "english gloss",
     levels: [
-      { id: "fr1", label: "Novice Mid", sub: "~ 1re année", description: "present tense of être/avoir/aller/faire + regular -er verbs, articles, numbers, concrete self/family/school topics", calibration: "Present tense only: être, avoir, aller, faire, s'appeler, habiter, aimer, regular -er verbs. Articles (le/la/les/un/une/des), numbers, days, colors. Sentences 5-8 words. Top 500 words. NO passé composé, NO futur, NO conditionnel, NO subjonctif. Topics: self, family, school, likes." },
-      { id: "fr2", label: "Novice High", sub: "~ 2e année", description: "present + common irregulars, passé composé with avoir introduced, futur proche", calibration: "Present tense + common irregulars (vouloir, pouvoir, prendre), passé composé with avoir introduced (regular participles), futur proche (aller + infinitive). Sentences 6-10 words. Top 1000 words. NO imparfait, NO futur simple, NO conditionnel, NO subjonctif." },
-      { id: "fr3", label: "Intermediate Low", sub: "~ 3e année", description: "passé composé (avoir and être), imparfait contrast, futur simple, reflexives", calibration: "Passé composé fluent (avoir AND être, agreement), imparfait introduced with contrast, futur simple introduced, reflexive verbs, sentences 8-14 words, top 2000 words, conditionnel only in fixed expressions (je voudrais)." },
-      { id: "fr4", label: "Intermediate Mid", sub: "~ 4e année", description: "all indicative tenses, present subjunctive intro, conditional, complex sentences", calibration: "All indicative tenses fluent (incl. plus-que-parfait), subjonctif présent introduced after common triggers (il faut que, je veux que), conditionnel fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
-      { id: "frap", label: "Intermediate High", sub: "~ 5e année+", description: "full register range, idiomatic usage, cultural depth, advanced themes", calibration: "Full tense/mood range, idiomatic expressions, tu/vous register variation, advanced themes (identity, family and community, science and technology, global challenges), sophisticated discourse markers." },
+      { id: "fr1", label: "Niveau 1", scale: "Novice Mid", sub: "~ 1re année", description: "present tense of être/avoir/aller/faire + regular -er verbs, articles, numbers, concrete self/family/school topics", calibration: "Present tense only: être, avoir, aller, faire, s'appeler, habiter, aimer, regular -er verbs. Articles (le/la/les/un/une/des), numbers, days, colors. Sentences 5-8 words. Top 500 words. NO passé composé, NO futur, NO conditionnel, NO subjonctif. Topics: self, family, school, likes." },
+      { id: "fr2", label: "Niveau 2", scale: "Novice High", sub: "~ 2e année", description: "present + common irregulars, passé composé with avoir introduced, futur proche", calibration: "Present tense + common irregulars (vouloir, pouvoir, prendre), passé composé with avoir introduced (regular participles), futur proche (aller + infinitive). Sentences 6-10 words. Top 1000 words. NO imparfait, NO futur simple, NO conditionnel, NO subjonctif." },
+      { id: "fr3", label: "Niveau 3", scale: "Intermediate Low", sub: "~ 3e année", description: "passé composé (avoir and être), imparfait contrast, futur simple, reflexives", calibration: "Passé composé fluent (avoir AND être, agreement), imparfait introduced with contrast, futur simple introduced, reflexive verbs, sentences 8-14 words, top 2000 words, conditionnel only in fixed expressions (je voudrais)." },
+      { id: "fr4", label: "Niveau 4", scale: "Intermediate Mid", sub: "~ 4e année", description: "all indicative tenses, present subjunctive intro, conditional, complex sentences", calibration: "All indicative tenses fluent (incl. plus-que-parfait), subjonctif présent introduced after common triggers (il faut que, je veux que), conditionnel fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
+      { id: "frap", label: "Niveau 5", scale: "Intermediate High", sub: "~ 5e année+", description: "full register range, idiomatic usage, cultural depth, advanced themes", calibration: "Full tense/mood range, idiomatic expressions, tu/vous register variation, advanced themes (identity, family and community, science and technology, global challenges), sophisticated discourse markers." },
     ],
   },
   es: {
@@ -68,11 +68,11 @@ const LANGUAGES = {
     tf: ["Cierto", "Falso"],
     glossRule: "english gloss",
     levels: [
-      { id: "es1", label: "Novice Mid", sub: "~ 1.er año", description: "present tense of ser/estar/tener/ir + regular -ar/-er/-ir verbs, gustar basics, articles, numbers, concrete topics", calibration: "Present tense only: ser, estar, tener, ir, llamarse, vivir, gustar (me gusta), regular -ar/-er/-ir verbs. Articles, numbers, days, colors. Sentences 5-8 words. Top 500 words. NO pretérito, NO futuro, NO condicional, NO subjuntivo. Topics: self, family, school, likes." },
-      { id: "es2", label: "Novice High", sub: "~ 2.º año", description: "present + stem-changers, preterite introduced, ir a + infinitive", calibration: "Present tense + stem-changing verbs, pretérito introduced (regular + ser/ir/hacer), ir a + infinitive for future. Sentences 6-10 words. Top 1000 words. NO imperfecto, NO futuro simple, NO condicional, NO subjuntivo." },
-      { id: "es3", label: "Intermediate Low", sub: "~ 3.er año", description: "preterite fluent, imperfect contrast, future introduced, reflexives", calibration: "Pretérito fluent (incl. common irregulars), imperfecto introduced with contrast, futuro simple introduced, reflexive verbs, sentences 8-14 words, top 2000 words, condicional only in fixed expressions (me gustaría)." },
-      { id: "es4", label: "Intermediate Mid", sub: "~ 4.º año", description: "all indicative tenses, present subjunctive intro, conditional, complex sentences", calibration: "All indicative tenses fluent (incl. pluscuamperfecto), presente de subjuntivo introduced after common triggers (quiero que, es importante que), condicional fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
-      { id: "esap", label: "Intermediate High", sub: "~ 5.º año+", description: "full register range, idiomatic usage, cultural depth, advanced themes", calibration: "Full tense/mood range, idiomatic expressions, tú/usted register variation, advanced themes (identity, family and community, science and technology, global challenges), sophisticated discourse markers." },
+      { id: "es1", label: "Nivel 1", scale: "Novice Mid", sub: "~ 1.er año", description: "present tense of ser/estar/tener/ir + regular -ar/-er/-ir verbs, gustar basics, articles, numbers, concrete topics", calibration: "Present tense only: ser, estar, tener, ir, llamarse, vivir, gustar (me gusta), regular -ar/-er/-ir verbs. Articles, numbers, days, colors. Sentences 5-8 words. Top 500 words. NO pretérito, NO futuro, NO condicional, NO subjuntivo. Topics: self, family, school, likes." },
+      { id: "es2", label: "Nivel 2", scale: "Novice High", sub: "~ 2.º año", description: "present + stem-changers, preterite introduced, ir a + infinitive", calibration: "Present tense + stem-changing verbs, pretérito introduced (regular + ser/ir/hacer), ir a + infinitive for future. Sentences 6-10 words. Top 1000 words. NO imperfecto, NO futuro simple, NO condicional, NO subjuntivo." },
+      { id: "es3", label: "Nivel 3", scale: "Intermediate Low", sub: "~ 3.er año", description: "preterite fluent, imperfect contrast, future introduced, reflexives", calibration: "Pretérito fluent (incl. common irregulars), imperfecto introduced with contrast, futuro simple introduced, reflexive verbs, sentences 8-14 words, top 2000 words, condicional only in fixed expressions (me gustaría)." },
+      { id: "es4", label: "Nivel 4", scale: "Intermediate Mid", sub: "~ 4.º año", description: "all indicative tenses, present subjunctive intro, conditional, complex sentences", calibration: "All indicative tenses fluent (incl. pluscuamperfecto), presente de subjuntivo introduced after common triggers (quiero que, es importante que), condicional fluent, sentences 10-18 words, subordinate clauses, abstract concepts." },
+      { id: "esap", label: "Nivel 5", scale: "Intermediate High", sub: "~ 5.º año+", description: "full register range, idiomatic usage, cultural depth, advanced themes", calibration: "Full tense/mood range, idiomatic expressions, tú/usted register variation, advanced themes (identity, family and community, science and technology, global challenges), sophisticated discourse markers." },
     ],
   },
   esl: {
@@ -103,8 +103,9 @@ const LANGUAGES = {
 const fixLv = (id) => (typeof id === "string" ? id.replace(/^w[a-z]{3}(\d)$/, "esl$1") : id);   // older ESL level ids
 const fixPages = (pg) => { const o = {}; Object.entries(pg || {}).forEach(([k, v]) => { o[fixLv(k)] = v; }); return o; };
 const LANGUAGE_ORDER = ["it", "fr", "es", "esl"];
-// Short tab names for the sublevels (the ESL side uses numbers 1-5).
-const LEVEL_SHORT = { "Novice Mid": "NM", "Novice High": "NH", "Intermediate Low": "IL", "Intermediate Mid": "IM", "Intermediate High": "IH" };
+// Level tabs show the numbers 1-5.
+// Teachers see "Livello 1-5"; the AI still receives the internal scale name (scale) so calibration is unchanged.
+const lvName = (l) => (l && (l.scale || l.label)) || "";
 // Voice used by the Listen button (the browser's own speech engine).
 const SPEECH = { it: "it-IT", fr: "fr-FR", es: "es-MX", esl: "en-US" };
 
@@ -161,7 +162,7 @@ const UI = {
     errScala: "Non riesco a costruire la scala.", scalaCount: "paragrafi",
     pdfStudent: "PDF studente", pdfTeacher: "PDF insegnante", pdfBuilding: "Creo il PDF...", teacherGuide: "Guida per l'insegnante", studentSheet: "Scheda dello studente",
     errPdf: "Non riesco a scaricare il PDF in questa vista.", pdfDeclined: "Download annullato.",
-    heroHead: "Una lettura. Cinque livelli di competenza.", heroSub: "Da Novice Mid a Intermediate High, per classi di italiano, francese, spagnolo e inglese.", heroCta: "Livella un testo", heroMicro: "Cinque livelli · quattro lingue · profili di lettura",
+    heroHead: "Una lettura. Cinque livelli di competenza.", heroSub: "Dal primo anno in su, per classi di italiano, francese, spagnolo e inglese.", heroCta: "Livella un testo", heroMicro: "Cinque livelli · quattro lingue · profili di lettura",
     cmpTitle: "Confronta", cmpLevel: "Livello", cmpProfile: "Supporto", cmpLang: "Lingua", cmpHint: "Ogni confronto è una nuova generazione: la tua pagina resta a sinistra.", cmpWorking: "Preparo il confronto...",
     switchWarn: "Passare a {x} cancella la lezione sullo schermo.", switchYes: "Passa a {x}", switchNo: "Resta qui", switchTip: "Per vedere la stessa lezione in un'altra lingua, usa Confronta → Lingua.",
     listen: "Ascolta", stopListen: "Ferma", slow: "Lento", hideText: "Nascondi il testo", showText: "Mostra il testo", hiddenNote: "Testo nascosto. Ascolta e rispondi.", errVoice: "Questo dispositivo non ha una voce per questa lingua.", listenNote: "Voce del browser: la qualità dipende dal dispositivo.",
@@ -205,7 +206,7 @@ const UI = {
     errScala: "Impossible de construire l'échelle.", scalaCount: "paragraphes",
     pdfStudent: "PDF élève", pdfTeacher: "PDF enseignant·e", pdfBuilding: "Création du PDF...", teacherGuide: "Guide de l'enseignant·e", studentSheet: "Fiche de l'élève",
     errPdf: "Impossible de télécharger le PDF dans cette vue.", pdfDeclined: "Téléchargement annulé.",
-    heroHead: "Une lecture. Cinq niveaux de compétence.", heroSub: "De Novice Mid à Intermediate High, pour les cours d'italien, de français, d'espagnol et d'anglais.", heroCta: "Niveler un texte", heroMicro: "Cinq niveaux · quatre langues · profils de lecture",
+    heroHead: "Une lecture. Cinq niveaux de compétence.", heroSub: "De la première année et au-delà, pour les cours d'italien, de français, d'espagnol et d'anglais.", heroCta: "Niveler un texte", heroMicro: "Cinq niveaux · quatre langues · profils de lecture",
     cmpTitle: "Comparer", cmpLevel: "Niveau", cmpProfile: "Aide", cmpLang: "Langue", cmpHint: "Chaque comparaison est une nouvelle génération : votre page reste à gauche.", cmpWorking: "Je prépare la comparaison...",
     switchWarn: "Passer à {x} efface la leçon affichée.", switchYes: "Passer à {x}", switchNo: "Rester ici", switchTip: "Pour voir la même leçon dans une autre langue, utilisez Comparer → Langue.",
     listen: "Écouter", stopListen: "Arrêter", slow: "Lent", hideText: "Masquer le texte", showText: "Afficher le texte", hiddenNote: "Texte masqué. Écoutez et répondez.", errVoice: "Cet appareil n'a pas de voix pour cette langue.", listenNote: "Voix du navigateur : la qualité dépend de l'appareil.",
@@ -249,7 +250,7 @@ const UI = {
     errScala: "Couldn't build the ladder.", scalaCount: "paragraphs",
     pdfStudent: "Student PDF", pdfTeacher: "Teacher PDF", pdfBuilding: "Building the PDF...", teacherGuide: "Teacher guide", studentSheet: "Student sheet",
     errPdf: "Can't download the PDF in this view.", pdfDeclined: "Download cancelled.",
-    heroHead: "One reading. Five proficiency levels.", heroSub: "Novice Mid to Intermediate High, for Italian, French, Spanish and English classes.", heroCta: "Level a text now", heroMicro: "Five levels · four languages · reader profiles",
+    heroHead: "One reading. Five proficiency levels.", heroSub: "From first year up, for Italian, French, Spanish and English classes.", heroCta: "Level a text now", heroMicro: "Five levels · four languages · reader profiles",
     cmpTitle: "Compare", cmpLevel: "Level", cmpProfile: "Support", cmpLang: "Language", cmpHint: "Each comparison is a new generation. Your page stays on the left.", cmpWorking: "Preparing the comparison...",
     switchWarn: "Switching to {x} clears the lesson on screen.", switchYes: "Switch to {x}", switchNo: "Stay here", switchTip: "To see the same lesson in another language, use Compare → Language.",
     listen: "Listen", stopListen: "Stop", slow: "Slow", hideText: "Hide the text", showText: "Show the text", hiddenNote: "Text hidden. Listen and answer.", errVoice: "This device has no voice for this language.", listenNote: "Browser voice: quality depends on the device.",
@@ -292,7 +293,7 @@ const UI = {
     errScala: "No se pudo construir la escalera.", scalaCount: "párrafos",
     pdfStudent: "PDF del estudiante", pdfTeacher: "PDF del docente", pdfBuilding: "Creando el PDF...", teacherGuide: "Guía del docente", studentSheet: "Hoja del estudiante",
     errPdf: "No se puede descargar el PDF en esta vista.", pdfDeclined: "Descarga cancelada.",
-    heroHead: "Una lectura. Cinco niveles de competencia.", heroSub: "De Novice Mid a Intermediate High, para clases de italiano, francés, español e inglés.", heroCta: "Nivelar un texto", heroMicro: "Cinco niveles · cuatro idiomas · perfiles de lectura",
+    heroHead: "Una lectura. Cinco niveles de competencia.", heroSub: "Del primer año en adelante, para clases de italiano, francés, español e inglés.", heroCta: "Nivelar un texto", heroMicro: "Cinco niveles · cuatro idiomas · perfiles de lectura",
     cmpTitle: "Comparar", cmpLevel: "Nivel", cmpProfile: "Apoyo", cmpLang: "Idioma", cmpHint: "Cada comparación es una nueva generación. Tu página queda a la izquierda.", cmpWorking: "Preparando la comparación...",
     switchWarn: "Cambiar a {x} borra la lección en pantalla.", switchYes: "Cambiar a {x}", switchNo: "Quedarme aquí", switchTip: "Para ver la misma lección en otro idioma, usa Comparar → Idioma.",
     listen: "Escuchar", stopListen: "Detener", slow: "Lento", hideText: "Ocultar el texto", showText: "Mostrar el texto", hiddenNote: "Texto oculto. Escucha y responde.", errVoice: "Este dispositivo no tiene una voz para este idioma.", listenNote: "Voz del navegador: la calidad depende del dispositivo.",
@@ -426,7 +427,7 @@ function genreBlock(genre, topic) {
 function buildPassagePrompt(L, mode = "text", withTr = true) {
   const write = mode === "write";
   const Lt = withTr ? L : { ...L, support: [] };   // without translations the reading comes back much sooner
-  const calibration = L.levels.map((l) => `${l.label.toUpperCase()} (${l.sub}): ${l.calibration}`).join("\n\n");
+  const calibration = L.levels.map((l) => `${lvName(l).toUpperCase()} (${l.sub}): ${l.calibration}`).join("\n\n");
   const pedagogy = L.id === "esl"
     ? "a five-level English language development scale and Comprehensible Input pedagogy"
     : "the proficiency scale used by U.S. world-language teachers (Novice, Intermediate, Advanced, each with Low, Mid and High sublevels) and Comprehensible Input pedagogy";
@@ -490,7 +491,7 @@ OUTPUT FORMAT (respond with ONLY a JSON object, no other text, no markdown fence
 // La Scala, in two steps so the first level shows quickly:
 // 1) the teacher's own level, split into paragraphs; 2) every other level re-written from it, at the same time.
 function buildScalaBasePrompt(L, mode, lv) {
-  return buildPassagePrompt(L, mode, false).replace(/OUTPUT FORMAT[\s\S]*$/, `PARAGRAPHS: Choose a paragraph count P between 3 and 5 (P = 4 if a SHORT CHUNKS rule is present). Write at ${lv.label.toUpperCase()} (${lv.sub}).
+  return buildPassagePrompt(L, mode, false).replace(/OUTPUT FORMAT[\s\S]*$/, `PARAGRAPHS: Choose a paragraph count P between 3 and 5 (P = 4 if a SHORT CHUNKS rule is present). Write at ${lvName(lv).toUpperCase()} (${lv.sub}).
 
 OUTPUT FORMAT (respond with ONLY a JSON object, no other text, no markdown fences):
 {
@@ -504,12 +505,12 @@ No text before/after JSON.`);
 function buildRungPrompt(L, from, to) {
   return `You are Livella, an expert ${L.langEn} language teacher. You re-write a reading from one proficiency level to another, paragraph by paragraph, using Comprehensible Input pedagogy.
 
-TARGET LEVEL — ${to.label.toUpperCase()} (${to.sub}): ${to.calibration}
+TARGET LEVEL — ${lvName(to).toUpperCase()} (${to.sub}): ${to.calibration}
 
 RULES — these matter more than anything else:
 1. Return EXACTLY as many paragraphs as you receive, without the [n] numbers. Paragraph i tells the SAME events and facts in the SAME order as source paragraph i. Only the language changes.
 2. You may add descriptive detail, connectors and richer vocabulary when going up; you may NEVER add a new event or character, drop an event, or change a fact.
-3. Obey the target level strictly. Never use a structure above it. The source is at ${from.label} (${from.sub}).
+3. Obey the target level strictly. Never use a structure above it. The source is at ${lvName(from)} (${from.sub}).
 4. Keep the same title, re-written at the target level if needed.
 5. Keep line breaks as \\n inside the strings where the genre needs them.
 6. If the request contains LEARNER PROFILE RULES or LEARNER AGE RULES, obey them; they never change the level. Never name a diagnosis, condition or plan.
@@ -521,7 +522,7 @@ OUTPUT FORMAT (respond with ONLY a JSON object, no other text, no markdown fence
 // La Scala (older single-call version, kept for reference): one call, the passage at every rung, paragraph-aligned.
 function buildScalaPrompt(L, mode = "text") {
   const write = mode === "write";
-  const calibration = L.levels.map((l, i) => `RUNG ${i + 1} — ${l.label.toUpperCase()} (${l.sub}): ${l.calibration}`).join("\n\n");
+  const calibration = L.levels.map((l, i) => `RUNG ${i + 1} — ${lvName(l).toUpperCase()} (${l.sub}): ${l.calibration}`).join("\n\n");
   const pedagogy = L.id === "esl" ? "a five-level English language development scale" : "the proficiency scale used by U.S. world-language teachers (Novice, Intermediate, Advanced, each with Low, Mid and High sublevels)";
   const what = write ? "Write ONE ORIGINAL text, in the GENRE and on the TOPIC given in the request," : "Write ONE passage";
   const genreRules = write ? `
@@ -937,12 +938,12 @@ export default function Livella() {
   }
 
   function buildPassageMessage(modifier = null) {
-    let msg = `LEVEL: ${selectedLevel.label} (${selectedLevel.sub})\nLEVEL NOTES: ${selectedLevel.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}${subjectBlock()}`;
+    let msg = `LEVEL: ${lvName(selectedLevel)} (${selectedLevel.sub})\nLEVEL NOTES: ${selectedLevel.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}${subjectBlock()}`;
     if (modifier === "easier") {
-      msg += `\n\nREVISION: Previous was too hard. Simpler. Stay at ${selectedLevel.label} but EASIER end.`;
+      msg += `\n\nREVISION: Previous was too hard. Simpler. Stay at ${lvName(selectedLevel)} but EASIER end.`;
       if (result) msg += `\n\nPREVIOUS:\n${result.passage}`;
     } else if (modifier === "harder") {
-      msg += `\n\nREVISION: Previous was too easy. Push upper edge of ${selectedLevel.label}. Do NOT exceed.`;
+      msg += `\n\nREVISION: Previous was too easy. Push upper edge of ${lvName(selectedLevel)}. Do NOT exceed.`;
       if (result) msg += `\n\nPREVIOUS:\n${result.passage}`;
     }
     return msg;
@@ -989,7 +990,7 @@ export default function Livella() {
     const otherLevel = LEVELS.find((l) => l.id === otherLevelId);
     setLoadingComparison(true); setError(null);
     try {
-      const msg = `LEVEL: ${otherLevel.label} (${otherLevel.sub})\nLEVEL NOTES: ${otherLevel.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}${subjectBlock()}`;
+      const msg = `LEVEL: ${lvName(otherLevel)} (${otherLevel.sub})\nLEVEL NOTES: ${otherLevel.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}${subjectBlock()}`;
       const parsed = await callClaude(buildPassagePrompt(L, mode), msg, attachment());
       setComparison(parsed); setComparisonLevel(otherLevel);
       setCmpInfo({ kind: "level", key: otherLevel.id, title: `${otherLevel.label} · ${otherLevel.sub}` });
@@ -1005,7 +1006,7 @@ export default function Livella() {
     setLoadingComparison(true); setCmpBusy("p:" + pid); setError(null);
     try {
       const ids = pid ? [pid] : [];
-      const msg = `LEVEL: ${selectedLevel.label} (${selectedLevel.sub})\nLEVEL NOTES: ${selectedLevel.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\n\nTASK: Rewrite the INPUT below at the SAME level. Keep the same title, events, facts and order. ${pid ? "Apply the learner profile rules that follow." : "Write it with no learner-profile adaptations."}${profileWritingBlock(ids)}${ageBlock(result.age)}\n\nINPUT:\n${result.title}\n\n${result.passage}`;
+      const msg = `LEVEL: ${lvName(selectedLevel)} (${selectedLevel.sub})\nLEVEL NOTES: ${selectedLevel.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\n\nTASK: Rewrite the INPUT below at the SAME level. Keep the same title, events, facts and order. ${pid ? "Apply the learner profile rules that follow." : "Write it with no learner-profile adaptations."}${profileWritingBlock(ids)}${ageBlock(result.age)}\n\nINPUT:\n${result.title}\n\n${result.passage}`;
       const parsed = await callClaude(buildPassagePrompt(L, "text"), msg, null);
       const p = PROFILES.find((x) => x.id === pid);
       setComparison({ ...parsed, profiles: ids, age: result.age }); setComparisonLevel(null);
@@ -1017,7 +1018,7 @@ export default function Livella() {
   }
 
   async function writeInLanguage(L2, lv2) {
-    const msg = `LEVEL: ${lv2.label} (${lv2.sub})\nLEVEL NOTES: ${lv2.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\n\nTASK: The INPUT below is a ${L.langEn} classroom reading. Write the SAME lesson in ${L2.langEn} at the level above, for a colleague who teaches ${L2.langEn}: same events, same facts, same order and paragraphing. Do not translate word for word; write it the way a ${L2.langEn} teacher would for this level. Where a name, place or cultural detail would not make sense for a ${L2.langEn} class, replace it with an equivalent from ${L2.culture}; otherwise keep it.${ageBlock(result.age)}\n\nINPUT:\n${result.title}\n\n${result.passage}`;
+    const msg = `LEVEL: ${lvName(lv2)} (${lv2.sub})\nLEVEL NOTES: ${lv2.description}\n\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nPURPOSE NOTES: ${selectedPurpose.description}\n\nTASK: The INPUT below is a ${L.langEn} classroom reading. Write the SAME lesson in ${L2.langEn} at the level above, for a colleague who teaches ${L2.langEn}: same events, same facts, same order and paragraphing. Do not translate word for word; write it the way a ${L2.langEn} teacher would for this level. Where a name, place or cultural detail would not make sense for a ${L2.langEn} class, replace it with an equivalent from ${L2.culture}; otherwise keep it.${ageBlock(result.age)}\n\nINPUT:\n${result.title}\n\n${result.passage}`;
     return await callClaude(buildPassagePrompt(L2, "text"), msg, null);
   }
 
@@ -1290,7 +1291,7 @@ export default function Livella() {
     const blank = (r) => ({ result: r, activities: {}, activeTab: null, customExercises: [], shared: null });
     let base;
     try {
-      base = await callClaude(buildScalaBasePrompt(Lx, mode, home), `${purposeTxt}\nLEVEL: ${home.label} (${home.sub})\nLEVEL NOTES: ${home.description}${subjectBlock()}`, attachment());
+      base = await callClaude(buildScalaBasePrompt(Lx, mode, home), `${purposeTxt}\nLEVEL: ${lvName(home)} (${home.sub})\nLEVEL NOTES: ${home.description}${subjectBlock()}`, attachment());
       if (!base || !Array.isArray(base.paragraphs) || !base.paragraphs.filter(Boolean).length) throw { code: "invalid_json", message: "no paragraphs" };
     } catch (err) {
       if (run === scalaRun.current) { console.error(err); setError(describeError(err, T.errScala)); setLoadingScala(false); }
@@ -1309,7 +1310,7 @@ export default function Livella() {
     }
     setView("pages"); setBumped(null);
     setScalaPending(others.map((l) => l.id)); setLoadingScala(false);
-    const source = `${purposeTxt}\n\nSOURCE (${home.label}):\nTITLE: ${base.title}\n\n${paras.map((p, j) => `[${j + 1}] ${p}`).join("\n\n")}${rules}`;
+    const source = `${purposeTxt}\n\nSOURCE (${lvName(home)}):\nTITLE: ${base.title}\n\n${paras.map((p, j) => `[${j + 1}] ${p}`).join("\n\n")}${rules}`;
     await Promise.all(others.map(async (lv) => {
       const i = levelIndex(lv.id);
       try {
@@ -1354,7 +1355,7 @@ export default function Livella() {
     if (activities[type]) { setActiveTab(type); return; }
     setLoadingActivity(type); setError(null);
     try {
-      const userMessage = `LEVEL: ${selectedLevel.label} (${selectedLevel.sub})\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nACTIVITY_TYPE: ${type}${profileTaskBlock(result.profiles || [])}${ageTaskBlock(result.age)}\n\nPASSAGE:\n${result.passage}`;
+      const userMessage = `LEVEL: ${lvName(selectedLevel)} (${selectedLevel.sub})\nPURPOSE: ${selectedPurpose.promptName} (${selectedPurpose.promptSub})\nACTIVITY_TYPE: ${type}${profileTaskBlock(result.profiles || [])}${ageTaskBlock(result.age)}\n\nPASSAGE:\n${result.passage}`;
       const parsed = await callClaude(buildActivitiesPrompt(L).replace("{ACTIVITY_TYPE}", type), userMessage);
       setActivities({ ...activities, [type]: parsed });
       setActiveTab(type);
@@ -1370,7 +1371,7 @@ export default function Livella() {
     const typeObj = EXERCISE_TYPES.find((t) => t.id === exerciseType);
     const diffObj = DIFFICULTIES.find((d) => d.id === exerciseDifficulty);
     try {
-      const userMessage = `LEVEL: ${selectedLevel.label} (${selectedLevel.sub})
+      const userMessage = `LEVEL: ${lvName(selectedLevel)} (${selectedLevel.sub})
 LEVEL NOTES: ${selectedLevel.description}
 
 EXERCISE_TYPE: ${exerciseType}
@@ -1621,7 +1622,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
             <button key={l.id} type="button" role="tab" aria-selected={l.id === level} title={`${l.label} · ${l.sub}`}
               aria-label={written ? l.label : `${l.label} · ${T.writeLevel}`}
               className={`livella-desk-tab ${written ? "" : "empty"}`} onClick={() => { setDemoAuto(false); pickLevel(l.id); }}>
-              {LEVEL_SHORT[l.label] || i + 1}{!written && <small aria-hidden="true">{coming ? "…" : "+"}</small>}
+              {i + 1}{!written && <small aria-hidden="true">{coming ? "…" : "+"}</small>}
             </button>
           );
         })}
@@ -2951,7 +2952,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
                   {LEVELS.map((l, i) => (
                     <button key={l.id} type="button" role="tab" aria-selected={heroIdx === i} aria-label={l.label}
                       className="livella-fan-tab" onClick={() => pickHero(i)}>
-                      {LEVEL_SHORT[l.label] || i + 1}
+                      {i + 1}
                     </button>
                   ))}
                 </div>
@@ -3028,7 +3029,7 @@ Generate exactly ${exerciseCount} ${exerciseType} items at ${exerciseDifficulty}
               {LEVELS.map((l, i) => (
                 <button key={l.id} type="button" title={`${l.label} · ${l.sub}`} aria-label={l.label} aria-pressed={level === l.id}
                   style={{ "--s": i }} className={`livella-lv-btn ${level === l.id ? "active" : ""}`} onClick={() => { setHeroAuto(false); setHeroIdx(i); pickLevel(l.id); }}>
-                  {LEVEL_SHORT[l.label] || i + 1}
+                  {i + 1}
                 </button>
               ))}
             </div>
